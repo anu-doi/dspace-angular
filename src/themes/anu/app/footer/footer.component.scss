@@ -1,0 +1,72 @@
+:host {
+    footer {
+      background-color: var(--ds-footer-bg);
+      text-align: center;
+      z-index: var(--ds-footer-z-index);
+      border-top: var(--ds-footer-border);
+      padding: var(--ds-footer-padding);
+  
+      p {
+        margin: 0;
+      }
+  
+      div > img {
+        height: var(--ds-footer-logo-height);
+      }
+  
+  
+      .top-footer {
+        background-color: var(--ds-top-footer-bg);
+        padding: var(--ds-footer-padding);
+        margin: calc(var(--ds-footer-padding) * -1);
+        text-align: left;
+        .partnerships {
+          li {
+            display: inline-flex;
+            background-color: inherit;
+          }
+        }
+        .list-group-item {
+          background-color: var(--ds-top-footer-bg);
+        }
+        .edx img {
+          width: 50px;
+          height: 38px;
+        }
+        .apru img {
+          width: 90px;
+          height: 30px;
+        }
+        .iaru img {
+          width: 115px;
+          height: 30px;
+        }
+        .go8 img {
+          width: 100px;
+          height: 60px;
+        }
+      }
+  
+      .bottom-footer {
+        ul {
+          li {
+            display: inline-flex;
+  
+            a {
+              padding: 0 calc(var(--bs-spacer) / 2);
+              color: inherit
+            }
+  
+            &:not(:last-child) {
+              &:after {
+                content: '';
+                border-right: 1px var(--bs-secondary) solid;
+              }
+  
+            }
+          }
+        }
+      }
+    }
+  }
+  

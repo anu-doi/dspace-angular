@@ -231,6 +231,10 @@ export const environment: GlobalConfig = {
       {
         id: 'subject',
         type: BrowseByType.Metadata
+      },
+      {
+        id: 'type',
+        type: BrowseByType.Metadata
       }
     ]
   },
