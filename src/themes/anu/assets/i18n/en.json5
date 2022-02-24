@@ -4,7 +4,7 @@
 
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "Open Research :: ",
-  
+
   "browse.comcol.by.type": "By Type",
 
   "browse.metadata.type": "Type",

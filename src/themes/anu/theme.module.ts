@@ -36,6 +36,7 @@ import { AppModule } from '../../app/app.module';
 import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
 import { PersonComponent } from './app/item-page/simple/item-types/person/person.component';
 import { ItemPageModule } from '../../app/item-page/item-page.module';
+import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 import { RouterModule } from '@angular/router';
 import { AccessControlModule } from '../../app/access-control/access-control.module';
 import { BrowseBySwitcherComponent } from './app/browse-by/browse-by-switcher/browse-by-switcher.component';
@@ -80,7 +81,11 @@ import { HeaderComponent } from './app/header/header.component';
 import { FooterComponent } from './app/footer/footer.component';
 import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
-import { FileSectionComponent} from './app/item-page/simple/field-components/file-section/file-section.component';
+import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
+import { SearchModule } from '../../app/shared/search/search.module';
+import { ResourcePoliciesModule } from '../../app/shared/resource-policies/resource-policies.module';
+import { ComcolModule } from '../../app/shared/comcol/comcol.module';
+import { FeedbackComponent } from './app/info/feedback/feedback.component';
 
 const DECLARATIONS = [
   FileSectionComponent,
@@ -123,7 +128,8 @@ const DECLARATIONS = [
   HeaderComponent,
   NavbarComponent,
   HeaderNavbarWrapperComponent,
-  BreadcrumbsComponent
+  BreadcrumbsComponent,
+  FeedbackComponent
 ];
 
 @NgModule({
@@ -144,6 +150,7 @@ const DECLARATIONS = [
     CoreModule,
     DragDropModule,
     ItemPageModule,
+    ItemSharedModule,
     EditItemPageModule,
     FormsModule,
     HomePageModule,
@@ -170,6 +177,10 @@ const DECLARATIONS = [
     SubmissionModule,
     MyDSpacePageModule,
     MyDspaceSearchModule,
+    SearchModule,
+    FormsModule,
+    ResourcePoliciesModule,
+    ComcolModule
   ],
   declarations: DECLARATIONS
 })
