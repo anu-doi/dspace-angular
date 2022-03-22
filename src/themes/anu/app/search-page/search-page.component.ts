@@ -6,12 +6,12 @@ import { SearchPageComponent as BaseComponent } from '../../../../app/search-pag
   // styleUrls: ['./search-page.component.scss'],
   // templateUrl: './search-page.component.html'
   templateUrl: '../../../../app/search-page/search-page.component.html',
-  providers: [
-    {
-      provide: SEARCH_CONFIG_SERVICE,
-      useClass: SearchConfigurationService
-    }
-  ]
+  // providers: [
+  //   {
+  //     provide: SEARCH_CONFIG_SERVICE,
+  //     useClass: SearchConfigurationService
+  //   }
+  // ]
 })
 
 /**
