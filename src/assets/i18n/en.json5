@@ -18,7 +18,6 @@
 
   "500.link.home-page": "Take me to the home page",
 
-
   "404.help": "We can't find the page you're looking for. The page may have been moved or deleted. You can use the button below to get back to the home page. ",
 
   "404.link.home-page": "Take me to the home page",
@@ -543,21 +542,15 @@
 
   "admin.metadata-import.page.validateOnly.hint": "When selected, the uploaded CSV will be validated. You will receive a report of detected changes, but no changes will be saved.",
 
-
-
-
   "auth.errors.invalid-user": "Invalid email address or password.",
 
   "auth.messages.expired": "Your session has expired. Please log in again.",
 
   "auth.messages.token-refresh-failed": "Refreshing your session token failed. Please log in again.",
 
+  "bitstream.download.page": "Now downloading {{bitstream}}...",
 
-
-  "bitstream.download.page": "Now downloading {{bitstream}}..." ,
-
-  "bitstream.download.page.back": "Back" ,
-
+  "bitstream.download.page.back": "Back",
 
   "bitstream.edit.authorizations.link": "Edit bitstream's Policies",
 
@@ -609,7 +602,6 @@
 
   "bitstream.edit.form.iiifHeight.hint": "The canvas height should usually match the image height.",
 
-
   "bitstream.edit.notifications.saved.content": "Your changes to this bitstream were saved.",
 
   "bitstream.edit.notifications.saved.title": "Bitstream saved",
@@ -653,8 +645,6 @@
   "bitstream-request-a-copy.submit.success": "The item request was submitted successfully.",
 
   "bitstream-request-a-copy.submit.error": "Something went wrong with submitting the item request.",
-
-
 
   "browse.back.all-results": "All browse results",
 
@@ -1096,7 +1086,6 @@
 
   "comcol-role.edit.delete.error.title": "Failed to delete the '{{ role }}' role's group",
 
-
   "comcol-role.edit.community-admin.name": "Administrators",
 
   "comcol-role.edit.collection-admin.name": "Administrators",
@@ -1325,7 +1314,6 @@
 
   "confirmation-modal.delete-profile.confirm": "Delete",
 
-
   "error.bitstream": "Error fetching bitstream",
 
   "error.browse-by": "Error fetching items",
@@ -1374,9 +1362,7 @@
 
   "error.validation.groupExists": "This group already exists",
 
-
   "feed.description": "Syndication feed",
-
 
   "file-section.error.header": "Error obtaining files for this item",
 
@@ -1390,11 +1376,9 @@
 
   "footer.link.privacy-policy": "Privacy policy",
 
-  "footer.link.end-user-agreement":"End User Agreement",
+  "footer.link.end-user-agreement": "End User Agreement",
 
-  "footer.link.feedback":"Send Feedback",
-
-
+  "footer.link.feedback": "Send Feedback",
 
   "forgot-email.form.header": "Forgot Password",
 
@@ -1546,14 +1530,13 @@
 
   "grant-request-copy.success": "Successfully granted item request",
 
-
   "health.breadcrumbs": "Health",
 
-  "health-page.heading" : "Health",
+  "health-page.heading": "Health",
 
-  "health-page.info-tab" : "Info",
+  "health-page.info-tab": "Info",
 
-  "health-page.status-tab" : "Status",
+  "health-page.status-tab": "Status",
 
   "health-page.error.msg": "The health check service is temporarily unavailable",
 
@@ -1587,7 +1570,6 @@
 
   "health-page.section.no-issues": "No issues detected",
 
-
   "home.description": "",
 
   "home.breadcrumbs": "Home",
@@ -1618,7 +1600,7 @@
 
   "info.privacy.breadcrumbs": "Privacy Statement",
 
-  "info.privacy.head": "Privacy Statement",
+  "info.privacy.head": "Privacy Policy",
 
   "info.privacy.title": "Privacy Statement",
 
@@ -1638,17 +1620,15 @@
 
   "info.feedback.email-label": "Your Email",
 
-  "info.feedback.create.success" : "Feedback Sent Successfully!",
+  "info.feedback.create.success": "Feedback Sent Successfully!",
 
-  "info.feedback.error.email.required" : "A valid email address is required",
+  "info.feedback.error.email.required": "A valid email address is required",
 
-  "info.feedback.error.message.required" : "A comment is required",
+  "info.feedback.error.message.required": "A comment is required",
 
-  "info.feedback.page-label" : "Page",
+  "info.feedback.page-label": "Page",
 
-  "info.feedback.page_help" : "Tha page related to your feedback",
-
-
+  "info.feedback.page_help": "Tha page related to your feedback",
 
   "item.alerts.private": "This item is non-discoverable",
 
@@ -1657,8 +1637,6 @@
   "item.edit.authorizations.heading": "With this editor you can view and alter the policies of an item, plus alter policies of individual item components: bundles and bitstreams. Briefly, an item is a container of bundles, and bundles are containers of bitstreams. Containers usually have ADD/REMOVE/READ/WRITE policies, while bitstreams only have READ/WRITE policies.",
 
   "item.edit.authorizations.title": "Edit item's Policies",
-
-
 
   "item.badge.private": "Non-discoverable",
 
@@ -2038,7 +2016,6 @@
 
   "item.orcid.return": "Back",
 
-
   "item.listelement.badge": "Item",
 
   "item.page.description": "Description",
@@ -2060,8 +2037,6 @@
   "item.truncatable-part.show-more": "Show more",
 
   "item.truncatable-part.show-less": "Collapse",
-
-
 
   "item.page.abstract": "Abstract",
 
@@ -2155,19 +2130,19 @@
 
   "item.preview.dc.type": "Type:",
 
-  "item.preview.oaire.citation.issue" : "Issue",
+  "item.preview.oaire.citation.issue": "Issue",
 
-  "item.preview.oaire.citation.volume" : "Volume",
+  "item.preview.oaire.citation.volume": "Volume",
 
-  "item.preview.dc.relation.issn" : "ISSN",
+  "item.preview.dc.relation.issn": "ISSN",
 
-  "item.preview.dc.identifier.isbn" : "ISBN",
+  "item.preview.dc.identifier.isbn": "ISBN",
 
   "item.preview.dc.identifier": "Identifier:",
 
-  "item.preview.dc.relation.ispartof" : "Journal or Serie",
+  "item.preview.dc.relation.ispartof": "Journal or Serie",
 
-  "item.preview.dc.identifier.doi" : "DOI",
+  "item.preview.dc.identifier.doi": "DOI",
 
   "item.preview.person.familyName": "Surname:",
 
@@ -2261,9 +2236,7 @@
 
   "item.version.create.modal.submitted.text": "The new version is being created. This may take some time if the item has a lot of relationships.",
 
-  "item.version.create.notification.success" : "New version has been created with version number {{version}}",
-
-  "item.version.create.notification.failure" : "New version has not been created",
+  "item.version.create.notification.success": "New version has been created with version number {{version}}",
 
   "item.version.create.notification.failure": "New version has not been created",
 
@@ -2543,8 +2516,6 @@
 
   "menu.section.health": "Health",
 
-
-
   "menu.section.registries": "Registries",
 
   "menu.section.registries_format": "Format",
@@ -2577,11 +2548,11 @@
 
   "menu.section.workflow": "Administer Workflow",
 
-
   "metadata-export-search.tooltip": "Export search results as CSV",
-  "metadata-export-search.submit.success": "The export was started successfully",
-  "metadata-export-search.submit.error": "Starting the export has failed",
 
+  "metadata-export-search.submit.success": "The export was started successfully",
+
+  "metadata-export-search.submit.error": "Starting the export has failed",
 
   "mydspace.breadcrumbs": "MyDSpace",
 
@@ -2823,15 +2794,11 @@
 
   "process.detail.create": "Create similar process",
 
-  "process.overview.table.finish": "Finish time",
-
-  "process.overview.table.finish" : "Finish time (UTC)",
+  "process.overview.table.finish": "Finish time (UTC)",
 
   "process.overview.table.name": "Name",
 
-  "process.overview.table.start": "Start time",
-
-  "process.overview.table.start" : "Start time (UTC)",
+  "process.overview.table.start": "Start time (UTC)",
 
   "process.overview.table.user": "User",
 
@@ -2924,8 +2891,6 @@
   "project.search.results.head": "Project Search Results",
 
   "project-relationships.search.results.head": "Project Search Results",
-
-
 
   "publication.listelement.badge": "Publication",
 
@@ -3401,11 +3366,9 @@
 
   "search.results.view-result": "View",
 
-
   "default.search.results.head": "Search Results",
 
   "default-relationships.search.results.head": "Search Results",
-
 
   "search.sidebar.close": "Back to results",
 
@@ -3861,7 +3824,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.title": "Search Results",
 
-  "submission.sections.describe.relationship-lookup.name-variant.notification.content": "Would you like to save \"{{ value }}\" as a name variant for this person so you and others can reuse it for future submissions? If you don\'t you can still use it for this submission.",
+  "submission.sections.describe.relationship-lookup.name-variant.notification.content": "Would you like to save \"{{ value }}\" as a name variant for this person so you and others can reuse it for future submissions? If you don't you can still use it for this submission.",
 
   "submission.sections.describe.relationship-lookup.name-variant.notification.confirm": "Save a new name variant",
 
@@ -3911,8 +3874,6 @@
 
   "submission.sections.general.sections_not_valid": "There are incomplete sections.",
 
-
-
   "submission.sections.submit.progressbar.accessCondition": "Item access conditions",
 
   "submission.sections.submit.progressbar.CClicense": "Creative commons license",
@@ -3934,7 +3895,6 @@
   "submission.sections.submit.progressbar.upload": "Upload files",
 
   "submission.sections.submit.progressbar.sherpaPolicies": "Publisher open access policy information",
-
 
   "submission.sections.sherpa-policy.title-empty": "No publisher policy information available. If your work has an associated ISSN, please enter it above to see any related publisher open access policies.",
 
@@ -4052,7 +4012,6 @@
 
   "submission.sections.accesses.form.until-placeholder": "Until",
 
-
   "submission.sections.sherpa.publication.information": "Publication information",
 
   "submission.sections.sherpa.publication.information.title": "Title",
@@ -4104,8 +4063,6 @@
   "submission.sections.sherpa.record.information.uri": "URI",
 
   "submission.sections.sherpa.error.message": "There was an error retrieving sherpa informations",
-
-
 
   "submission.submit.breadcrumbs": "New submission",
 
@@ -4163,11 +4120,9 @@
 
   "submission.workflow.tasks.pool.show-detail": "Show detail",
 
-
   "submission.workspace.generic.view": "View",
 
   "submission.workspace.generic.view-help": "Select this option to view the item's metadata.",
-
 
   "thumbnail.default.alt": "Thumbnail Image",
 
@@ -4219,15 +4174,11 @@
 
   "virtual-metadata.delete-relationship.modal-head": "Select the items for which you want to save the virtual metadata as real metadata",
 
-
-
   "workspace.search.results.head": "Your submissions",
 
   "workflowAdmin.search.results.head": "Administer Workflow",
 
   "workflow.search.results.head": "Workflow tasks",
-
-
 
   "workflow-item.edit.breadcrumbs": "Edit workflowitem",
 
@@ -4279,7 +4230,7 @@
 
   "idle-modal.extend-session": "Extend session",
 
-  "researcher.profile.action.processing" : "Processing...",
+  "researcher.profile.action.processing": "Processing...",
 
   "researcher.profile.associated": "Researcher profile associated",
 
@@ -4301,27 +4252,27 @@
 
   "researcher.profile.view": "View",
 
-  "researcher.profile.private.visibility" : "PRIVATE",
+  "researcher.profile.private.visibility": "PRIVATE",
 
-  "researcher.profile.public.visibility" : "PUBLIC",
+  "researcher.profile.public.visibility": "PUBLIC",
 
   "researcher.profile.status": "Status:",
 
   "researcherprofile.claim.not-authorized": "You are not authorized to claim this item. For more details contact the administrator(s).",
 
-  "researcherprofile.error.claim.body" : "An error occurred while claiming the profile, please try again later",
+  "researcherprofile.error.claim.body": "An error occurred while claiming the profile, please try again later",
 
-  "researcherprofile.error.claim.title" : "Error",
+  "researcherprofile.error.claim.title": "Error",
 
-  "researcherprofile.success.claim.body" : "Profile claimed with success",
+  "researcherprofile.success.claim.body": "Profile claimed with success",
 
-  "researcherprofile.success.claim.title" : "Success",
+  "researcherprofile.success.claim.title": "Success",
 
   "person.page.orcid.create": "Create an ORCID ID",
 
   "person.page.orcid.granted-authorizations": "Granted authorizations",
 
-  "person.page.orcid.grant-authorizations" : "Grant authorizations",
+  "person.page.orcid.grant-authorizations": "Grant authorizations",
 
   "person.page.orcid.link": "Connect to ORCID ID",
 
@@ -4353,31 +4304,31 @@
 
   "person.page.orcid.save.preference.changes": "Update settings",
 
-  "person.page.orcid.sync-profile.affiliation" : "Affiliation",
+  "person.page.orcid.sync-profile.affiliation": "Affiliation",
 
-  "person.page.orcid.sync-profile.biographical" : "Biographical data",
+  "person.page.orcid.sync-profile.biographical": "Biographical data",
 
-  "person.page.orcid.sync-profile.education" : "Education",
+  "person.page.orcid.sync-profile.education": "Education",
 
-  "person.page.orcid.sync-profile.identifiers" : "Identifiers",
+  "person.page.orcid.sync-profile.identifiers": "Identifiers",
 
-  "person.page.orcid.sync-fundings.all" : "All fundings",
+  "person.page.orcid.sync-fundings.all": "All fundings",
 
-  "person.page.orcid.sync-fundings.mine" : "My fundings",
+  "person.page.orcid.sync-fundings.mine": "My fundings",
 
-  "person.page.orcid.sync-fundings.my_selected" : "Selected fundings",
+  "person.page.orcid.sync-fundings.my_selected": "Selected fundings",
 
-  "person.page.orcid.sync-fundings.disabled" : "Disabled",
+  "person.page.orcid.sync-fundings.disabled": "Disabled",
 
-  "person.page.orcid.sync-publications.all" : "All publications",
+  "person.page.orcid.sync-publications.all": "All publications",
 
-  "person.page.orcid.sync-publications.mine" : "My publications",
+  "person.page.orcid.sync-publications.mine": "My publications",
 
-  "person.page.orcid.sync-publications.my_selected" : "Selected publications",
+  "person.page.orcid.sync-publications.my_selected": "Selected publications",
 
-  "person.page.orcid.sync-publications.disabled" : "Disabled",
+  "person.page.orcid.sync-publications.disabled": "Disabled",
 
-  "person.page.orcid.sync-queue.discard" : "Discard the change and do not synchronize with the ORCID registry",
+  "person.page.orcid.sync-queue.discard": "Discard the change and do not synchronize with the ORCID registry",
 
   "person.page.orcid.sync-queue.discard.error": "The discarding of the ORCID queue record failed",
 
@@ -4385,11 +4336,11 @@
 
   "person.page.orcid.sync-queue.empty-message": "The ORCID queue registry is empty",
 
-  "person.page.orcid.sync-queue.table.header.type" : "Type",
+  "person.page.orcid.sync-queue.table.header.type": "Type",
 
-  "person.page.orcid.sync-queue.table.header.description" : "Description",
+  "person.page.orcid.sync-queue.table.header.description": "Description",
 
-  "person.page.orcid.sync-queue.table.header.action" : "Action",
+  "person.page.orcid.sync-queue.table.header.action": "Action",
 
   "person.page.orcid.sync-queue.description.affiliation": "Affiliations",
 
@@ -4433,7 +4384,7 @@
 
   "person.page.orcid.sync-queue.tooltip.researcher_urls": "Researcher url",
 
-  "person.page.orcid.sync-queue.send" : "Synchronize with ORCID registry",
+  "person.page.orcid.sync-queue.send": "Synchronize with ORCID registry",
 
   "person.page.orcid.sync-queue.send.unauthorized-error.title": "The submission to ORCID failed for missing authorizations.",
 
@@ -4469,7 +4420,7 @@
 
   "person.page.orcid.sync-queue.send.validation-error.organization.name-required": "The organization's name is required",
 
-  "person.page.orcid.sync-queue.send.validation-error.publication.date-invalid" : "The publication date must be one year after 1900",
+  "person.page.orcid.sync-queue.send.validation-error.publication.date-invalid": "The publication date must be one year after 1900",
 
   "person.page.orcid.sync-queue.send.validation-error.organization.address-required": "The organization to be sent requires an address",
 
