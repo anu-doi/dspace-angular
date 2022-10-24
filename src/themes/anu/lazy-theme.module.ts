@@ -45,79 +45,120 @@ import { ComcolModule } from '../../app/shared/comcol/comcol.module';
 import { RootModule } from '../../app/root.module';
 import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
-import { RootComponent } from './app/root/root.component';
-import { BrowseBySwitcherComponent } from './app/browse-by/browse-by-switcher/browse-by-switcher.component';
-import { CommunityListPageComponent } from './app/community-list-page/community-list-page.component';
-import { SearchPageComponent } from './app/search-page/search-page.component';
-import { ConfigurationSearchPageComponent } from './app/search-page/configuration-search-page.component';
-import { EndUserAgreementComponent } from './app/info/end-user-agreement/end-user-agreement.component';
-import { PageNotFoundComponent } from './app/pagenotfound/pagenotfound.component';
-import { ObjectNotFoundComponent } from './app/lookup-by-id/objectnotfound/objectnotfound.component';
-import { ForbiddenComponent } from './app/forbidden/forbidden.component';
-import { PrivacyComponent } from './app/info/privacy/privacy.component';
+// import { RootComponent } from './app/root/root.component';
+// import { BrowseBySwitcherComponent } from './app/browse-by/browse-by-switcher/browse-by-switcher.component';
+// import { CommunityListPageComponent } from './app/community-list-page/community-list-page.component';
+// import { SearchPageComponent } from './app/search-page/search-page.component';
+// import { ConfigurationSearchPageComponent } from './app/search-page/configuration-search-page.component';
+// import { EndUserAgreementComponent } from './app/info/end-user-agreement/end-user-agreement.component';
+// import { PageNotFoundComponent } from './app/pagenotfound/pagenotfound.component';
+// import { ObjectNotFoundComponent } from './app/lookup-by-id/objectnotfound/objectnotfound.component';
+// import { ForbiddenComponent } from './app/forbidden/forbidden.component';
+// import { PrivacyComponent } from './app/info/privacy/privacy.component';
 import { CollectionStatisticsPageComponent } from './app/statistics-page/collection-statistics-page/collection-statistics-page.component';
 import { CommunityStatisticsPageComponent } from './app/statistics-page/community-statistics-page/community-statistics-page.component';
 import { ItemStatisticsPageComponent } from './app/statistics-page/item-statistics-page/item-statistics-page.component';
 import { SiteStatisticsPageComponent } from './app/statistics-page/site-statistics-page/site-statistics-page.component';
-import { CommunityPageComponent } from './app/community-page/community-page.component';
-import { CollectionPageComponent } from './app/collection-page/collection-page.component';
+// import { CommunityPageComponent } from './app/community-page/community-page.component';
+// import { CollectionPageComponent } from './app/collection-page/collection-page.component';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
-import { LoginPageComponent } from './app/login-page/login-page.component';
-import { LogoutPageComponent } from './app/logout-page/logout-page.component';
-import { CreateProfileComponent } from './app/register-page/create-profile/create-profile.component';
-import { ForgotEmailComponent } from './app/forgot-password/forgot-password-email/forgot-email.component';
-import { ForgotPasswordFormComponent } from './app/forgot-password/forgot-password-form/forgot-password-form.component';
-import { ProfilePageComponent } from './app/profile-page/profile-page.component';
-import { RegisterEmailComponent } from './app/register-page/register-email/register-email.component';
-import { MyDSpacePageComponent } from './app/my-dspace-page/my-dspace-page.component';
-import { SubmissionEditComponent } from './app/submission/edit/submission-edit.component';
-import { SubmissionImportExternalComponent } from './app/submission/import-external/submission-import-external.component';
-import { SubmissionSubmitComponent } from './app/submission/submit/submission-submit.component';
-import { WorkflowItemDeleteComponent } from './app/workflowitems-edit-page/workflow-item-delete/workflow-item-delete.component';
-import { WorkflowItemSendBackComponent } from './app/workflowitems-edit-page/workflow-item-send-back/workflow-item-send-back.component';
-import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
-import { FeedbackComponent } from './app/info/feedback/feedback.component';
-import { CommunityListComponent } from './app/community-list-page/community-list/community-list.component';
+// import { LoginPageComponent } from './app/login-page/login-page.component';
+// import { LogoutPageComponent } from './app/logout-page/logout-page.component';
+// import { CreateProfileComponent } from './app/register-page/create-profile/create-profile.component';
+// import { ForgotEmailComponent } from './app/forgot-password/forgot-password-email/forgot-email.component';
+// import { ForgotPasswordFormComponent } from './app/forgot-password/forgot-password-form/forgot-password-form.component';
+// import { ProfilePageComponent } from './app/profile-page/profile-page.component';
+// import { RegisterEmailComponent } from './app/register-page/register-email/register-email.component';
+// import { MyDSpacePageComponent } from './app/my-dspace-page/my-dspace-page.component';
+// import { SubmissionEditComponent } from './app/submission/edit/submission-edit.component';
+// import { SubmissionImportExternalComponent } from './app/submission/import-external/submission-import-external.component';
+// import { SubmissionSubmitComponent } from './app/submission/submit/submission-submit.component';
+// import { WorkflowItemDeleteComponent } from './app/workflowitems-edit-page/workflow-item-delete/workflow-item-delete.component';
+// import { WorkflowItemSendBackComponent } from './app/workflowitems-edit-page/workflow-item-send-back/workflow-item-send-back.component';
+// import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
+// import { FeedbackComponent } from './app/info/feedback/feedback.component';
+// import { CommunityListComponent } from './app/community-list-page/community-list/community-list.component';
+// import { ComcolPageHandleComponent } from './app/shared/comcol-page-handle/comcol-page-handle.component';
+// import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
+// import {
+//   ExpandableNavbarSectionComponent
+// } from './app/navbar/expandable-navbar-section/expandable-navbar-section.component';
+// import { ItemMetadataComponent } from './app/item-page/edit-item-page/item-metadata/item-metadata.component';
+// import {
+//   EditItemTemplatePageComponent
+// } from './app/collection-page/edit-item-template-page/edit-item-template-page.component';
+// import { LoadingComponent } from './app/shared/loading/loading.component';
+// import { SearchResultsComponent } from './app/shared/search/search-results/search-results.component';
+// import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
+// import { ComcolPageBrowseByComponent } from './app/shared/comcol-page-browse-by/comcol-page-browse-by.component';
+// import { SearchSettingsComponent } from './app/shared/search/search-settings/search-settings.component';
+// import {
+//   CommunityPageSubCommunityListComponent
+// } from './app/community-page/sub-community-list/community-page-sub-community-list.component';
+// import {
+//   CommunityPageSubCollectionListComponent
+// } from './app/community-page/sub-collection-list/community-page-sub-collection-list.component';
+// import { ObjectListComponent } from './app/shared/object-list/object-list.component';
+//
+// import { BrowseByMetadataPageComponent } from './app/browse-by/browse-by-metadata-page/browse-by-metadata-page.component';
+// import { BrowseByDatePageComponent } from './app/browse-by/browse-by-date-page/browse-by-date-page.component';
+// import { BrowseByTitlePageComponent } from './app/browse-by/browse-by-title-page/browse-by-title-page.component';
 
 
 const DECLARATIONS = [
   FileSectionComponent,
   HomePageComponent,
-  RootComponent,
-  BrowseBySwitcherComponent,
-  CommunityListPageComponent,
-  SearchPageComponent,
-  ConfigurationSearchPageComponent,
-  EndUserAgreementComponent,
-  PageNotFoundComponent,
-  ObjectNotFoundComponent,
-  ForbiddenComponent,
-  PrivacyComponent,
+  // RootComponent,
+  // BrowseBySwitcherComponent,
+  // CommunityListPageComponent,
+  // SearchPageComponent,
+  // ConfigurationSearchPageComponent,
+  // EndUserAgreementComponent,
+  // PageNotFoundComponent,
+  // ObjectNotFoundComponent,
+  // ForbiddenComponent,
+  // PrivacyComponent,
   CollectionStatisticsPageComponent,
   CommunityStatisticsPageComponent,
   ItemStatisticsPageComponent,
   SiteStatisticsPageComponent,
-  CommunityPageComponent,
-  CollectionPageComponent,
+  // CommunityPageComponent,
+  // CommunityPageSubCommunityListComponent,
+  // CommunityPageSubCollectionListComponent,
+  // CollectionPageComponent,
   ItemPageComponent,
   FullItemPageComponent,
-  LoginPageComponent,
-  LogoutPageComponent,
-  CreateProfileComponent,
-  ForgotEmailComponent,
-  ForgotPasswordFormComponent,
-  ProfilePageComponent,
-  RegisterEmailComponent,
-  MyDSpacePageComponent,
-  SubmissionEditComponent,
-  SubmissionImportExternalComponent,
-  SubmissionSubmitComponent,
-  WorkflowItemDeleteComponent,
-  WorkflowItemSendBackComponent,
-  BreadcrumbsComponent,
-  FeedbackComponent,
-  CommunityListComponent,
+  // LoginPageComponent,
+  // LogoutPageComponent,
+  // CreateProfileComponent,
+  // ForgotEmailComponent,
+  // ForgotPasswordFormComponent,
+  // ProfilePageComponent,
+  // RegisterEmailComponent,
+  // MyDSpacePageComponent,
+  // SubmissionEditComponent,
+  // SubmissionImportExternalComponent,
+  // SubmissionSubmitComponent,
+  // WorkflowItemDeleteComponent,
+  // WorkflowItemSendBackComponent,
+  // BreadcrumbsComponent,
+  // FeedbackComponent,
+  // CommunityListComponent,
+  // ComcolPageHandleComponent,
+  // AuthNavMenuComponent,
+  // ExpandableNavbarSectionComponent,
+  // ItemMetadataComponent,
+  // EditItemTemplatePageComponent,
+  // LoadingComponent,
+  // SearchResultsComponent,
+  // AdminSidebarComponent,
+  // SearchSettingsComponent,
+  // ComcolPageBrowseByComponent,
+  // ObjectListComponent,
+  // BrowseByMetadataPageComponent,
+  // BrowseByDatePageComponent,
+  // BrowseByTitlePageComponent,
 ];
 
 @NgModule({
@@ -170,6 +211,9 @@ const DECLARATIONS = [
     ComcolModule,
   ],
   declarations: DECLARATIONS,
+  // exports: [
+  //   CommunityPageSubCollectionListComponent
+  // ]
 })
 
   /**
