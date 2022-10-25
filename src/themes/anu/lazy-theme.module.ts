@@ -50,11 +50,11 @@ import { HomePageComponent } from './app/home-page/home-page.component';
 // import { CommunityListPageComponent } from './app/community-list-page/community-list-page.component';
 // import { SearchPageComponent } from './app/search-page/search-page.component';
 // import { ConfigurationSearchPageComponent } from './app/search-page/configuration-search-page.component';
-// import { EndUserAgreementComponent } from './app/info/end-user-agreement/end-user-agreement.component';
+import { EndUserAgreementComponent } from './app/info/end-user-agreement/end-user-agreement.component';
 // import { PageNotFoundComponent } from './app/pagenotfound/pagenotfound.component';
 // import { ObjectNotFoundComponent } from './app/lookup-by-id/objectnotfound/objectnotfound.component';
 // import { ForbiddenComponent } from './app/forbidden/forbidden.component';
-// import { PrivacyComponent } from './app/info/privacy/privacy.component';
+import { PrivacyComponent } from './app/info/privacy/privacy.component';
 import { CollectionStatisticsPageComponent } from './app/statistics-page/collection-statistics-page/collection-statistics-page.component';
 import { CommunityStatisticsPageComponent } from './app/statistics-page/community-statistics-page/community-statistics-page.component';
 import { ItemStatisticsPageComponent } from './app/statistics-page/item-statistics-page/item-statistics-page.component';
@@ -77,7 +77,7 @@ import { FullItemPageComponent } from './app/item-page/full/full-item-page.compo
 // import { WorkflowItemDeleteComponent } from './app/workflowitems-edit-page/workflow-item-delete/workflow-item-delete.component';
 // import { WorkflowItemSendBackComponent } from './app/workflowitems-edit-page/workflow-item-send-back/workflow-item-send-back.component';
 // import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
-// import { FeedbackComponent } from './app/info/feedback/feedback.component';
+import { FeedbackComponent } from './app/info/feedback/feedback.component';
 // import { CommunityListComponent } from './app/community-list-page/community-list/community-list.component';
 // import { ComcolPageHandleComponent } from './app/shared/comcol-page-handle/comcol-page-handle.component';
 // import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
@@ -114,11 +114,11 @@ const DECLARATIONS = [
   // CommunityListPageComponent,
   // SearchPageComponent,
   // ConfigurationSearchPageComponent,
-  // EndUserAgreementComponent,
+  EndUserAgreementComponent,
   // PageNotFoundComponent,
   // ObjectNotFoundComponent,
   // ForbiddenComponent,
-  // PrivacyComponent,
+  PrivacyComponent,
   CollectionStatisticsPageComponent,
   CommunityStatisticsPageComponent,
   ItemStatisticsPageComponent,
@@ -143,7 +143,7 @@ const DECLARATIONS = [
   // WorkflowItemDeleteComponent,
   // WorkflowItemSendBackComponent,
   // BreadcrumbsComponent,
-  // FeedbackComponent,
+  FeedbackComponent,
   // CommunityListComponent,
   // ComcolPageHandleComponent,
   // AuthNavMenuComponent,
