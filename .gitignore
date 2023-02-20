@@ -39,3 +39,23 @@ package-lock.json
 /nbproject/
 
 junit.xml
+.vscode/launch.json
+angular.json
+dspace-ui.json
+package.json
+src/app/app.module.ts
+src/app/menu.resolver.ts
+src/app/navbar/navbar-section/navbar-section.component.ts
+src/themes/anu/app/statistics-page/collection-statistics-page/collection-statistics-page.component.html
+src/themes/anu/app/statistics-page/collection-statistics-page/collection-statistics-page.component.scss
+src/themes/anu/app/statistics-page/collection-statistics-page/collection-statistics-page.component.ts
+src/themes/anu/app/statistics-page/date-picker/date-picker.component.html
+src/themes/anu/app/statistics-page/date-picker/date-picker.component.scss
+src/themes/anu/app/statistics-page/date-picker/date-picker.component.spec.ts
+src/themes/anu/app/statistics-page/date-picker/date-picker.component.ts
+src/themes/anu/app/statistics-page/item-statistics-page/item-statistics-page.component.html
+src/themes/anu/app/statistics-page/site-statistics-page/site-statistics-page.component.html
+src/themes/anu/app/statistics-page/site-statistics-page/site-statistics-page.component.scss
+src/themes/anu/app/statistics-page/site-statistics-page/site-statistics-page.component.ts
+src/themes/anu/eager-theme.module.ts
+yarn.lock
