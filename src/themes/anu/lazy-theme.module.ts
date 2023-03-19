@@ -10,7 +10,7 @@ import { CommunityFormModule } from '../../app/community-page/community-form/com
 import { CoreModule } from '../../app/core/core.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EditItemPageModule } from '../../app/item-page/edit-item-page/edit-item-page.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IdlePreloadModule } from 'angular-idle-preload';
 import { JournalEntitiesModule } from '../../app/entity-groups/journal-entities/journal-entities.module';
@@ -59,10 +59,13 @@ import { CollectionStatisticsPageComponent } from './app/statistics-page/collect
 import { CommunityStatisticsPageComponent } from './app/statistics-page/community-statistics-page/community-statistics-page.component';
 import { ItemStatisticsPageComponent } from './app/statistics-page/item-statistics-page/item-statistics-page.component';
 import { SiteStatisticsPageComponent } from './app/statistics-page/site-statistics-page/site-statistics-page.component';
-// import { CommunityPageComponent } from './app/community-page/community-page.component';
-// import { CollectionPageComponent } from './app/collection-page/collection-page.component';
+import { CommunityPageComponent } from './app/community-page/community-page.component';
+import { CollectionPageComponent } from './app/collection-page/collection-page.component';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
+//import { StatisticsTableComponent } from 'src/themes/anu/app/statistics-page/statistics-table/statistics-table.component';
+
+
 // import { LoginPageComponent } from './app/login-page/login-page.component';
 // import { LogoutPageComponent } from './app/logout-page/logout-page.component';
 // import { CreateProfileComponent } from './app/register-page/create-profile/create-profile.component';
@@ -93,12 +96,20 @@ import { FeedbackComponent } from './app/info/feedback/feedback.component';
 // import { AdminSidebarComponent } from './app/admin/admin-sidebar/admin-sidebar.component';
 // import { ComcolPageBrowseByComponent } from './app/shared/comcol-page-browse-by/comcol-page-browse-by.component';
 // import { SearchSettingsComponent } from './app/shared/search/search-settings/search-settings.component';
-// import {
-//   CommunityPageSubCommunityListComponent
-// } from './app/community-page/sub-community-list/community-page-sub-community-list.component';
-// import {
-//   CommunityPageSubCollectionListComponent
-// } from './app/community-page/sub-collection-list/community-page-sub-collection-list.component';
+import {
+  CommunityPageSubCommunityListComponent
+} from './app/community-page/sub-community-list/community-page-sub-community-list.component';
+import {
+  CommunityPageSubCollectionListComponent
+} from './app/community-page/sub-collection-list/community-page-sub-collection-list.component';
+// import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
+
+// import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatDatepickerModule } from '@angular/material/datepicker';
+// import { MatDialogModule } from '@angular/material/dialog';
+// import { OverlayModule } from "@angular/cdk/overlay";
+// import { ReactiveFormsModule } from '@angular/forms';
 // import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 //
 // import { BrowseByMetadataPageComponent } from './app/browse-by/browse-by-metadata-page/browse-by-metadata-page.component';
@@ -106,9 +117,12 @@ import { FeedbackComponent } from './app/info/feedback/feedback.component';
 // import { BrowseByTitlePageComponent } from './app/browse-by/browse-by-title-page/browse-by-title-page.component';
 
 
+
+
 const DECLARATIONS = [
   FileSectionComponent,
   HomePageComponent,
+  // DatePickerComponent,
   // RootComponent,
   // BrowseBySwitcherComponent,
   // CommunityListPageComponent,
@@ -123,12 +137,13 @@ const DECLARATIONS = [
   CommunityStatisticsPageComponent,
   ItemStatisticsPageComponent,
   SiteStatisticsPageComponent,
-  // CommunityPageComponent,
-  // CommunityPageSubCommunityListComponent,
-  // CommunityPageSubCollectionListComponent,
-  // CollectionPageComponent,
+  CommunityPageComponent,
+  CommunityPageSubCommunityListComponent,
+  CommunityPageSubCollectionListComponent,
+  CollectionPageComponent,
   ItemPageComponent,
   FullItemPageComponent,
+  // StatisticsTableComponent,
   // LoginPageComponent,
   // LogoutPageComponent,
   // CreateProfileComponent,
@@ -198,7 +213,7 @@ const DECLARATIONS = [
     SearchPageModule,
     SharedModule,
     StatisticsModule,
-    StatisticsPageModule,
+    //StatisticsPageModule,
     StoreModule,
     StoreRouterConnectingModule,
     TranslateModule,
@@ -209,11 +224,17 @@ const DECLARATIONS = [
     FormsModule,
     ResourcePoliciesModule,
     ComcolModule,
+    // MatFormFieldModule,
+    // MatDatepickerModule,
+    // MatDialogModule,
+    // OverlayModule,
+    // MatNativeDateModule,
   ],
   declarations: DECLARATIONS,
-  // exports: [
-  //   CommunityPageSubCollectionListComponent
-  // ]
+  exports: [
+    //CommunityPageSubCollectionListComponent
+    // StatisticsTableComponent,
+  ]
 })
 
   /**
