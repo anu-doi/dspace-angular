@@ -10,8 +10,7 @@ import { environment } from '../../../../environments/environment';
   // templateUrl: '../../../../app/footer/footer.component.html'
 })
 export class FooterComponent extends BaseComponent {
-  showTopFooter = true;
-  
+  showTopFooter = true;  
   dataTrackerValue = null;
 
   ngOnInit(){
@@ -21,15 +20,13 @@ export class FooterComponent extends BaseComponent {
   loadscript(){
     const node = document.createElement('script');
     if (environment.production) {
-      node.src = "https://webstyle.anu.edu.au/widgets/bundle.js";
-      this.dataTrackerValue = "anu";
+      node.src = 'https://webstyle.anu.edu.au/widgets/bundle.js';
+      this.dataTrackerValue = 'anu';
     } else {
-      node.src = "https://webstyle-dev.anu.edu.au/widgets/bundle.js";
+      node.src = 'https://webstyle-dev.anu.edu.au/widgets/bundle.js';
     }
     node.type = 'text/javascript';
     node.async = true;
     document.getElementsByTagName('footer')[0].appendChild(node);
-
   }
-
 }
