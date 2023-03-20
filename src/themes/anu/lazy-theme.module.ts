@@ -213,7 +213,7 @@ const DECLARATIONS = [
     SearchPageModule,
     SharedModule,
     StatisticsModule,
-    StatisticsPageModule,
+    //StatisticsPageModule,
     StoreModule,
     StoreRouterConnectingModule,
     TranslateModule,
