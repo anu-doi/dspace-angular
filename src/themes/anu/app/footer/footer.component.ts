@@ -10,7 +10,7 @@ import { environment } from '../../../../environments/environment';
   // templateUrl: '../../../../app/footer/footer.component.html'
 })
 export class FooterComponent extends BaseComponent {
-  showTopFooter = true;  
+  showTopFooter = true;
   dataTrackerValue = null;
 
   ngOnInit(){
