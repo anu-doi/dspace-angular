@@ -1,100 +1,29 @@
-<footer class="text-lg-start">
-    <div *ngIf="showTopFooter" class="top-footer text-white">
-      <!-- Grid container -->
-      <div class=" container p-4">
-        <!--Grid row-->
-        <div class="row">
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="https://www.anu.edu.au/contact" class="text-white">Contact ANU</a>
-              </li>
-              <li>
-                <a href="https://www.anu.edu.au/copyright" class="text-white">Copyright</a>
-              </li>
-              <li>
-                <a href="https://www.anu.edu.au/disclaimer" class="text-white">Disclaimer</a>
-              </li>
-              <li>
-                <a href="https://www.anu.edu.au/privacy" class="text-white">Privacy</a>
-              </li>
-              <li>
-                <a href="https://www.anu.edu.au/freedom-of-information" class="text-white">Freedom of Information</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <ul class="list-unstyled mb-0">
-              <li>
-                +612 6125 5111
-              </li>
-              <li>
-                The Australian National University, Canberra
-              </li>
-              <li>
-                CRICOS Provider : 00120C
-              </li>
-              <li>
-                ABN : 52 234 063 906
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <ul class="list-unstyled list-group list-group-horizontal mb-0 partnerships">
-              <li class="edx list-group-item">
-                <a href="//www.anu.edu.au/about/partnerships/edx"><img src="//marketing-pages.anu.edu.au/_anu/4/images/logos/2x_edx.png" alt="edx" /></a>
-              </li>
-              <li class="apru list-group-item">
-                <a href="//www.anu.edu.au/about/partnerships/association-of-pacific-rim-universities"><img src="//marketing-pages.anu.edu.au/_anu/4/images/logos/2x_apru.png" alt="APRU" /></a>
-              </li>
-              <li class="iaru list-group-item">
-                <a href="//www.anu.edu.au/about/partnerships/international-alliance-of-research-universities"><img src="//marketing-pages.anu.edu.au/_anu/4/images/logos/2x_iaru.png" alt="IARU" /></a>
-              </li>
-              <li class="go8 list-group-item">
-                <a href="//www.anu.edu.au/about/partnerships/group-of-eight"><img src="//marketing-pages.anu.edu.au/_anu/4/images/logos/2x_GroupOf8.png" alt="Group of Eight Member" /></a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </div>
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="bottom-footer p-1 d-flex justify-content-center align-items-center text-white">
-      <div class="content-container">
-        <p class="m-0">
-          <a class="text-white"
-             href="http://www.dspace.org/">{{ 'footer.link.dspace' | translate}}</a>
-          {{ 'footer.copyright' | translate:{year: dateObj | date:'y'} }}
-          <a class="text-white"
-             href="https://www.lyrasis.org/">{{ 'footer.link.lyrasis' | translate}}</a>
-        </p>
-        <ul class="footer-info list-unstyled small d-flex justify-content-center mb-0">
-          <li>
-            <a class="text-white" href="#"
-               (click)="showCookieSettings()">{{ 'footer.link.cookies' | translate}}</a>
-          </li>
-          <li>
-            <a class="text-white"
-               routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate}}</a>
-          </li>
-          <li>
-            <a class="text-white"
-               routerLink="info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate}}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Copyright -->
+<footer class="anu-wf-footer" aria-label="Footer banner" [attr.data-tracker] = "dataTrackerValue" role="contentinfo"> 
 </footer>
+<!-- Copyright -->
+<div class="bottom-footer p-1 d-flex justify-content-center align-items-center text-white" aria-label="Footer site">
+  <div class="content-container">
+    <p class="m-0">
+      <a class="text-white"
+         href="http://www.dspace.org/">{{ 'footer.link.dspace' | translate}}</a>
+      {{ 'footer.copyright' | translate:{year: dateObj | date:'y'} }}
+      <a class="text-white"
+         href="https://www.lyrasis.org/">{{ 'footer.link.lyrasis' | translate}}</a>
+    </p>
+    <ul class="footer-info list-unstyled small d-flex justify-content-center mb-0">
+      <li>
+        <a class="text-white" href="#"
+           (click)="showCookieSettings()">{{ 'footer.link.cookies' | translate}}</a>
+      </li>
+      <li>
+        <a class="text-white"
+           routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate}}</a>
+      </li>
+      <li>
+        <a class="text-white"
+           routerLink="info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Copyright -->

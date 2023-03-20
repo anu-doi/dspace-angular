@@ -1218,13 +1218,9 @@
 
   "cookies.consent.app.description.google-analytics": "Allows us to track statistical data",
 
-
-
   "cookies.consent.app.title.google-recaptcha": "Google reCaptcha",
 
   "cookies.consent.app.description.google-recaptcha": "We use google reCAPTCHA service during registration and password recovery",
-
-
 
   "cookies.consent.purpose.functional": "Functional",
 
@@ -1234,9 +1230,9 @@
 
   "cookies.consent.purpose.sharing": "Sharing",
 
-  "curation-task.task.citationpage.label":  "Generate Citation Page",
+  "curation-task.task.citationpage.label": "Generate Citation Page",
 
-  "curation-task.task.checklinks.label":  "Check Links in Metadata",
+  "curation-task.task.checklinks.label": "Check Links in Metadata",
 
   "curation-task.task.noop.label": "NOOP",
 
@@ -1477,7 +1473,6 @@
   "forgot-password.form.notification.success.title": "Password reset completed",
 
   "forgot-password.form.submit": "Submit password",
-
 
   "form.add": "Add more",
 
@@ -2507,7 +2502,6 @@
 
   "menu.section.export_batch": "Batch Export (ZIP)",
 
-
   "menu.section.icon.access_control": "Access Control menu section",
 
   "menu.section.icon.admin_search": "Admin search menu section",
@@ -2887,8 +2881,6 @@
   "process.bulk.delete.error.body": "The process with ID {{processId}} could not be deleted. The remaining processes will continue being deleted. ",
 
   "process.bulk.delete.success": "{{count}} process(es) have been succesfully deleted",
-
-
 
   "profile.breadcrumbs": "Update Profile",
 
@@ -3524,7 +3516,7 @@
 
   "statistics.table.title.TotalVisitsPerMonth": "Total visits per month",
 
-  "statistics.table.title.TotalDownloads": "File Visits",
+  "statistics.table.title.TotalDownloads": "Total Downloads",
 
   "statistics.table.title.TopCountries": "Top country views",
 
@@ -4112,8 +4104,7 @@
 
   "submission.sections.license.required": "You must accept the license",
 
-  "submission.sections.license.notgranted":  "You must accept the license",
-
+  "submission.sections.license.notgranted": "You must accept the license",
 
   "submission.sections.sherpa.publication.information": "Publication information",
 
@@ -4576,6 +4567,7 @@
   "person.orcid.registry.queue": "ORCID Registry Queue",
 
   "person.orcid.registry.auth": "ORCID Authorizations",
+
   "home.recent-submissions.head": "Recent Submissions",
 
   "browse.comcol.by.type": "By Type",
@@ -4591,4 +4583,18 @@
   "search.filters.filter.accessrights.head": "Access Rights",
 
   "search.filters.filter.accessrights.label": "Search Access Rights",
+
+  "submission.sections.describe.relationship-lookup.title.isJournalOfVolume": "Journal",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalOfVolume" : "Journal",
+
+  "submission.sections.describe.relationship-lookup.title.isJournalVolumeOfIssue" : "Journal Volumes",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalVolumeOfIssue" : "Journal volumes",
+
+  "journalvolume.search.results.head" : "Journal Volumes",
+
+  "submission.sections.describe.relationship-lookup.title.isPublicationOfAuthor" : "Publications",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfAuthor" :  "Publications",
 }
