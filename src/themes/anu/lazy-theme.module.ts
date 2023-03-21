@@ -63,7 +63,7 @@ import { CommunityPageComponent } from './app/community-page/community-page.comp
 import { CollectionPageComponent } from './app/collection-page/collection-page.component';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
-//import { StatisticsTableComponent } from 'src/themes/anu/app/statistics-page/statistics-table/statistics-table.component';
+// import { StatisticsTableComponent } from 'src/themes/anu/app/statistics-page/statistics-table/statistics-table.component';
 
 
 // import { LoginPageComponent } from './app/login-page/login-page.component';
@@ -213,7 +213,7 @@ const DECLARATIONS = [
     SearchPageModule,
     SharedModule,
     StatisticsModule,
-    //StatisticsPageModule,
+    StatisticsPageModule,
     StoreModule,
     StoreRouterConnectingModule,
     TranslateModule,
