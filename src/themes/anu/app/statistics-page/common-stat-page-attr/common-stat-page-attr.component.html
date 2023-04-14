@@ -1,0 +1,44 @@
+<ds-page-with-sidebar [id]="'statistics-page'" [sidebarContent]="sidebarContent">
+  <ng-template *ngTemplateOutlet="statisticsContent"></ng-template>
+</ds-page-with-sidebar>
+<ng-template #statisticsContent>
+  <ng-container *ngVar="(scope$ | async) as scope">
+    <h2 *ngIf="scope" class="header" id="{{ scope.id }}">
+      {{ 'statistics.header' | translate: { scope: getName(scope) } }}
+    </h2>
+  </ng-container>
+  <ng-container *ngVar="(reports$ | async) as reports">
+    <ng-container *ngIf="!reports">
+      <ds-themed-loading></ds-themed-loading>
+    </ng-container>
+    <ng-container *ngIf="reports">
+      <ds-statistics-table *ngFor="let report of reports" [selectedValue]="selectedValue" [report]="report"
+      class="m-2 {{ report.id }}">
+    </ds-statistics-table>
+    <div *ngIf="!(hasData$ | async)">
+      {{ 'statistics.page.no-data' | translate }}
+    </div>
+    </ng-container>
+  </ng-container>
+</ng-template>
+
+<ng-template #sidebarContent>
+  <div class="setting-option mb-3 p-3">
+    <h5>
+      <label>View By</label>
+    </h5>
+    <select [(ngModel)]="selectedValue"  class="form-control" (change)="onOptionsSelected(selectedValue)" >
+      <option *ngFor="let type of types" [value]='type'>{{ type }}</option>
+    </select>
+  </div>
+<form class="w-200" [formGroup]="formData">
+  <div class="setting-option mb-3 p-3">
+    <h5>
+      <label>Filter</label>
+    </h5>
+    <div class="col-6 form-group mb-0" >
+      <ds-date-picker (dateChange)="getChangeFromDatePicker($event)"></ds-date-picker>
+    </div>
+  </div>
+  </form>
+</ng-template>

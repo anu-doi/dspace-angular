@@ -63,9 +63,7 @@ import { CommunityPageComponent } from './app/community-page/community-page.comp
 import { CollectionPageComponent } from './app/collection-page/collection-page.component';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
-// import { StatisticsTableComponent } from 'src/themes/anu/app/statistics-page/statistics-table/statistics-table.component';
-
-
+import { StatisticsTableComponent } from 'src/themes/anu/app/statistics-page/statistics-table/statistics-table.component';
 // import { LoginPageComponent } from './app/login-page/login-page.component';
 // import { LogoutPageComponent } from './app/logout-page/logout-page.component';
 // import { CreateProfileComponent } from './app/register-page/create-profile/create-profile.component';
@@ -102,13 +100,13 @@ import {
 import {
   CommunityPageSubCollectionListComponent
 } from './app/community-page/sub-collection-list/community-page-sub-collection-list.component';
-// import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
 
-// import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
-// import { MatFormFieldModule } from '@angular/material/form-field';
-// import { MatDatepickerModule } from '@angular/material/datepicker';
-// import { MatDialogModule } from '@angular/material/dialog';
-// import { OverlayModule } from "@angular/cdk/overlay";
+import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { OverlayModule } from "@angular/cdk/overlay";
 // import { ReactiveFormsModule } from '@angular/forms';
 // import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 //
@@ -116,13 +114,10 @@ import {
 // import { BrowseByDatePageComponent } from './app/browse-by/browse-by-date-page/browse-by-date-page.component';
 // import { BrowseByTitlePageComponent } from './app/browse-by/browse-by-title-page/browse-by-title-page.component';
 
-
-
-
 const DECLARATIONS = [
   FileSectionComponent,
   HomePageComponent,
-  // DatePickerComponent,
+  DatePickerComponent,
   // RootComponent,
   // BrowseBySwitcherComponent,
   // CommunityListPageComponent,
@@ -143,7 +138,7 @@ const DECLARATIONS = [
   CollectionPageComponent,
   ItemPageComponent,
   FullItemPageComponent,
-  // StatisticsTableComponent,
+  StatisticsTableComponent,
   // LoginPageComponent,
   // LogoutPageComponent,
   // CreateProfileComponent,
@@ -213,7 +208,6 @@ const DECLARATIONS = [
     SearchPageModule,
     SharedModule,
     StatisticsModule,
-    StatisticsPageModule,
     StoreModule,
     StoreRouterConnectingModule,
     TranslateModule,
@@ -224,16 +218,15 @@ const DECLARATIONS = [
     FormsModule,
     ResourcePoliciesModule,
     ComcolModule,
-    // MatFormFieldModule,
-    // MatDatepickerModule,
-    // MatDialogModule,
-    // OverlayModule,
-    // MatNativeDateModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    OverlayModule,
+    MatNativeDateModule,
   ],
   declarations: DECLARATIONS,
   exports: [
     //CommunityPageSubCollectionListComponent
-    // StatisticsTableComponent,
   ]
 })
 

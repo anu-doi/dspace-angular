@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
-import { CommunityStatisticsPageComponent as BaseComponent } from '../../../../../app/statistics-page/community-statistics-page/community-statistics-page.component';
+import { StatisticsPageCommonComponent } from '../common-stat-page-attr/common-stat-page-attr.component';
+import { UsageReport } from 'src/app/core/statistics/models/usage-report.model';
 
 @Component({
-  selector: 'ds-collection-statistics-page',
-  // styleUrls: ['./community-statistics-page.component.scss'],
-  styleUrls: ['../../../../../app/statistics-page/community-statistics-page/community-statistics-page.component.scss'],
-  // templateUrl: './community-statistics-page.component.html',
-  templateUrl: '../../../../../app/statistics-page/statistics-page/statistics-page.component.html'
+  selector: 'ds-community-statistics-page',
+  styleUrls: ['./community-statistics-page.component.scss'],
+  templateUrl: '../common-stat-page-attr/common-stat-page-attr.component.html',
 })
 
 /**
  * Component representing the statistics page for a community.
  */
-export class CommunityStatisticsPageComponent extends BaseComponent {}
-
+export class CommunityStatisticsPageComponent extends StatisticsPageCommonComponent {
+  types: string[] = [
+    'TotalVisits',
+    'TotalVisitsPerMonth',
+    'TopCountries',
+    'TopCities',
+    'TotalDownloads'
+  ];
+}

@@ -24,7 +24,7 @@ import { CoreState } from 'src/app/core/core-state.model';
 export class HomeNewsComponent extends BaseComponent implements OnInit {
   canRegister$: Observable<boolean>;
   public isAuthenticated: Observable<boolean>;
-  
+
   constructor(
     private modalService: NgbModal,
     private authorizationService: AuthorizationDataService,
