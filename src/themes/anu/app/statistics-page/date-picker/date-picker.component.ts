@@ -43,13 +43,13 @@ export class DatePickerComponent implements OnInit {
     this.href = this.router.url;
     this.sub = this.route.queryParams
       .subscribe(params => {
-        this.initialMinDate = params['minDate'];
-        this.initialMaxDate = params['maxDate'];
+        this.initialMinDate = params.minDate;
+        this.initialMaxDate = params.maxDate;
       });
     if (this.initialMinDate != null && this.initialMaxDate != null) {
       this.range = new FormGroup({
-        startDate: new FormControl(new Date(Number(this.initialMinDate.split("-")[0]), Number(this.initialMinDate.split("-")[1]) - 1, Number(this.initialMinDate.split("-")[2]))),
-        endDate: new FormControl(new Date(Number(this.initialMaxDate.split("-")[0]), Number(this.initialMaxDate.split("-")[1]) - 1, Number(this.initialMaxDate.split("-")[2]))),
+        startDate: new FormControl(new Date(Number(this.initialMinDate.split('-')[0]), Number(this.initialMinDate.split('-')[1]) - 1, Number(this.initialMinDate.split('-')[2]))),
+        endDate: new FormControl(new Date(Number(this.initialMaxDate.split('-')[0]), Number(this.initialMaxDate.split('-')[1]) - 1, Number(this.initialMaxDate.split('-')[2]))),
       });
     }
   }
@@ -72,8 +72,8 @@ export class DatePickerComponent implements OnInit {
         'maxDate': null,
       },
       queryParamsHandling: 'merge'
-    })
-    this.href = this.href.split("&")[0];
+    });
+    this.href = this.href.split('&')[0];
     window.location.href = this.href;
   }
 }

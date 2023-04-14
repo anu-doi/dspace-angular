@@ -64,8 +64,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent {
           this.usageReportService.searchStatistics(scope._links.self.href, 0, 10),
         )
       );
-    }
-    else {
+    } else {
       return this.scope$.pipe(
         switchMap((scope) =>
           this.filterStatistics(scope._links.self.href, this.minDate, this.maxDate, this.type, 0, 10),

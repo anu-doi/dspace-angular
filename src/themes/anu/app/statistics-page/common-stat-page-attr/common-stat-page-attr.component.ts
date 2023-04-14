@@ -31,9 +31,9 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
 
   minDate: string;
   maxDate: string;
-  filterStats: boolean = false;
+  filterStats = false;
   subs: Subscription[] = [];
-  selectedValue: string = 'TotalVisits';
+  selectedValue = 'TotalVisits';
   type: string;
   dateChange: boolean;
 
@@ -52,14 +52,14 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       nameService,
       authService,
     );
-    
+
     this.route.queryParams.subscribe(params => {
-      this.minDate = params['minDate'];
-      this.maxDate = params['maxDate'];
-      this.type = params['type'];
+      this.minDate = params.minDate;
+      this.maxDate = params.maxDate;
+      this.type = params.type;
     });
-    
-    if(this.minDate==null && this.maxDate==null && this.type==null){
+
+    if (this.minDate == null && this.maxDate == null && this.type == null) {
       this.router.navigate([], {
         queryParams: Object.assign({ type: this.selectedValue }),
         queryParamsHandling: 'merge'
@@ -72,18 +72,17 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
     this.onOptionsSelected(this.selectedValue);
     this.filterStats = false;
 
-    if(this.minDate!=null && this.maxDate!=null){
+    if (this.minDate != null && this.maxDate != null) {
       this.getChangeFromDatePicker(true);
     }
-    else{
+    else {
       super.ngOnInit();
     }
   }
 
-  getChangeFromDatePicker(item: boolean) 
-  {
+  getChangeFromDatePicker(item: boolean) {
     this.dateChange = item;
-    if(this.dateChange){
+    if (this.dateChange) {
       this.filterStats = true;
       super.ngOnInit();
     }
@@ -98,8 +97,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
           ),
         ),
       );
-    }
-    else {
+    } else {
       return this.scope$.pipe(
         switchMap((scope) =>
           this.filterStatistics(scope._links.self.href, this.minDate, this.maxDate, this.type, 0, 10),
@@ -139,9 +137,9 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
 
   onOptionsSelected(value: string) {
     this.route.queryParams.subscribe(params => {
-      this.minDate = params['minDate'];
-      this.maxDate = params['maxDate'];
-      this.type = params['type'];
+      this.minDate = params.minDate;
+      this.maxDate = params.maxDate;
+      this.type = params.type;
     });
 
     this.router.navigate([], {

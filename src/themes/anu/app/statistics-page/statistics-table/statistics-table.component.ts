@@ -22,7 +22,7 @@ export class StatisticsTableComponent extends BaseComponent implements OnInit {
   report: any;
 
   @Input()
-  selectedValue : string;
+  selectedValue: string;
 
   @autoserialize
   points: AugPoint[];
@@ -42,7 +42,7 @@ export class StatisticsTableComponent extends BaseComponent implements OnInit {
     this.hasData = this.report.points.length > 0;
     if (this.hasData) {
       this.headers = Object.keys(this.report.points[0].values);
-      if(this.report.points[0].values1!=null){
+      if (this.report.points[0].values1 != null){
         this.headers1 = Object.keys(this.report.points[0].values1);
       }
     }
