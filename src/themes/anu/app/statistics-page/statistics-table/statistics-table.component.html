@@ -3,9 +3,9 @@
     <h3 class="m-1">
       {{ 'statistics.table.title.' + report.reportType | translate }}
     </h3>
-    <table class="table table-striped">
+    <table class="table">
       <tbody>
-        <tr>
+        <tr class="table-header">
           <th scope="col"></th>
           <th scope="col" *ngFor="let header of headers" class="{{header}}-header">
             {{ header }}

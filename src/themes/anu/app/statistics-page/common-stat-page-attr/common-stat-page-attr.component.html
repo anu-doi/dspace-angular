@@ -13,11 +13,16 @@
     </ng-container>
     <ng-container *ngIf="reports">
       <ds-statistics-table *ngFor="let report of reports" [selectedValue]="selectedValue" [report]="report"
-      class="m-2 {{ report.id }}">
-    </ds-statistics-table>
-    <div *ngIf="!(hasData$ | async)">
-      {{ 'statistics.page.no-data' | translate }}
-    </div>
+        class="m-2 {{ report.id }}">
+      </ds-statistics-table>
+      <div *ngFor="let report of reports">
+        <div *ngIf="report.reportType === 'TotalVisitsDownloads'">
+          <ds-total-views-downloads [report]="report"></ds-total-views-downloads>
+        </div>
+      </div>
+      <div *ngIf="!(hasData$ | async)">
+        {{ 'statistics.page.no-data' | translate }}
+      </div>
     </ng-container>
   </ng-container>
 </ng-template>
@@ -27,18 +32,18 @@
     <h5>
       <label>View By</label>
     </h5>
-    <select [(ngModel)]="selectedValue"  class="form-control" (change)="onOptionsSelected(selectedValue)" >
+    <select [(ngModel)]="selectedValue" class="form-control" (change)="onOptionsSelected(selectedValue)">
       <option *ngFor="let type of types" [value]='type'>{{ type }}</option>
     </select>
   </div>
-<form class="w-200" [formGroup]="formData">
-  <div class="setting-option mb-3 p-3">
-    <h5>
-      <label>Filter</label>
-    </h5>
-    <div class="col-6 form-group mb-0" >
-      <ds-date-picker (dateChange)="getChangeFromDatePicker($event)"></ds-date-picker>
+  <form class="w-200" [formGroup]="formData">
+    <div class="setting-option mb-3 p-3">
+      <h5>
+        <label>Filter</label>
+      </h5>
+      <div class="col-6 form-group mb-0">
+        <ds-date-picker (dateChange)="getChangeFromDatePicker($event)"></ds-date-picker>
+      </div>
     </div>
-  </div>
   </form>
 </ng-template>

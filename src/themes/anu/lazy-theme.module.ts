@@ -107,6 +107,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { TotalViewsDownloadsComponent } from './app/statistics-page/total-views-downloads/total-views-downloads.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 // import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 //
@@ -139,6 +140,7 @@ const DECLARATIONS = [
   ItemPageComponent,
   FullItemPageComponent,
   StatisticsTableComponent,
+  TotalViewsDownloadsComponent,
   // LoginPageComponent,
   // LogoutPageComponent,
   // CreateProfileComponent,
