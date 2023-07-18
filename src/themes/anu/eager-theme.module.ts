@@ -26,6 +26,11 @@ import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 // import { EditItemSelectorComponent } from './app/shared/dso-selector/modal-wrappers/edit-item-selector/edit-item-selector.component';
 // import { CommunityListElementComponent } from './app/shared/object-list/community-list-element/community-list-element.component';
 // import { CollectionListElementComponent} from './app/shared/object-list/collection-list-element/collection-list-element.component';
+// import { CollectionDropdownComponent } from './app/shared/collection-dropdown/collection-dropdown.component';
+import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
+import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
+import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+// import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -39,7 +44,9 @@ const ENTRY_COMPONENTS = [
 /*  UntypedItemComponent,
 
   CommunityListElementComponent,
-  CollectionListElementComponent,*/
+  CollectionListElementComponent,
+  CollectionDropdownComponent,
+  FileDownloadLinkComponent,*/
 ];
 
 const DECLARATIONS = [
@@ -68,6 +75,9 @@ const DECLARATIONS = [
     NavbarModule,
     ItemPageModule,
     ItemSharedModule,
+    SharedBrowseByModule,
+    ResultsBackButtonModule,
+    DsoPageModule,
   ],
   declarations: DECLARATIONS,
   providers: [

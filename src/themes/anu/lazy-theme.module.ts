@@ -101,6 +101,26 @@ import {
   CommunityPageSubCollectionListComponent
 } from './app/community-page/sub-collection-list/community-page-sub-collection-list.component';
 
+// import { ObjectListComponent } from './app/shared/object-list/object-list.component';
+
+// import { BrowseByMetadataPageComponent } from './app/browse-by/browse-by-metadata-page/browse-by-metadata-page.component';
+// import { BrowseByDatePageComponent } from './app/browse-by/browse-by-date-page/browse-by-date-page.component';
+// import { BrowseByTitlePageComponent } from './app/browse-by/browse-by-title-page/browse-by-title-page.component';
+// import {
+//   ExternalSourceEntryImportModalComponent
+// } from './app/shared/form/builder/ds-dynamic-form-ui/relation-lookup-modal/external-source-tab/external-source-entry-import-modal/external-source-entry-import-modal.component';
+import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
+import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
+import { ItemVersionsModule } from '../../app/item-page/versions/item-versions.module';
+import { ItemSharedModule } from '../../app/item-page/item-shared.module';
+// import { ResultsBackButtonComponent } from './app/shared/results-back-button/results-back-button.component';
+// import { DsoEditMetadataComponent } from './app/dso-shared/dso-edit-metadata/dso-edit-metadata.component';
+import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
+import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
+import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+
+// import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
+
 import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -171,6 +191,9 @@ const DECLARATIONS = [
   // BrowseByMetadataPageComponent,
   // BrowseByDatePageComponent,
   // BrowseByTitlePageComponent,
+  // ExternalSourceEntryImportModalComponent,
+  // ResultsBackButtonComponent,
+  // DsoEditMetadataComponent,
 ];
 
 @NgModule({
@@ -192,6 +215,7 @@ const DECLARATIONS = [
     DragDropModule,
     ItemPageModule,
     EditItemPageModule,
+    ItemVersionsModule,
     FormsModule,
     HomePageModule,
     HttpClientModule,
@@ -199,6 +223,7 @@ const DECLARATIONS = [
     InfoModule,
     JournalEntitiesModule,
     MenuModule,
+    DsoPageModule,
     MyDspaceSearchModule,
     NavbarModule,
     NgbModule,
@@ -209,7 +234,10 @@ const DECLARATIONS = [
     ScrollToModule,
     SearchPageModule,
     SharedModule,
+    // SharedBrowseByModule,
+    // ResultsBackButtonModule,
     StatisticsModule,
+    StatisticsPageModule,
     StoreModule,
     StoreRouterConnectingModule,
     TranslateModule,
@@ -220,6 +248,8 @@ const DECLARATIONS = [
     FormsModule,
     ResourcePoliciesModule,
     ComcolModule,
+    // DsoSharedModule,
+    // SystemWideAlertModule
     MatFormFieldModule,
     MatDatepickerModule,
     MatDialogModule,
