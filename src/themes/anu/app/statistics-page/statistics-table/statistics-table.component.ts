@@ -2,7 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Point } from 'src/app/core/statistics/models/usage-report.model';
 import { StatisticsTableComponent as BaseComponent } from 'src/app/statistics-page/statistics-table/statistics-table.component';
 import { autoserialize } from 'cerialize';
-import { saveAs } from 'file-saver';
+import { HttpClient} from '@angular/common/http';
+import { DSpaceObjectDataService } from 'src/app/core/data/dspace-object-data.service';
+import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
+import { Observable, map } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 /**
  * Component representing a statistics table for a given usage report.
@@ -39,6 +43,11 @@ export class StatisticsTableComponent extends BaseComponent implements OnInit {
   headers: string[];
   headers1: string[];
 
+  constructor(protected dsoService: DSpaceObjectDataService,
+    protected nameService: DSONameService, private http: HttpClient, protected route: ActivatedRoute,
+    protected router: Router) {
+    super(dsoService, nameService);
+  }
   ngOnInit() {
     this.hasData = this.report.points.length > 0;
     if (this.hasData) {
@@ -51,7 +60,7 @@ export class StatisticsTableComponent extends BaseComponent implements OnInit {
 }
 
 /**
- * A statistics data point.
+ * A statistics data point. &startdate=2023-02-01&enddate=2023-02-28&
  */
 export interface AugPoint extends Point {
   id: string;

@@ -3,10 +3,15 @@
 </ds-page-with-sidebar>
 <ng-template #statisticsContent>
   <ng-container *ngVar="(scope$ | async) as scope">
-    <h2 *ngIf="scope" class="header" id="{{ scope.id }}">
-      {{ 'statistics.header' | translate: { scope: getName(scope) } }}
-    </h2>
+    <div class="d-flex justify-content-between">
+      <h2 *ngIf="scope" class="header" id="{{ scope.id }}">
+        {{ 'statistics.header' | translate: { scope: getName(scope) } }}
+      </h2>
+      <button (click)="writeData()" class="export-button btn btn-dark btn-sm"><i
+          class="fas fa-file-export fa-fw"></i></button>
+    </div>
   </ng-container>
+
   <ng-container *ngVar="(reports$ | async) as reports">
     <ng-container *ngIf="!reports">
       <ds-themed-loading></ds-themed-loading>
@@ -42,7 +47,7 @@
         <label>Filter</label>
       </h5>
       <div class="col-6 form-group mb-0">
-        <ds-date-picker (dateChange)="getChangeFromDatePicker($event)"></ds-date-picker>
+        <ds-date-picker-range (dateChange)="getChangeFromDatePicker($event)"></ds-date-picker-range>
       </div>
     </div>
   </form>

@@ -10,13 +10,16 @@ import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-na
 import { SearchModule } from '../../app/shared/search/search.module';
 import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
-//import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+import { ArchiveComponent } from './app/item-page/simple/item-types/archive/archive.component';
 import { ItemPageModule } from '../../app/item-page/item-page.module';
 import { FooterComponent } from './app/footer/footer.component';
-//import { JournalComponent } from './app/entity-groups/journal-entities/item-pages/journal/journal.component';
-//import { JournalIssueComponent } from './app/entity-groups/journal-entities/item-pages/journal-issue/journal-issue.component';
-//import { JournalVolumeComponent } from './app/entity-groups/journal-entities/item-pages/journal-volume/journal-volume.component';
-//import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
+import { JournalComponent } from './app/entity-groups/journal-entities/item-pages/journal/journal.component';
+import { JournalIssueComponent } from './app/entity-groups/journal-entities/item-pages/journal-issue/journal-issue.component';
+import { JournalVolumeComponent } from './app/entity-groups/journal-entities/item-pages/journal-volume/journal-volume.component';
+import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
+import { ItemPageFieldsComponent } from './app/item-page/item-page-fields.component';
+
 import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 //import { CreateCollectionParentSelectorComponent } from './app/shared/dso-selector/modal-wrappers/create-collection-parent-selector/create-collection-parent-selector.component';
 // import { CreateCommunityParentSelectorComponent } from './app/shared/dso-selector/modal-wrappers/create-community-parent-selector/create-community-parent-selector.component';
@@ -30,6 +33,9 @@ import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
+import { OrgUnitComponent } from './app/entity-groups/research-entities/item-pages/org-unit/org-unit.component';
+import { ProjectComponent } from './app/entity-groups/research-entities/item-pages/project/project.component';
 // import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
 
 /**
@@ -37,13 +43,18 @@ import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
  * This will ensure that decorator gets picked up when the app loads
  */
 const ENTRY_COMPONENTS = [
-/*  JournalComponent,
+  JournalComponent,
   JournalIssueComponent,
-  JournalVolumeComponent,*/
-  // PublicationComponent,
-/*  UntypedItemComponent,
+  JournalVolumeComponent,
+  PublicationComponent,
+  ArchiveComponent,
+  UntypedItemComponent,
+  ItemPageFieldsComponent,
+  PersonComponent,
+  OrgUnitComponent,
+  ProjectComponent,
 
-  CommunityListElementComponent,
+  /* CommunityListElementComponent,
   CollectionListElementComponent,
   CollectionDropdownComponent,
   FileDownloadLinkComponent,*/

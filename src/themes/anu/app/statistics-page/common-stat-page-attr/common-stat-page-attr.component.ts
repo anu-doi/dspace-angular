@@ -1,6 +1,8 @@
+import { HttpClient, HttpHeaderResponse, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { observe } from 'fast-json-patch';
 import { combineLatest, map, Observable, Subscription, switchMap } from 'rxjs';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
@@ -22,6 +24,7 @@ import { StatisticsPageComponent } from 'src/app/statistics-page/statistics-page
 
 export abstract class StatisticsPageCommonComponent extends StatisticsPageComponent<Site>{
 
+  baseApiUrl: string = 'http://localhost:7080/server/api/statistics/usagereports/exportstatistics?uri=';
   reports$: Observable<UsageReport[]>;
 
   formData: FormGroup = new FormGroup({
@@ -36,14 +39,17 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
   selectedValue = 'TotalVisits';
   type: string;
   dateChange: boolean;
+  exportStats: boolean;
+  uri: string;
 
-  constructor(
+constructor(
     protected routeService: RouteService,
     protected route: ActivatedRoute,
     protected router: Router,
     protected usageReportService: UsageReportDataService,
     protected nameService: DSONameService,
     protected authService: AuthService,
+    protected http: HttpClient
   ) {
     super(
       route,
@@ -52,6 +58,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       nameService,
       authService,
     );
+
 
     this.route.queryParams.subscribe(params => {
       this.minDate = params.minDate;
@@ -71,7 +78,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
     this.selectedValue = this.type;
     this.onOptionsSelected(this.selectedValue);
     this.filterStats = false;
-
+    
     if (this.minDate != null && this.maxDate != null) {
       this.getChangeFromDatePicker(true);
     }
@@ -87,6 +94,47 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       super.ngOnInit();
     }
   }
+  writeData() {
+    this.scope$.subscribe((scope) => 
+    this.uri = scope._links.self.href
+    );
+
+    this.exportStatistics(this.type, this.uri
+    ).subscribe(
+      (response: any) => {
+        const blobUrl = window.URL.createObjectURL(response.body);
+        const link = document.createElement('a');
+        const fileName = response.headers.get('Content-Disposition').split('filename=')[1];
+        link.href = blobUrl;
+        link.download = fileName;
+        link.click();
+      }
+    );
+}
+
+exportStatistics(type: string, uri: string): Observable<HttpResponse<Blob>> {
+  var encodedUri = encodeURI(uri);
+  let startDate : string | undefined;
+  let endDate : string | undefined;
+  if(this.minDate === undefined) {
+    startDate = null;
+  } else {
+    startDate = this.minDate;
+  }
+  if(this.maxDate  === undefined){
+    endDate = null;
+  } else {
+    endDate = this.maxDate;
+  }
+  console.log("The max and min date : "+ startDate + " : "+ endDate);
+  var url = this.baseApiUrl + encodedUri + '&startdate='+startDate+'&enddate='+endDate+'&type='+type
+  return this.http.get(url,
+    {
+      observe: 'response',
+      responseType: 'blob',
+    }
+  )
+}
 
   protected getReports$() {
     if (!this.filterStats) {

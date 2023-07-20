@@ -8,6 +8,7 @@ import { RouteService } from 'src/app/core/services/route.service';
 import { Component } from '@angular/core';
 import { StatisticsPageCommonComponent } from '../common-stat-page-attr/common-stat-page-attr.component';
 import { switchMap } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'ds-site-statistics-page',
@@ -41,7 +42,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent {
     protected authService: AuthService,
     protected dsoService: DSpaceObjectDataService,
     protected siteService: SiteDataService,
-
+    protected http: HttpClient
   ) {
     super(
       routeService,
@@ -50,6 +51,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent {
       usageReportService,
       nameService,
       authService,
+      http
     );
   }
 

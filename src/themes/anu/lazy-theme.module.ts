@@ -64,6 +64,8 @@ import { CollectionPageComponent } from './app/collection-page/collection-page.c
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
 import { StatisticsTableComponent } from 'src/themes/anu/app/statistics-page/statistics-table/statistics-table.component';
+
+
 // import { LoginPageComponent } from './app/login-page/login-page.component';
 // import { LogoutPageComponent } from './app/logout-page/logout-page.component';
 // import { CreateProfileComponent } from './app/register-page/create-profile/create-profile.component';
@@ -100,7 +102,6 @@ import {
 import {
   CommunityPageSubCollectionListComponent
 } from './app/community-page/sub-collection-list/community-page-sub-collection-list.component';
-
 // import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 
 // import { BrowseByMetadataPageComponent } from './app/browse-by/browse-by-metadata-page/browse-by-metadata-page.component';
@@ -119,21 +120,23 @@ import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
 import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 
-// import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
-
 import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
-import { OverlayModule } from '@angular/cdk/overlay';
+import { OverlayModule } from "@angular/cdk/overlay";
 import { TotalViewsDownloadsComponent } from './app/statistics-page/total-views-downloads/total-views-downloads.component';
+
 // import { ReactiveFormsModule } from '@angular/forms';
 // import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 //
 // import { BrowseByMetadataPageComponent } from './app/browse-by/browse-by-metadata-page/browse-by-metadata-page.component';
 // import { BrowseByDatePageComponent } from './app/browse-by/browse-by-date-page/browse-by-date-page.component';
 // import { BrowseByTitlePageComponent } from './app/browse-by/browse-by-title-page/browse-by-title-page.component';
+
+
+
 
 const DECLARATIONS = [
   FileSectionComponent,
@@ -237,7 +240,7 @@ const DECLARATIONS = [
     // SharedBrowseByModule,
     // ResultsBackButtonModule,
     StatisticsModule,
-    StatisticsPageModule,
+    //StatisticsPageModule,
     StoreModule,
     StoreRouterConnectingModule,
     TranslateModule,
@@ -259,6 +262,7 @@ const DECLARATIONS = [
   declarations: DECLARATIONS,
   exports: [
     //CommunityPageSubCollectionListComponent
+    // StatisticsTableComponent,
   ]
 })
 

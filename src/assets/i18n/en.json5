@@ -3815,8 +3815,6 @@
 
   "statistics.table.title.TopCities": "Top city views",
 
-  "statistics.table.title.TopDownloads": "Top Downloads",
-
   "statistics.table.header.views": "Views",
 
   "submission.edit.breadcrumbs": "Edit Submission",
@@ -5089,4 +5087,50 @@
   "submission.sections.describe.relationship-lookup.title.isPublicationOfAuthor" : "Publications",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfAuthor" :  "Publications",
+
+  "statistics.table.title.TopDownloads": "Top downloads",
+  
+  "dc.source": "Source",
+
+  "dc.date.issued": "Date Issued",
+
+  "dc.terms.accessRights": "Access Rights",
+
+  "dc.rights.license": "License Rights",
+
+  "dc.type": "Type",
+
+  "local.identifier.doi": "DOI",
+
+  "archive.listelement.badge": "Archive",
+
+  "archive.page.description": "Description",
+
+  "archive.page.edit": "Edit this item",
+
+  "archive.page.journal-issn": "Journal ISSN",
+
+  "archive.page.journal-title": "Journal Title",
+
+  "archive.page.publisher": "Publisher",
+
+  "archive.page.titleprefix": "Archive: ",
+
+  "archive.page.volume-title": "Volume Title",
+
+  "archive.search.results.head": "Archive Search Results",
+
+  "archive-relationships.search.results.head": "Archive Search Results",
+
+  "archive.search.title": "Archive Search",
+
+  "archive.date.created": "Date created",
+
+  "archive.identifier.other": "Other identifier",
+
+  "archive.rights.license": "Rights license",
+
+  "archive.page.uri": "URI",
+
+  "dspace.entity.type": "Entity type",
 }

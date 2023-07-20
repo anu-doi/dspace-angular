@@ -33,19 +33,19 @@
     </ds-metadata-representation-list>
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.title']"
-      [label]="'publication.page.journal-title'">
+      [label]="'archive.page.journal-title'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.identifier.issn']"
-      [label]="'publication.page.journal-issn'">
+      [label]="'archive.page.journal-issn'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['journalvolume.identifier.name']"
-      [label]="'publication.page.volume-title'">
+      [label]="'archive.page.volume-title'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.publisher']"
-      [label]="'publication.page.publisher'">
+      [label]="'archive.page.publisher'">
     </ds-generic-item-page-field>
   </div>
   <div class="col-xs-12 col-md-7">
@@ -67,26 +67,42 @@
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.description']"
-      [label]="'publication.page.description'">
+      [label]="'archive.page.description'">
     </ds-generic-item-page-field>
 
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.subject']"
       [separator]="', '"
-      [label]="'item.page.subject'">
+      [label]="'archive.page.subject'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.identifier.citation']"
-      [label]="'item.page.citation'">
+      [label]="'archive.page.citation'">
     </ds-generic-item-page-field>
     <ds-item-page-uri-field [item]="object"
       [fields]="['dc.identifier.uri']"
-      [label]="'item.page.uri'">
+      [label]="'archive.page.uri'">
     </ds-item-page-uri-field>
-
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
-    
-    <ds-item-page-fields [object]="object"></ds-item-page-fields>
+    <ds-generic-item-page-field [item]="object"
+        [fields]="['dc.identifier']"
+        [label]="'archive.identifier'">
+    </ds-generic-item-page-field>
+
+    <ds-generic-item-page-field [item]="object"
+        [fields]="['dc.identifier.other']"
+        [label]="'archive.identifier.other'">
+    </ds-generic-item-page-field>
+
+    <ds-generic-item-page-field [item]="object"
+        [fields]="['dc.date.created']"
+        [label]="'archive.date.created'">
+    </ds-generic-item-page-field>
+
+    <ds-generic-item-page-field [item]="object"
+        [fields]="['dc.rights.license']"
+        [label]="'archive.rights.license'">
+    </ds-generic-item-page-field>
     <div>
       <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">
         <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}

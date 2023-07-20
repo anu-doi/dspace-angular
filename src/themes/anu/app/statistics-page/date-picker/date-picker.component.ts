@@ -7,7 +7,7 @@ import { URLSearchParams } from 'url';
 
 
 @Component({
-  selector: 'ds-date-picker',
+  selector: 'ds-date-picker-range',
   templateUrl: './date-picker.component.html',
   styleUrls: ['./date-picker.component.scss'],
   providers: [
@@ -16,7 +16,6 @@ import { URLSearchParams } from 'url';
 })
 export class DatePickerComponent implements OnInit {
   @Output() dateChange = new EventEmitter();
-  @Output() resetFilter = new EventEmitter();
 
   changeDate: boolean;
   range: FormGroup;
