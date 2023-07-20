@@ -110,22 +110,22 @@ import {
 // import {
 //   ExternalSourceEntryImportModalComponent
 // } from './app/shared/form/builder/ds-dynamic-form-ui/relation-lookup-modal/external-source-tab/external-source-entry-import-modal/external-source-entry-import-modal.component';
-import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
-import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
+// import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
+// import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { ItemVersionsModule } from '../../app/item-page/versions/item-versions.module';
-import { ItemSharedModule } from '../../app/item-page/item-shared.module';
+// import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 // import { ResultsBackButtonComponent } from './app/shared/results-back-button/results-back-button.component';
 // import { DsoEditMetadataComponent } from './app/dso-shared/dso-edit-metadata/dso-edit-metadata.component';
-import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
-import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
+// import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
+// import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 
 import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
-import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
-import { OverlayModule } from "@angular/cdk/overlay";
+import { OverlayModule } from '@angular/cdk/overlay';
 import { TotalViewsDownloadsComponent } from './app/statistics-page/total-views-downloads/total-views-downloads.component';
 
 // import { ReactiveFormsModule } from '@angular/forms';

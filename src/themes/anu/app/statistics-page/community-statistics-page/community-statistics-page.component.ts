@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { StatisticsPageCommonComponent } from '../common-stat-page-attr/common-stat-page-attr.component';
-import { UsageReport } from 'src/app/core/statistics/models/usage-report.model';
 
 @Component({
   selector: 'ds-community-statistics-page',

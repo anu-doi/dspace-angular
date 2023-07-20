@@ -5,7 +5,6 @@ import { autoserialize } from 'cerialize';
 import { HttpClient} from '@angular/common/http';
 import { DSpaceObjectDataService } from 'src/app/core/data/dspace-object-data.service';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
-import { Observable, map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
 /**

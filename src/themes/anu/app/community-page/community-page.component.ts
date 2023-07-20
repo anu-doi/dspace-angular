@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, Inject, Input } from '@angular/core';
-import { CommunityPageComponent as BaseComponent} from '../../../../app/community-page/community-page.component';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommunityPageComponent as BaseComponent } from '../../../../app/community-page/community-page.component';
 import { fadeInOut } from '../../../../app/shared/animations/fade';
 
 

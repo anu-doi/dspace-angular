@@ -21,10 +21,10 @@ export class TotalViewsDownloadsComponent implements OnInit {
     if (this.report != null) {
       this.views = this.report.points[0].values['views'];
       this.downloads = this.report.points[1].values['views'];
-      if (this.report.points[0].label == 'totalViews') {
+      if (this.report.points[0].label === 'totalViews') {
         this.label1 = 'Total Views';
       }
-      if (this.report.points[1].label == 'totalDownloads') {
+      if (this.report.points[1].label === 'totalDownloads') {
         this.label2 = 'Total Downloads';
       }
     }

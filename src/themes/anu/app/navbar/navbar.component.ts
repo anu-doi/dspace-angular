@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { any } from 'prop-types';
-import { find, map } from 'rxjs';
-import { hasValue } from 'src/app/shared/empty.util';
 import { MenuID } from 'src/app/shared/menu/menu-id.model';
 import { MenuItemType } from 'src/app/shared/menu/menu-item-type.model';
-import { LinkMenuItemModel } from 'src/app/shared/menu/menu-item/models/link.model';
-import { TextMenuItemModel } from 'src/app/shared/menu/menu-item/models/text.model';
 import { ExternalLinkMenuItemModel } from 'src/app/shared/menu/menu-item/models/external-link.model';
-import { MenuSection } from 'src/app/shared/menu/menu-section.model';
-import { MenuState } from 'src/app/shared/menu/menu-state.model';
 import { NavbarComponent as BaseComponent } from '../../../../app/navbar/navbar.component';
 import { slideMobileNav } from '../../../../app/shared/animations/slide';
 

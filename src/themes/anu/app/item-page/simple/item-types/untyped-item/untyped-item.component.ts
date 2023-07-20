@@ -4,7 +4,6 @@ import { ViewMode } from 'src/app/core/shared/view-mode.model';
 import { listableObjectComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { UntypedItemComponent as BaseComponent } from 'src/app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { Context } from 'src/app/core/shared/context.model';
-import { any } from 'prop-types';
 
 /**
  * Component that represents a publication Item page
@@ -19,5 +18,4 @@ import { any } from 'prop-types';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UntypedItemComponent extends BaseComponent {
-
 }

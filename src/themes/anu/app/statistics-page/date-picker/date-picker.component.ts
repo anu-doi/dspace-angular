@@ -3,8 +3,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { URLSearchParams } from 'url';
-
 
 @Component({
   selector: 'ds-date-picker-range',

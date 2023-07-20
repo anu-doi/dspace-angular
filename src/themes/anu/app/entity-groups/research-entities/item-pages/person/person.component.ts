@@ -4,7 +4,7 @@ import { listableObjectComponent } from 'src/app/shared/object-collection/shared
 import { PersonComponent as BaseComponent } from 'src/app/entity-groups/research-entities/item-pages/person/person.component';
 import { Context } from 'src/app/core/shared/context.model';
 
-@listableObjectComponent('Person', ViewMode.StandalonePage, Context.Any, "anu")
+@listableObjectComponent('Person', ViewMode.StandalonePage, Context.Any, 'anu')
 @Component({
   selector: 'ds-person',
   // styleUrls: ['./person.component.scss'],

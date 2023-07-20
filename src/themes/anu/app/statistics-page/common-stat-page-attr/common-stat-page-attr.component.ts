@@ -1,8 +1,7 @@
-import { HttpClient, HttpHeaderResponse, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { observe } from 'fast-json-patch';
 import { combineLatest, map, Observable, Subscription, switchMap } from 'rxjs';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
@@ -81,8 +80,7 @@ constructor(
     
     if (this.minDate != null && this.maxDate != null) {
       this.getChangeFromDatePicker(true);
-    }
-    else {
+    } else {
       super.ngOnInit();
     }
   }
@@ -95,10 +93,8 @@ constructor(
     }
   }
   writeData() {
-    this.scope$.subscribe((scope) => 
-    this.uri = scope._links.self.href
-    );
-
+    this.scope$.subscribe((scope) =>
+    this.uri = scope._links.self.href);
     this.exportStatistics(this.type, this.uri
     ).subscribe(
       (response: any) => {
@@ -113,21 +109,20 @@ constructor(
 }
 
 exportStatistics(type: string, uri: string): Observable<HttpResponse<Blob>> {
-  var encodedUri = encodeURI(uri);
-  let startDate : string | undefined;
-  let endDate : string | undefined;
+  let encodedUri = encodeURI(uri);
+  let startDate: string | undefined;
+  let endDate: string | undefined;
   if(this.minDate === undefined) {
     startDate = null;
   } else {
     startDate = this.minDate;
   }
-  if(this.maxDate  === undefined){
+  if (this.maxDate  === undefined){
     endDate = null;
   } else {
     endDate = this.maxDate;
   }
-  console.log("The max and min date : "+ startDate + " : "+ endDate);
-  var url = this.baseApiUrl + encodedUri + '&startdate='+startDate+'&enddate='+endDate+'&type='+type
+  var url = this.baseApiUrl + encodedUri + '&startdate=' + startDate + '&enddate=' + endDate + '&type=' + type;
   return this.http.get(url,
     {
       observe: 'response',
