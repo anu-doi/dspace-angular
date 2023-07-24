@@ -10,7 +10,7 @@ import { CommunityFormModule } from '../../app/community-page/community-form/com
 import { CoreModule } from '../../app/core/core.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EditItemPageModule } from '../../app/item-page/edit-item-page/edit-item-page.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IdlePreloadModule } from 'angular-idle-preload';
 import { JournalEntitiesModule } from '../../app/entity-groups/journal-entities/journal-entities.module';
@@ -34,7 +34,7 @@ import { ItemPageModule } from '../../app/item-page/item-page.module';
 import { RouterModule } from '@angular/router';
 import { CommunityListPageModule } from '../../app/community-list-page/community-list-page.module';
 import { InfoModule } from '../../app/info/info.module';
-import { StatisticsPageModule } from '../../app/statistics-page/statistics-page.module';
+// import { StatisticsPageModule } from '../../app/statistics-page/statistics-page.module';
 import { CommunityPageModule } from '../../app/community-page/community-page.module';
 import { CollectionPageModule } from '../../app/collection-page/collection-page.module';
 import { SubmissionModule } from '../../app/submission/submission.module';
