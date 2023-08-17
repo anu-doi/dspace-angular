@@ -59,7 +59,7 @@ export class DatePickerComponent implements OnInit {
       queryParamsHandling: 'merge'
     });
     this.changeDate = true;
-    this.dateChange.emit(this.changeDate);
+    this.dateChange.emit(this.convertedStartDate+":"+this.convertedEndDate+":"+this.changeDate);
   }
 
   onReset(): void {

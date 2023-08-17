@@ -23,7 +23,9 @@ import { StatisticsPageComponent } from 'src/app/statistics-page/statistics-page
 
 export abstract class StatisticsPageCommonComponent extends StatisticsPageComponent<Site>{
 
-  baseApiUrl: string = 'http://localhost:7080/server/api/statistics/usagereports/exportstatistics?uri=';
+  baseApiUrl = 'http://localhost:7080/server/api/statistics/usagereports/exportstatistics?uri=';
+  selectedValue = 'TotalVisits';
+
   reports$: Observable<UsageReport[]>;
 
   formData: FormGroup = new FormGroup({
@@ -35,13 +37,15 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
   maxDate: string;
   filterStats = false;
   subs: Subscription[] = [];
-  selectedValue = 'TotalVisits';
   type: string;
   dateChange: boolean;
   exportStats: boolean;
   uri: string;
+  filterValue: number;
+  numberChange = false;
+  defaultNumber = 5;
 
-constructor(
+  constructor(
     protected routeService: RouteService,
     protected route: ActivatedRoute,
     protected router: Router,
@@ -57,44 +61,41 @@ constructor(
       nameService,
       authService,
     );
-
-
     this.route.queryParams.subscribe(params => {
       this.minDate = params.minDate;
       this.maxDate = params.maxDate;
-      this.type = params.type;
+      this.type = params.type || this.selectedValue;
+      this.filterValue = params.noofitems || this.defaultNumber;
     });
 
-    if (this.minDate == null && this.maxDate == null && this.type == null) {
-      this.router.navigate([], {
-        queryParams: Object.assign({ type: this.selectedValue }),
-        queryParamsHandling: 'merge'
-      });
-    }
+    this.router.navigate([],{
+      queryParams: Object.assign({ type: this.type, noofitems: this.filterValue }),
+      queryParamsHandling: 'merge'
+    });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.selectedValue = this.type;
-    this.onOptionsSelected(this.selectedValue);
     this.filterStats = false;
-    
-    if (this.minDate != null && this.maxDate != null) {
-      this.getChangeFromDatePicker(true);
-    } else {
-      super.ngOnInit();
-    }
+    super.ngOnInit();
+    this.onOptionsSelected(this.selectedValue);
+    this.onNumberChange(this.filterValue);
   }
 
-  getChangeFromDatePicker(item: boolean) {
-    this.dateChange = item;
+  getChangeFromDatePicker(item: string) {
+    const splitVar = item.split(":");
+    this.minDate = splitVar[0];
+    this.maxDate = splitVar[1];
+    this.dateChange = JSON.parse(splitVar[2]);
     if (this.dateChange) {
       this.filterStats = true;
-      super.ngOnInit();
     }
+    this.reports$ = this.getReports$();
   }
+
   writeData() {
     this.scope$.subscribe((scope) =>
-    this.uri = scope._links.self.href);
+      this.uri = scope._links.self.href);
     this.exportStatistics(this.type, this.uri
     ).subscribe(
       (response: any) => {
@@ -106,33 +107,36 @@ constructor(
         link.click();
       }
     );
-}
+  }
 
-exportStatistics(type: string, uri: string): Observable<HttpResponse<Blob>> {
-  let encodedUri = encodeURI(uri);
-  let startDate: string | undefined;
-  let endDate: string | undefined;
-  if(this.minDate === undefined) {
-    startDate = null;
-  } else {
-    startDate = this.minDate;
-  }
-  if (this.maxDate  === undefined){
-    endDate = null;
-  } else {
-    endDate = this.maxDate;
-  }
-  var url = this.baseApiUrl + encodedUri + '&startdate=' + startDate + '&enddate=' + endDate + '&type=' + type;
-  return this.http.get(url,
-    {
-      observe: 'response',
-      responseType: 'blob',
+  exportStatistics(type: string, uri: string): Observable<HttpResponse<Blob>> {
+    let encodedUri = encodeURI(uri);
+    let startDate: string | undefined;
+    let endDate: string | undefined;
+
+    if (this.minDate === undefined) {
+      startDate = null;
+    } else {
+      startDate = this.minDate;
     }
-  )
-}
+    if (this.maxDate === undefined) {
+      endDate = null;
+    } else {
+      endDate = this.maxDate;
+    }
+    let url = this.baseApiUrl + encodedUri + '&startdate=' + startDate + '&enddate=' + endDate + '&type=' + type;
+    return this.http.get(url,
+      {
+        observe: 'response',
+        responseType: 'blob',
+      }
+    );
+  }
 
   protected getReports$() {
-    if (!this.filterStats) {
+    let startDate: string | undefined;
+    let endDate: string | undefined;
+    if (!this.filterStats && !this.numberChange) {
       return this.scope$.pipe(
         switchMap((scope) =>
           combineLatest(
@@ -141,15 +145,25 @@ exportStatistics(type: string, uri: string): Observable<HttpResponse<Blob>> {
         ),
       );
     } else {
+      if (this.minDate === undefined) {
+        startDate = null;
+      } else {
+        startDate = this.minDate;
+      }
+      if (this.maxDate === undefined) {
+        endDate = null;
+      } else {
+        endDate = this.maxDate;
+      }
       return this.scope$.pipe(
         switchMap((scope) =>
-          this.filterStatistics(scope._links.self.href, this.minDate, this.maxDate, this.type, 0, 10),
+          this.filterStatistics(scope._links.self.href, this.type, 0, this.filterValue, startDate, endDate),
         )
       );
     }
   }
 
-  filterStatistics(uri: string, startdate: string, enddate: string, type: string, page: number, size: number): Observable<UsageReport[]> {
+  filterStatistics(uri: string, type: string, page: number, size: number, startdate: string, enddate: string): Observable<UsageReport[]> {
     return this.usageReportService.searchBy('filterstatistics', {
       searchParams: [
         {
@@ -171,7 +185,7 @@ exportStatistics(type: string, uri: string): Observable<HttpResponse<Blob>> {
       ],
       currentPage: page,
       elementsPerPage: size,
-    }, true, false).pipe(
+    }, false, false).pipe(
       getFirstSucceededRemoteData(),
       getRemoteDataPayload(),
       map((list) => list.page),
@@ -189,6 +203,22 @@ exportStatistics(type: string, uri: string): Observable<HttpResponse<Blob>> {
       queryParams: Object.assign({ type: value }),
       queryParamsHandling: 'merge'
     });
+    this.reports$ = this.getReports$();
+  }
+
+  onNumberChange(value: number) {
+    this.route.queryParams.subscribe(params => {
+      this.minDate = params.minDate;
+      this.maxDate = params.maxDate;
+      this.filterValue = params.noofitems;
+    });
+    this.router.navigate([], {
+      queryParams: Object.assign({ noofitems: value }),
+      queryParamsHandling: 'merge'
+    });
+    this.numberChange = true;
+    this.reports$ = this.getReports$();
+    this.numberChange = false;
   }
 
   ngOnDestroy(): void {
