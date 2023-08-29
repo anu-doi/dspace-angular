@@ -5,13 +5,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { combineLatest, map, Observable, Subscription, switchMap } from 'rxjs';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
+import { restServiceFactory } from 'src/app/core/core.module';
+import { BaseDataService } from 'src/app/core/data/base/base-data.service';
 import { RouteService } from 'src/app/core/services/route.service';
 import { getFirstSucceededRemoteData, getRemoteDataPayload } from 'src/app/core/shared/operators';
 import { Site } from 'src/app/core/shared/site.model';
 import { UsageReport } from 'src/app/core/statistics/models/usage-report.model';
 import { UsageReportDataService } from 'src/app/core/statistics/usage-report-data.service';
+import { RESTURLCombiner } from 'src/app/core/url-combiner/rest-url-combiner';
 import { hasValue } from 'src/app/shared/empty.util';
 import { StatisticsPageComponent } from 'src/app/statistics-page/statistics-page/statistics-page.component';
+import { APP_CONFIG, AppConfig } from 'src/config/app-config.interface';
+import { buildAppConfig } from 'src/config/config.server';
 
 /**
  * Class representing an abstract statistics page component.
@@ -23,9 +28,9 @@ import { StatisticsPageComponent } from 'src/app/statistics-page/statistics-page
 
 export abstract class StatisticsPageCommonComponent extends StatisticsPageComponent<Site>{
 
-  baseApiUrl = 'http://localhost:7080/server/api/statistics/usagereports/exportstatistics?uri=';
+  baseApiUrl = new RESTURLCombiner().toString();
+  exportApiUrl = '/statistics/usagereports/exportstatistics?uri=';
   selectedValue = 'TotalVisits';
-
   reports$: Observable<UsageReport[]>;
 
   formData: FormGroup = new FormGroup({
@@ -52,7 +57,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
     protected usageReportService: UsageReportDataService,
     protected nameService: DSONameService,
     protected authService: AuthService,
-    protected http: HttpClient
+    protected http: HttpClient,
   ) {
     super(
       route,
@@ -68,7 +73,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       this.filterValue = params.noofitems || this.defaultNumber;
     });
 
-    this.router.navigate([],{
+    this.router.navigate([], {
       queryParams: Object.assign({ type: this.type, noofitems: this.filterValue }),
       queryParamsHandling: 'merge'
     });
@@ -83,7 +88,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
   }
 
   getChangeFromDatePicker(item: string) {
-    const splitVar = item.split(":");
+    const splitVar = item.split(':');
     this.minDate = splitVar[0];
     this.maxDate = splitVar[1];
     this.dateChange = JSON.parse(splitVar[2]);
@@ -113,7 +118,6 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
     let encodedUri = encodeURI(uri);
     let startDate: string | undefined;
     let endDate: string | undefined;
-
     if (this.minDate === undefined) {
       startDate = null;
     } else {
@@ -124,7 +128,8 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
     } else {
       endDate = this.maxDate;
     }
-    let url = this.baseApiUrl + encodedUri + '&startdate=' + startDate + '&enddate=' + endDate + '&type=' + type;
+
+    let url = this.baseApiUrl + this.exportApiUrl + encodedUri + '&startdate=' + startDate + '&enddate=' + endDate + '&type=' + type;
     return this.http.get(url,
       {
         observe: 'response',

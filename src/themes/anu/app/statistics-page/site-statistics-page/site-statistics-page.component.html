@@ -7,8 +7,8 @@
       <h2 *ngIf="scope" class="header" id="{{ scope.id }}">
         {{ 'statistics.header' | translate: { scope: getName(scope) } }}
       </h2>
-      <button (click)="writeData()" class="export-button btn btn-dark btn-sm"><i
-          class="fas fa-file-export fa-fw"></i></button>
+      <button (click)="writeData()" class="export-button btn btn-dark btn-sm" title="Export statistics as CSV"
+        aria-label="Export statistics as CSV"><i class="fas fa-file-export fa-fw"></i></button>
     </div>
   </ng-container>
 
@@ -35,7 +35,7 @@
 <ng-template #sidebarContent>
   <div class="setting-option mb-3 p-3">
     <h5>
-      <label>View By</label>
+      <label id="viewbyfilter" for="optselect">View By</label>
     </h5>
     <select id="optselect" [(ngModel)]="selectedValue" class="form-control" (change)="onOptionsSelected(selectedValue)">
       <option *ngFor="let type of types" [value]='type'>{{ type }}</option>
@@ -43,17 +43,17 @@
   </div>
   <div class="setting-option mb-3 p-3" id="selectitems">
     <h5>
-      <label>Display top items</label>
+      <label id="topitemslabel" for="sitefilter">Display top items</label>
     </h5>
-    <input type="number" id="sitefilter" [(ngModel)]="filterValue" min="1" max="20" class="form-control" (keyup.enter)="onNumberChange(filterValue)"
-      placeholder="Enter a number to filter">
+    <input type="number" id="sitefilter" [(ngModel)]="filterValue" min="1" max="20" class="form-control"
+      (keyup.enter)="onNumberChange(filterValue)" placeholder="Enter a number to filter">
     <button class="btn btn-outline-secondary" type="submit" (click)="onNumberChange(filterValue)">Submit</button>
   </div>
 
   <form class="w-200" [formGroup]="formData">
     <div class="setting-option mb-3 p-3">
       <h5>
-        <label>Filter</label>
+        <label aria-label="datefilter">Filter</label>
       </h5>
       <div class="col-6 form-group mb-0">
         <ds-date-picker-range (dateChange)="getChangeFromDatePicker($event)"></ds-date-picker-range>
