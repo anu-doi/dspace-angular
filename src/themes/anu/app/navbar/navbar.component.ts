@@ -121,6 +121,18 @@ export class NavbarComponent extends BaseComponent implements OnInit {
         href: 'https://openresearch.anu.edu.au/copyright-considerations'
       } as ExternalLinkMenuItemModel,
     },
+    {
+      id: 'about_contact',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Contact',
+        href: 'https://openresearch.anu.edu.au/contact'
+      } as ExternalLinkMenuItemModel,
+    }
   ];
 
     menuList.push({
