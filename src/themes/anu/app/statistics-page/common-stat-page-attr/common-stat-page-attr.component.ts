@@ -5,8 +5,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { combineLatest, map, Observable, Subscription, switchMap } from 'rxjs';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
-import { restServiceFactory } from 'src/app/core/core.module';
-import { BaseDataService } from 'src/app/core/data/base/base-data.service';
 import { RouteService } from 'src/app/core/services/route.service';
 import { getFirstSucceededRemoteData, getRemoteDataPayload } from 'src/app/core/shared/operators';
 import { Site } from 'src/app/core/shared/site.model';
@@ -15,8 +13,6 @@ import { UsageReportDataService } from 'src/app/core/statistics/usage-report-dat
 import { RESTURLCombiner } from 'src/app/core/url-combiner/rest-url-combiner';
 import { hasValue } from 'src/app/shared/empty.util';
 import { StatisticsPageComponent } from 'src/app/statistics-page/statistics-page/statistics-page.component';
-import { APP_CONFIG, AppConfig } from 'src/config/app-config.interface';
-import { buildAppConfig } from 'src/config/config.server';
 
 /**
  * Class representing an abstract statistics page component.

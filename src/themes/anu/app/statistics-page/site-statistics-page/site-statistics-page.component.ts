@@ -37,7 +37,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
     'TotalVisitsPerMonth',
     'TopCountries',
     'TopCities',
-    'TopDownloads'
+    'TopDownloads',
   ];
 
   constructor(
@@ -76,8 +76,6 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
     this.selectedValue = this.type;
     this.filterStats = false;
     super.ngOnInit();
-    this.onOptionsSelected(this.selectedValue);
-    this.onNumberChange(this.filterValue);
   }
 
   protected getScope$() {
