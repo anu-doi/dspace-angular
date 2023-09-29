@@ -1778,6 +1778,8 @@
 
   "grant-deny-request-copy.processed": "This request has already been processed. You can use the button below to get back to the home page.",
 
+  "grant-request-copy.email.message": "Dear {{ recipientName }},\nIn response to your request I have the pleasure to send you in attachment a copy of the file(s) concerning the document: \"{{ itemUrl }}\" ({{ itemName }}), of which I am an author.\n\nBest regards,\n{{ authorName }} <{{ authorEmail }}>",
+
   "grant-request-copy.email.subject": "Request copy of document",
 
   "grant-request-copy.error": "An error occurred",
@@ -1860,7 +1862,7 @@
 
   "info.privacy.breadcrumbs": "Privacy Statement",
 
-  "info.privacy.head": "Privacy Statement",
+  "info.privacy.head": "Privacy Policy",
 
   "info.privacy.title": "Privacy Statement",
 
@@ -2816,7 +2818,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "Browse Open Research",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -3219,6 +3221,9 @@
   "process.overview.table.finish": "Finish time (UTC)",
 
   "process.overview.table.id": "Process ID",
+  "process.detail.create": "Create similar process",
+
+  "process.overview.table.finish": "Finish time (UTC)",
 
   "process.overview.table.name": "Name",
 
@@ -3495,6 +3500,10 @@
   "repository.title": "DSpace Repository",
 
   "repository.title.prefix": "DSpace Repository :: ",
+
+  "repository.title.prefix": "Open Research :: ",
+
+  "repository.title.prefixDSpace": "DSpace Angular ::",
 
   "resource-policies.add.button": "Add",
 
@@ -3902,7 +3911,7 @@
 
   "statistics.table.title.TotalVisitsPerMonth": "Total visits per month",
 
-  "statistics.table.title.TotalDownloads": "File Visits",
+  "statistics.table.title.TotalDownloads": "Total Downloads",
 
   "statistics.table.title.TopCountries": "Top country views",
 
@@ -5216,4 +5225,77 @@
 
   "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
 
+  "browse.comcol.by.type": "By Type",
+
+  "browse.metadata.type": "Type",
+
+  "browse.metadata.type.breadcrumbs": "Browse by Type",
+
+  "menu.section.browse_global_by_type": "By Type",
+
+  "search.filters.applied.f.accessrights": "Access Rights",
+
+  "search.filters.filter.accessrights.head": "Access Rights",
+
+  "search.filters.filter.accessrights.label": "Search Access Rights",
+
+  "submission.sections.describe.relationship-lookup.title.isJournalOfVolume": "Journal",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalOfVolume" : "Journal",
+
+  "submission.sections.describe.relationship-lookup.title.isJournalVolumeOfIssue" : "Journal Volumes",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalVolumeOfIssue" : "Journal volumes",
+
+  "journalvolume.search.results.head" : "Journal Volumes",
+
+  "submission.sections.describe.relationship-lookup.title.isPublicationOfAuthor" : "Publications",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfAuthor" :  "Publications",
+
+  "statistics.table.title.TopDownloads": "Top downloads",
+  
+  "dc.source": "Source",
+
+  "dc.date.issued": "Date Issued",
+
+  "dc.terms.accessRights": "Access Rights",
+
+  "dc.rights.license": "License Rights",
+
+  "dc.type": "Type",
+
+  "local.identifier.doi": "DOI",
+
+  "archive.listelement.badge": "Archive",
+
+  "archive.page.description": "Description",
+
+  "archive.page.edit": "Edit this item",
+
+  "archive.page.journal-issn": "Journal ISSN",
+
+  "archive.page.journal-title": "Journal Title",
+
+  "archive.page.publisher": "Publisher",
+
+  "archive.page.titleprefix": "Archive: ",
+
+  "archive.page.volume-title": "Volume Title",
+
+  "archive.search.results.head": "Archive Search Results",
+
+  "archive-relationships.search.results.head": "Archive Search Results",
+
+  "archive.search.title": "Archive Search",
+
+  "archive.date.created": "Date created",
+
+  "archive.identifier.other": "Other identifier",
+
+  "archive.rights.license": "Rights license",
+
+  "archive.page.uri": "URI",
+
+  "dspace.entity.type": "Entity type",
 }

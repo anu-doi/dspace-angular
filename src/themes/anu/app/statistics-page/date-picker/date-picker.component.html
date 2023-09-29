@@ -1,0 +1,24 @@
+<form [formGroup]="range" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter a date range</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input aria-label="startdate" matStartDate placeholder="Start date" [formControl]="range.controls.startDate">
+        <input aria-label="enddate" matEndDate placeholder="End date" [formControl]="range.controls.endDate">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+
+      <mat-error *ngIf="range.controls.startDate.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+      <mat-error *ngIf="range.controls.endDate.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="block btn-group">
+    <button mat-raised-button color="accent" class="btn btn-outline-secondary" type="submit">
+      Submit
+    </button>
+    <button mat-raised-button type="reset" class="btn btn-primary" (click)="onReset()">
+      <i class="fas fa-undo"></i>{{"Reset"}}
+    </button>
+  </div>
+</form>
