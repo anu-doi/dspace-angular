@@ -16,7 +16,7 @@ import { of as observableOf } from 'rxjs';
 import { By } from '@angular/platform-browser';
 import { isEmpty, isNotEmpty } from '../../shared/empty.util';
 import { FlatNode } from '../flat-node.model';
-import { RouterLinkWithHref } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 describe('CommunityListComponent', () => {
   let component: CommunityListComponent;
@@ -195,7 +195,7 @@ describe('CommunityListComponent', () => {
         }),
         CdkTreeModule,
         RouterTestingModule,
-        RouterLinkWithHref],
+        RouterLink],
       declarations: [CommunityListComponent],
       providers: [CommunityListComponent,
         { provide: CommunityListService, useValue: communityListServiceStub },],
@@ -233,7 +233,7 @@ describe('CommunityListComponent', () => {
   });
 
   it('should not render the show more button as an empty link', () => {
-    const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
+    const debugElements = fixture.debugElement.queryAll(By.directive(RouterLink));
     expect(debugElements).toBeTruthy();
   });
 
