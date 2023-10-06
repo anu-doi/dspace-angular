@@ -1,41 +1,50 @@
 .setting-option {
-    border: 1px solid var(--bs-light);
-  }
-  table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
-  }
+  border: 1px solid var(--bs-light);
+}
 
-  table th,
-  table td {
-    padding: 0.75rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
-  }
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
 
-  th {
-    display: table-cell;
-    vertical-align: inherit;
-    font-weight: bold;
-    text-align: -internal-center;
-  }
+table th,
+table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
 
-  th,
-  td {
-    padding: 0.5rem;
-  }
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
 
-  td {
-    width: 50px;
-    max-width: 50px;
-  }
+th,
+td {
+  padding: 0.5rem;
+}
 
-  .table-striped tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
+td {
+  width: 50px;
+  max-width: 50px;
+}
 
-  .setting-option {
-    border: 1px solid var(--bs-light);
-  }
-  
+.table-striped tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.setting-option {
+  border: 1px solid var(--bs-light);
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

@@ -20,11 +20,10 @@
       <ds-statistics-table *ngFor="let report of reports" [selectedValue]="selectedValue" [report]="report"
         class="m-2 {{ report.id }}">
       </ds-statistics-table>
-      <div *ngFor="let report of reports">
-        <div *ngIf="report.reportType === 'TotalVisitsDownloads'">
-          <ds-total-views-downloads [report]="report"></ds-total-views-downloads>
-        </div>
-      </div>
+      <ng-container *ngFor="let report of reports">
+        <ds-total-views-downloads *ngIf="report.reportType === 'TotalVisitsDownloads'" [report]="report"></ds-total-views-downloads>
+      </ng-container>
+      <!-- <div>{{ hasData$ }}</div> -->
       <div *ngIf="!(hasData$ | async)">
         {{ 'statistics.page.no-data' | translate }}
       </div>
@@ -45,9 +44,9 @@
     <h5>
       <label id="topitemslabel" for="sitefilter">Display top items</label>
     </h5>
-    <input type="number" id="sitefilter" [(ngModel)]="filterValue" min="1" max="20" class="form-control"
-      (keyup.enter)="onNumberChange(filterValue)" placeholder="Enter a number to filter">
-    <button class="btn btn-outline-secondary" type="submit" (click)="onNumberChange(filterValue)">Submit</button>
+    <input type="number" id="sitefilter" [(ngModel)]="filterValue" class="form-control"
+      (keyup)="onNumberChange(filterValue)" placeholder="Enter a number to filter">
+    <!-- <button class="btn btn-outline-secondary" type="submit" (click)="onNumberChange(filterValue)">Submit</button> -->
   </div>
 
   <form class="w-200" [formGroup]="formData">

@@ -4,6 +4,7 @@ import { MenuItemType } from 'src/app/shared/menu/menu-item-type.model';
 import { ExternalLinkMenuItemModel } from 'src/app/shared/menu/menu-item/models/external-link.model';
 import { NavbarComponent as BaseComponent } from '../../../../app/navbar/navbar.component';
 import { slideMobileNav } from '../../../../app/shared/animations/slide';
+import { LinkMenuItemModel } from 'src/app/shared/menu/menu-item/models/link.model';
 
 /**
  * Component representing the public navbar
@@ -31,7 +32,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       parentID: 'browse_related_links',
       active: false,
       visible: true,
-      index: 2,
+      index: 11,
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'ANU Archives',
@@ -42,7 +43,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       parentID: 'browse_related_links',
       active: false,
       visible: true,
-      index: 2,
+      index: 11,
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'ANU Press',
@@ -53,7 +54,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       parentID: 'browse_related_links',
       active: false,
       visible: true,
-      index: 2,
+      index: 11,
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'ANU Library',
@@ -64,21 +65,106 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       parentID: 'browse_related_links',
       active: false,
       visible: true,
-      index: 2,
+      index: 11,
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'Research Services Division',
         href: 'https://services.anu.edu.au/business-units/research-services-division'
       } as ExternalLinkMenuItemModel,
-    }];
+    }, 
+    {
+      id: 'about_about',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'About',
+        href: 'https://openresearch.anu.edu.au/about-open-research-anu'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'about_publish',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Publish',
+        href: 'https://openresearch.anu.edu.au/publishing-open-access'
+      } as ExternalLinkMenuItemModel,
+    },
+    
+    {
+      id: 'about_policy',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Policy',
+        href: 'https://openresearch.anu.edu.au/policy'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'about_copyright',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Copyright',
+        href: 'https://openresearch.anu.edu.au/copyright-considerations'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'about_contact',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Contact',
+        href: 'https://openresearch.anu.edu.au/contact'
+      } as ExternalLinkMenuItemModel,
+    }
+  ];
+
     menuList.push({
       id: 'browse_related_links',
       active: false,
       visible: true,
-      index: 2,
+      index: 11,
       model: {
         type: MenuItemType.TEXT,
         text: 'Related Links',
+      } as ExternalLinkMenuItemModel,
+    });
+    menuList.push({
+      id: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.TEXT,
+        text: 'About'
+      } as ExternalLinkMenuItemModel,
+    });
+
+    menuList.push({
+      id: 'contribute',
+      active: false,
+      visible: true,
+      index: 6,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Contribute',
+        href: 'https://openresearch.anu.edu.au/contribute'
       } as ExternalLinkMenuItemModel,
     });
 
