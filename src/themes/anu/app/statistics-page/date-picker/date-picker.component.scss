@@ -37,6 +37,9 @@
     background-color: black !important;
 }
 
+::ng-deep .mat-mdc-form-field-flex{
+    color: black !important;
+}
 ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
     color: black !important;
 }

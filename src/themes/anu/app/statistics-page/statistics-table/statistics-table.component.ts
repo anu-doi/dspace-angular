@@ -6,6 +6,7 @@ import { HttpClient} from '@angular/common/http';
 import { DSpaceObjectDataService } from 'src/app/core/data/dspace-object-data.service';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 /**
  * Component representing a statistics table for a given usage report.
@@ -43,9 +44,12 @@ export class StatisticsTableComponent extends BaseComponent implements OnInit {
   headers1: string[];
 
   constructor(protected dsoService: DSpaceObjectDataService,
-    protected nameService: DSONameService, private http: HttpClient, protected route: ActivatedRoute,
-    protected router: Router) {
-    super(dsoService, nameService);
+    protected nameService: DSONameService, 
+    private http: HttpClient, 
+    protected route: ActivatedRoute,
+    protected router: Router, 
+    protected translateService: TranslateService,) {
+    super(dsoService, nameService, translateService);
   }
   ngOnInit() {
     this.hasData = this.report.points.length > 0;

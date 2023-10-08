@@ -5,7 +5,7 @@ import { SiteDataService } from 'src/app/core/data/site-data.service';
 import { UsageReportDataService } from 'src/app/core/statistics/usage-report-data.service';
 import { DSpaceObjectDataService } from 'src/app/core/data/dspace-object-data.service';
 import { RouteService } from 'src/app/core/services/route.service';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StatisticsPageCommonComponent } from '../common-stat-page-attr/common-stat-page-attr.component';
 import { Observable, map, switchMap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
