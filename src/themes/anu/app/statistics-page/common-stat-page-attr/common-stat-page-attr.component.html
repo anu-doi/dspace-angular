@@ -2,6 +2,14 @@
   <ng-template *ngTemplateOutlet="statisticsContent"></ng-template>
 </ds-page-with-sidebar>
 <ng-template #statisticsContent>
+  <div id="filter-content" class="col-12">
+    <div class="d-block d-md-none search-controls clearfix">
+        <button (click)="openSidebar()" aria-controls="#search-body"
+                class="btn btn-outline-primary float-right open-sidebar"><i
+                class="fas fa-sliders"></i> Filter Statistics
+        </button>
+    </div>
+  </div>
   <ng-container *ngVar="(scope$ | async) as scope">
     <div class="d-flex justify-content-between">
       <h2 *ngIf="scope" class="header" id="{{ scope.id }}">
@@ -20,11 +28,9 @@
       <ds-statistics-table *ngFor="let report of reports" [selectedValue]="selectedValue" [report]="report"
         class="m-2 {{ report.id }}">
       </ds-statistics-table>
-      <div *ngFor="let report of reports">
-        <div *ngIf="report.reportType === 'TotalVisitsDownloads'">
-          <ds-total-views-downloads [report]="report"></ds-total-views-downloads>
-        </div>
-      </div>
+      <ng-container *ngFor="let report of reports">
+        <ds-total-views-downloads *ngIf="report.reportType === 'TotalVisitsDownloads'" [report]="report"></ds-total-views-downloads>
+      </ng-container>
       <div *ngIf="!(hasData$ | async)">
         {{ 'statistics.page.no-data' | translate }}
       </div>
@@ -33,11 +39,19 @@
 </ng-template>
 
 <ng-template #sidebarContent>
+  <div class="d-block d-md-none search-controls clearfix">
+  <div id="search-content" class="col-12">
+    <button (click)="closeSidebar()" aria-controls="#search-body"
+                class="btn btn-outline-primary float-right close-sidebar"><i
+                class="fas fa-arrow-right"></i> Back
+    </button>
+  </div>
+  </div>
   <div class="setting-option mb-3 p-3">
     <h5>
       <label id="viewbyfilter" for="c-optselect">View By</label>
     </h5>
-    <select id="c-optselect" label="testtsts" [(ngModel)]="selectedValue" class="form-control"
+    <select id="c-optselect" [(ngModel)]="selectedValue" class="form-control"
       (ngModelChange)="onOptionsSelected(selectedValue)">
       <option *ngFor="let type of types" [value]='type'>{{ type }}</option>
     </select>
@@ -45,30 +59,20 @@
 
   <div class="setting-option mb-3 p-3" id="selectitems">
     <h5>
-      <label for="otherfilter">Display top items</label>
+      <label id="topitemslabel" for="otherfilter">Display top items</label>
     </h5>
     <input type="number" id="otherfilter" aria-label="otherfilter" [(ngModel)]="filterValue"
       class="form-control" placeholder="Enter a number to filter" (keyup)="onNumberChange(filterValue)">
-    <!-- <button class="btn btn-outline-secondary" type="submit" (click)="onNumberChange(filterValue)">Submit</button> -->
   </div>
 
   <form class="w-200" [formGroup]="formData">
     <div class="setting-option mb-3 p-3">
       <h5>
-        <label>Filter</label>
+        <label aria-label="datefilter">Filter</label>
       </h5>
-      <div class="col-6 form-group mb-0">
+      <div class="col-12 form-group mb-0">
         <ds-date-picker-range (dateChange)="getChangeFromDatePicker($event)"></ds-date-picker-range>
       </div>
     </div>
   </form>
 </ng-template>
-<!-- <style>
-  input[type='number'] {
-    -moz-appearance: textfield;
-  }
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
-</style> -->

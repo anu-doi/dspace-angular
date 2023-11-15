@@ -11,10 +11,10 @@ import { LinkMenuItemModel } from 'src/app/shared/menu/menu-item/models/link.mod
  */
 @Component({
   selector: 'ds-navbar',
-  // styleUrls: ['./navbar.component.scss'],
-  styleUrls: ['../../../../app/navbar/navbar.component.scss'],
-  // templateUrl: './navbar.component.html',
-  templateUrl: '../../../../app/navbar/navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  // styleUrls: ['../../../../app/navbar/navbar.component.scss'],
+  templateUrl: './navbar.component.html',
+  // templateUrl: '../../../../app/navbar/navbar.component.html',
   animations: [slideMobileNav]
 })
 

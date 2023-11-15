@@ -10,6 +10,11 @@
     background-image: none !important;
     line-height: 1.5;
   }
+  
+  .navbar-toggler {
+    background-color: black;
+    color: white;
+  }
 
   .navbar ::ng-deep {
     a {
@@ -35,4 +40,3 @@
   .navbar-brand.border-right {
     border-right: 1px solid #000 !important;
   }
-  

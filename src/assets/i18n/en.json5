@@ -2762,7 +2762,7 @@
 
   "loading.top-level-communities": "Loading top-level communities...",
 
-  "login.form.email": "Email address",
+  "login.form.email": "ANU ID/Email Address",
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
@@ -5259,7 +5259,7 @@
 
   "dc.date.issued": "Date Issued",
 
-  "dc.terms.accessRights": "Access Rights",
+  "dcterms.accessRights": "Access Rights",
 
   "dc.rights.license": "License Rights",
 
@@ -5267,7 +5267,7 @@
 
   "local.identifier.doi": "DOI",
 
-  "archive.listelement.badge": "Archive",
+  "anuarchiveitems.listelement.badge": "Archive",
 
   "archive.page.description": "Description",
 
@@ -5298,4 +5298,10 @@
   "archive.page.uri": "URI",
 
   "dspace.entity.type": "Entity type",
+
+  "statistics-view-count": "Total views",
+
+  "statistics-download-count": "Total downloads"
+
+  "dc.relation.ispartof": "Book Title"
 }

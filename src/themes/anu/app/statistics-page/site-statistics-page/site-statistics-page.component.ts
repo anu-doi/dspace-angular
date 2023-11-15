@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 import { hasValue } from 'src/app/shared/empty.util';
 import { UsageReport } from 'src/app/core/statistics/models/usage-report.model';
 import { getFirstSucceededRemoteData, getRemoteDataPayload } from 'src/app/core/shared/operators';
+import { SidebarService } from 'src/app/shared/sidebar/sidebar.service';
 
 @Component({
   selector: 'ds-site-statistics-page',
@@ -49,7 +50,8 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
     protected authService: AuthService,
     protected dsoService: DSpaceObjectDataService,
     protected siteService: SiteDataService,
-    protected http: HttpClient
+    protected http: HttpClient,
+    protected sidebarService: SidebarService,
   ) {
     super(
       routeService,
@@ -58,7 +60,8 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
       usageReportService,
       nameService,
       authService,
-      http
+      http,
+      sidebarService
     );
     this.route.queryParams.subscribe(params => {
       this.minDate = params.minDate;
@@ -125,6 +128,14 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
       getRemoteDataPayload(),
       map((list) => list.page),
     );
+  }
+
+  openSidebar() {
+    this.sidebarService.expand();
+  }
+
+  closeSidebar() {
+    this.sidebarService.collapse();
   }
 
   ngOnDestroy(): void {

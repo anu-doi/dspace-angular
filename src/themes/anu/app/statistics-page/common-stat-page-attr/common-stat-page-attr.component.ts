@@ -12,6 +12,7 @@ import { UsageReport } from 'src/app/core/statistics/models/usage-report.model';
 import { UsageReportDataService } from 'src/app/core/statistics/usage-report-data.service';
 import { RESTURLCombiner } from 'src/app/core/url-combiner/rest-url-combiner';
 import { hasValue } from 'src/app/shared/empty.util';
+import { SidebarService } from 'src/app/shared/sidebar/sidebar.service';
 import { StatisticsPageComponent } from 'src/app/statistics-page/statistics-page/statistics-page.component';
 
 /**
@@ -54,6 +55,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
     protected nameService: DSONameService,
     protected authService: AuthService,
     protected http: HttpClient,
+    protected sidebarService: SidebarService,
   ) {
     super(
       route,
@@ -110,6 +112,14 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
     );
   }
 
+  public openSidebar(): void {
+    this.sidebarService.expand();
+  }
+
+  closeSidebar() {
+    this.sidebarService.collapse();
+  }
+  
   exportStatistics(type: string, uri: string): Observable<HttpResponse<Blob>> {
     let encodedUri = encodeURI(uri);
     let startDate: string | undefined;
