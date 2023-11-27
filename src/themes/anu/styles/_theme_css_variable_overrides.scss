@@ -105,3 +105,10 @@ footer.anu-wf-footer {
   z-index: 0;
   position: relative;
 }
+
+/** Mobile menu styling **/
+@media screen and (max-width: map-get($grid-breakpoints, md)) {
+  .dropdown-item-text {
+      color: white
+  }
+}

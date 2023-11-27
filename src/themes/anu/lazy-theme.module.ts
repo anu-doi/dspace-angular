@@ -64,7 +64,7 @@ import { CollectionPageComponent } from './app/collection-page/collection-page.c
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
 import { StatisticsTableComponent } from 'src/themes/anu/app/statistics-page/statistics-table/statistics-table.component';
-
+// import { SubmissionSectionLicenseComponentx } from 'src/themes/anu/app/submission/sections/license/section-license.component';
 
 // import { LoginPageComponent } from './app/login-page/login-page.component';
 // import { LogoutPageComponent } from './app/logout-page/logout-page.component';
@@ -84,9 +84,9 @@ import { FeedbackComponent } from './app/info/feedback/feedback.component';
 // import { CommunityListComponent } from './app/community-list-page/community-list/community-list.component';
 // import { ComcolPageHandleComponent } from './app/shared/comcol-page-handle/comcol-page-handle.component';
 // import { AuthNavMenuComponent } from './app/shared/auth-nav-menu/auth-nav-menu.component';
-// import {
-//   ExpandableNavbarSectionComponent
-// } from './app/navbar/expandable-navbar-section/expandable-navbar-section.component';
+import {
+  ExpandableNavbarSectionComponent
+} from './app/navbar/expandable-navbar-section/expandable-navbar-section.component';
 // import { ItemMetadataComponent } from './app/item-page/edit-item-page/item-metadata/item-metadata.component';
 // import {
 //   EditItemTemplatePageComponent
@@ -127,7 +127,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { TotalViewsDownloadsComponent } from './app/statistics-page/total-views-downloads/total-views-downloads.component';
-
+// import { UserMenuComponent } from './app/shared/auth-nav-menu/user-menu/user-menu.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 // import { ObjectListComponent } from './app/shared/object-list/object-list.component';
 //
@@ -139,6 +139,7 @@ import { TotalViewsDownloadsComponent } from './app/statistics-page/total-views-
 
 
 const DECLARATIONS = [
+  // UserMenuComponent,
   FileSectionComponent,
   HomePageComponent,
   DatePickerComponent,
@@ -147,6 +148,7 @@ const DECLARATIONS = [
   // CommunityListPageComponent,
   // SearchPageComponent,
   // ConfigurationSearchPageComponent,
+  // SubmissionSectionLicenseComponentx,
   EndUserAgreementComponent,
   // PageNotFoundComponent,
   // ObjectNotFoundComponent,
@@ -182,7 +184,8 @@ const DECLARATIONS = [
   // CommunityListComponent,
   // ComcolPageHandleComponent,
   // AuthNavMenuComponent,
-  // ExpandableNavbarSectionComponent,
+  ExpandableNavbarSectionComponent,
+ 
   // ItemMetadataComponent,
   // EditItemTemplatePageComponent,
   // LoadingComponent,

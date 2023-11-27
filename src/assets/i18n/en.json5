@@ -5259,7 +5259,7 @@
 
   "dc.date.issued": "Date Issued",
 
-  "dcterms.accessRights": "Access Rights",
+  "dcterms.accessRights": "Access Statement",
 
   "dc.rights.license": "License Rights",
 
@@ -5267,35 +5267,35 @@
 
   "local.identifier.doi": "DOI",
 
-  "anuarchiveitems.listelement.badge": "Archive",
+  "anuarchivesitem.listelement.badge": "Archive",
 
-  "archive.page.description": "Description",
+  "anuarchivesitem.page.description": "Description",
 
-  "archive.page.edit": "Edit this item",
+  "anuarchivesitem.page.edit": "Edit this item",
 
-  "archive.page.journal-issn": "Journal ISSN",
+  "anuarchivesitem.page.journal-issn": "Journal ISSN",
 
-  "archive.page.journal-title": "Journal Title",
+  "anuarchivesitem.page.journal-title": "Journal Title",
 
-  "archive.page.publisher": "Publisher",
+  "anuarchivesitem.page.publisher": "Publisher",
 
-  "archive.page.titleprefix": "Archive: ",
+  "anuarchivesitem.page.titleprefix": "Archive: ",
 
-  "archive.page.volume-title": "Volume Title",
+  "anuarchivesitem.page.volume-title": "Volume Title",
 
-  "archive.search.results.head": "Archive Search Results",
+  "anuarchivesitem.search.results.head": "Archive Search Results",
 
-  "archive-relationships.search.results.head": "Archive Search Results",
+  "anuarchivesitem-relationships.search.results.head": "Archive Search Results",
 
-  "archive.search.title": "Archive Search",
+  "anuarchivesitem.search.title": "Archive Search",
 
-  "archive.date.created": "Date created",
+  "anuarchivesitem.date.created": "Date created",
 
-  "archive.identifier.other": "Other identifier",
+  "anuarchivesitem.identifier.other": "Other Identifier/s",
 
-  "archive.rights.license": "Rights license",
+  "anuarchivesitem.rights.license": "Rights/License",
 
-  "archive.page.uri": "URI",
+  "anuarchivesitem.page.uri": "URI",
 
   "dspace.entity.type": "Entity type",
 
@@ -5303,5 +5303,8 @@
 
   "statistics-download-count": "Total downloads",
 
-  "dc.relation.ispartof": "Book Title"
+  "dc.relation.ispartof": "Book Title",
+
+  "local.description.embargo": "Restricted until",
+
 }
