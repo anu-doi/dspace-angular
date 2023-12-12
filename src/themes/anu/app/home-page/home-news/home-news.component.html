@@ -1,0 +1,35 @@
+<div class="container-fluid mb-2" style="margin-top: -1.5rem;">
+  <div class="row align-items-end"
+    style="background-image: url(https://live.staticflickr.com/65535/49245750546_8152d4b817_o.jpg); height: 500px;background-size: cover; background-position: center;">
+    <div class="col">
+      <div class="container pb-3">
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-4">
+            <div class="bg-black p-2">
+              <h1>Open Research Repository</h1>
+              <p>
+                The Open Research Repository is the University’s online open access repository for collecting,
+                maintaining and disseminating the scholarly output of the University.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+          </div>
+          <div class="col-12 col-md-4 col-lg-2 align-self-end">
+            <div class="bg-black p-2">
+              <p>
+                Contribute to the Open Research Repository
+              </p>
+              <ng-container *ngIf="(isAuthenticated | async)">
+                <button class="bg-black-button" type="button" (click)="openScopeModal()">Contribute</button>
+              </ng-container>
+              <ng-container *ngIf="!(isAuthenticated | async)">
+                <button class="bg-black-button" type="button" routerLink="/login">Login</button>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

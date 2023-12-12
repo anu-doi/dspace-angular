@@ -1780,6 +1780,8 @@
 
   "grant-deny-request-copy.processed": "This request has already been processed. You can use the button below to get back to the home page.",
 
+  "grant-request-copy.email.message": "Dear {{ recipientName }},\nIn response to your request I have the pleasure to send you in attachment a copy of the file(s) concerning the document: \"{{ itemUrl }}\" ({{ itemName }}), of which I am an author.\n\nBest regards,\n{{ authorName }} <{{ authorEmail }}>",
+
   "grant-request-copy.email.subject": "Request copy of document",
 
   "grant-request-copy.error": "An error occurred",
@@ -1862,7 +1864,7 @@
 
   "info.privacy.breadcrumbs": "Privacy Statement",
 
-  "info.privacy.head": "Privacy Statement",
+  "info.privacy.head": "Privacy Policy",
 
   "info.privacy.title": "Privacy Statement",
 
@@ -2764,7 +2766,7 @@
 
   "loading.top-level-communities": "Loading top-level communities...",
 
-  "login.form.email": "Email address",
+  "login.form.email": "ANU ID/Email Address",
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
@@ -2818,7 +2820,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "Browse Open Research",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -3223,6 +3225,9 @@
   "process.overview.table.finish": "Finish time (UTC)",
 
   "process.overview.table.id": "Process ID",
+  "process.detail.create": "Create similar process",
+
+  "process.overview.table.finish": "Finish time (UTC)",
 
   "process.overview.table.name": "Name",
 
@@ -3499,6 +3504,10 @@
   "repository.title": "DSpace Repository",
 
   "repository.title.prefix": "DSpace Repository :: ",
+
+  "repository.title.prefix": "Open Research :: ",
+
+  "repository.title.prefixDSpace": "DSpace Angular ::",
 
   "resource-policies.add.button": "Add",
 
@@ -3918,7 +3927,7 @@
 
   "statistics.table.title.TotalVisitsPerMonth": "Total visits per month",
 
-  "statistics.table.title.TotalDownloads": "File Visits",
+  "statistics.table.title.TotalDownloads": "Total Downloads",
 
   "statistics.table.title.TopCountries": "Top country views",
 
@@ -5233,5 +5242,87 @@
   "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
 
   "vocabulary-treeview.search.form.add": "Add",
+
+  "browse.comcol.by.type": "By Type",
+
+  "browse.metadata.type": "Type",
+
+  "browse.metadata.type.breadcrumbs": "Browse by Type",
+
+  "menu.section.browse_global_by_type": "By Type",
+
+  "search.filters.applied.f.accessrights": "Access Rights",
+
+  "search.filters.filter.accessrights.head": "Access Rights",
+
+  "search.filters.filter.accessrights.label": "Search Access Rights",
+
+  "submission.sections.describe.relationship-lookup.title.isJournalOfVolume": "Journal",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalOfVolume" : "Journal",
+
+  "submission.sections.describe.relationship-lookup.title.isJournalVolumeOfIssue" : "Journal Volumes",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalVolumeOfIssue" : "Journal volumes",
+
+  "journalvolume.search.results.head" : "Journal Volumes",
+
+  "submission.sections.describe.relationship-lookup.title.isPublicationOfAuthor" : "Publications",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfAuthor" :  "Publications",
+
+  "statistics.table.title.TopDownloads": "Top downloads",
+  
+  "dc.source": "Source",
+
+  "dc.date.issued": "Date Issued",
+
+  "dcterms.accessRights": "Access Statement",
+
+  "dc.rights.license": "License Rights",
+
+  "dc.type": "Type",
+
+  "local.identifier.doi": "DOI",
+
+  "anuarchivesitem.listelement.badge": "Archive",
+
+  "anuarchivesitem.page.description": "Description",
+
+  "anuarchivesitem.page.edit": "Edit this item",
+
+  "anuarchivesitem.page.journal-issn": "Journal ISSN",
+
+  "anuarchivesitem.page.journal-title": "Journal Title",
+
+  "anuarchivesitem.page.publisher": "Publisher",
+
+  "anuarchivesitem.page.titleprefix": "ANU Archives Item: ",
+
+  "anuarchivesitem.page.volume-title": "Volume Title",
+
+  "anuarchivesitem.search.results.head": "ANU Archive Search Results",
+
+  "anuarchivesitem-relationships.search.results.head": "ANU Archive Search Results",
+
+  "anuarchivesitem.search.title": "ANU Archive Search",
+
+  "anuarchivesitem.date.created": "Date created",
+
+  "anuarchivesitem.identifier.other": "Other Identifier/s",
+
+  "anuarchivesitem.rights.license": "Rights/License",
+
+  "anuarchivesitem.page.uri": "URI",
+
+  "dspace.entity.type": "Entity type",
+
+  "statistics-view-count": "Total views",
+
+  "statistics-download-count": "Total downloads",
+
+  "dc.relation.ispartof": "Book Title",
+
+  "local.description.embargo": "Restricted until",
 
 }
