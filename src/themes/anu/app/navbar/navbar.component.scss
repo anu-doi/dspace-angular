@@ -10,6 +10,7 @@ nav.navbar {
       position: absolute;
       overflow: hidden;
       height: 0;
+      z-index: var(--ds-nav-z-index);
       &.open {
         height: 100%; //doesn't matter because wrapper is sticky
       }
@@ -29,7 +30,7 @@ nav.navbar {
       > .navbar-inner-container {
         background-color: black;
         padding: 0 var(--bs-spacer);
-        z-index: 10;
+        /* z-index: 10; */
         a.navbar-brand {
           display: none;
         }
