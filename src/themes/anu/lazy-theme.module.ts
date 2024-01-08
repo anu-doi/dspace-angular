@@ -50,6 +50,7 @@ import { HomePageComponent } from './app/home-page/home-page.component';
 // import { CommunityListPageComponent } from './app/community-list-page/community-list-page.component';
 // import { SearchPageComponent } from './app/search-page/search-page.component';
 // import { ConfigurationSearchPageComponent } from './app/search-page/configuration-search-page.component';
+// import { SearchFormComponent } from './app/shared/search-form/search-form.component';
 import { EndUserAgreementComponent } from './app/info/end-user-agreement/end-user-agreement.component';
 // import { PageNotFoundComponent } from './app/pagenotfound/pagenotfound.component';
 // import { ObjectNotFoundComponent } from './app/lookup-by-id/objectnotfound/objectnotfound.component';
@@ -119,6 +120,14 @@ import { ItemVersionsModule } from '../../app/item-page/versions/item-versions.m
 // import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
 // import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import { MediaViewerComponent } from './app/item-page/media-viewer/media-viewer.component';
+import {
+  MediaViewerImageComponent
+} from './app/item-page/media-viewer/media-viewer-image/media-viewer-image.component';
+import {
+  MediaViewerVideoComponent
+} from './app/item-page/media-viewer/media-viewer-video/media-viewer-video.component';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 import { DatePickerComponent } from './app/statistics-page/date-picker/date-picker.component';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -164,6 +173,9 @@ const DECLARATIONS = [
   CollectionPageComponent,
   ItemPageComponent,
   FullItemPageComponent,
+  MediaViewerComponent,
+  MediaViewerImageComponent,
+  MediaViewerVideoComponent,
   StatisticsTableComponent,
   TotalViewsDownloadsComponent,
   // LoginPageComponent,
@@ -256,6 +268,7 @@ const DECLARATIONS = [
     ComcolModule,
     // DsoSharedModule,
     // SystemWideAlertModule
+    NgxGalleryModule,
     MatFormFieldModule,
     MatDatepickerModule,
     MatDialogModule,
