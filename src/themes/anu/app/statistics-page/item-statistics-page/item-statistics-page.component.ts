@@ -19,6 +19,7 @@ export class ItemStatisticsPageComponent extends StatisticsPageCommonComponent {
     'TotalVisitsPerMonth',
     'TopCountries',
     'TopCities',
-    'TotalDownloads'
+    'TotalDownloads',
+    'TotalVisitsDownloads'
   ];
 }

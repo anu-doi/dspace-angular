@@ -30,7 +30,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
    * The usage report types to show on this statistics page, as an Observable list.
    */
 
-  selectedValue = 'TotalVisits';
+  // selectedValue = 'TotalVisits';
   defaultNumber = 5;
   value: any;
   types: string[] = [
@@ -63,20 +63,9 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
       http,
       sidebarService
     );
-    this.route.queryParams.subscribe(params => {
-      this.minDate = params.minDate;
-      this.maxDate = params.maxDate;
-      this.type = params.type || this.selectedValue;
-      this.filterValue = params.noofitems || this.defaultNumber;
-    });
-    this.router.navigate([], {
-      queryParams: Object.assign({ type: this.selectedValue, noofitems: this.filterValue }),
-      queryParamsHandling: 'merge'
-    });
   }
 
   ngOnInit(): void {
-    this.selectedValue = this.type;
     this.filterStats = false;
     super.ngOnInit();
   }
@@ -88,7 +77,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
   public getReports$() {
     let startDate: string | undefined;
     let endDate: string | undefined;
-    if (!this.filterStats && !this.numberChange) {
+    if (!this.filterStats && !this.paramsChange) {
       return this.scope$.pipe(
         switchMap((scope) =>
           this.searchStatistics(scope._links.self.href, 0, this.filterValue),
