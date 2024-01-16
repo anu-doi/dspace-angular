@@ -40,13 +40,11 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
   filterStats = false;
   subs: Subscription[] = [];
   type: string;
-
   dateChange: boolean;
-  href: string;
   exportStats: boolean;
   uri: string;
   filterValue: number;
-  paramsChange = false;
+  numberChange = false;
   defaultNumber = 5;
 
   constructor(
@@ -66,9 +64,6 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       nameService,
       authService,
     );
-  }
-
-  ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.minDate = params.minDate;
       this.maxDate = params.maxDate;
@@ -76,26 +71,18 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       this.filterValue = params.noofitems || this.defaultNumber;
     });
 
-    if(this.minDate !=  null && this.maxDate !=null){
-      this.router.navigate([], {
-        queryParams: Object.assign({ type: this.type, noofitems: this.filterValue, minDate: this.minDate, maxDate: this.maxDate }),
-        queryParamsHandling: 'merge'
-      });
-    } 
-    else {
-      this.router.navigate([], {
-        queryParams: Object.assign({ type: this.type, noofitems: this.filterValue }),
-        queryParamsHandling: 'merge'
-      });
-    }
-    if((this.minDate != null && this.maxDate != null) || this.filterValue != this.defaultNumber || this.type != this.selectedValue){ 
-      this.filterStats = true;
-    } else {
-      this.filterStats = false;
-    }
+    this.router.navigate([], {
+      queryParams: Object.assign({ type: this.type, noofitems: this.filterValue }),
+      queryParamsHandling: 'merge'
+    });
+  }
+
+  ngOnInit(): void {
     this.selectedValue = this.type;
-    this.href = this.router.url;
+    this.filterStats = false;
     super.ngOnInit();
+    this.onOptionsSelected(this.selectedValue);
+    this.onNumberChange(this.filterValue);
   }
 
   getChangeFromDatePicker(item: string) {
@@ -160,7 +147,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
   protected getReports$() {
     let startDate: string | undefined;
     let endDate: string | undefined;
-    if (!this.filterStats && !this.paramsChange) {
+    if (!this.filterStats && !this.numberChange) {
       return this.scope$.pipe(
         switchMap((scope) =>
           combineLatest(
@@ -222,6 +209,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       this.maxDate = params.maxDate;
       this.type = params.type;
     });
+
     this.router.navigate([], {
       queryParams: Object.assign({ type: value }),
       queryParamsHandling: 'merge'
@@ -239,10 +227,9 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       queryParams: Object.assign({ noofitems: value }),
       queryParamsHandling: 'merge'
     });
-    this.paramsChange = true;
-    this.filterStats = true;
+    this.numberChange = true;
     this.reports$ = this.getReports$();
-    this.paramsChange = false;
+    this.numberChange = false;
   }
 
   ngOnDestroy(): void {

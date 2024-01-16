@@ -53,7 +53,7 @@
     </h5>
     <select id="c-optselect" [(ngModel)]="selectedValue" class="form-control"
       (ngModelChange)="onOptionsSelected(selectedValue)">
-      <option *ngFor="let type of types" [value]='type' [hidden]="type==='TotalVisitsDownloads'">{{ type }}</option>
+      <option *ngFor="let type of types" [value]='type'>{{ type }}</option>
     </select>
   </div>
 
