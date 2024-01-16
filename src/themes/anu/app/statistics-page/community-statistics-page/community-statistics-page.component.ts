@@ -16,6 +16,7 @@ export class CommunityStatisticsPageComponent extends StatisticsPageCommonCompon
     'TotalVisitsPerMonth',
     'TopCountries',
     'TopCities',
-    'TotalDownloads'
+    'TotalDownloads',
+    'TotalVisitsDownloads'
   ];
 }
