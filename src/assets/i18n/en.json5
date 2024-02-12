@@ -769,6 +769,16 @@
   "bitstream-request-a-copy.submit.success": "The item request was submitted successfully.",
 
   "bitstream-request-a-copy.submit.error": "Something went wrong with submitting the item request.",
+  
+  "bitstream-request-a-copy.google-recaptcha.notification.title": "Google reCaptcha",
+
+  "bitstream-request-a-copy.google-recaptcha.notification.message.error": "An error occurred during reCaptcha verification",
+
+  "bitstream-request-a-copy.google-recaptcha.notification.message.expired": "Verification expired. Please verify again.",
+
+  "bitstream-request-a-copy.google-recaptcha.must-accept-cookies": "In order to request a copy of the file, you must accept the <b>Request a copy </b> (Google reCaptcha) cookies.",
+  
+  "bitstream-request-a-copy.google-recaptcha.open-cookie-settings": "Open cookie settings",
 
   "browse.back.all-results": "All browse results",
 
@@ -1370,13 +1380,13 @@
 
   "cookies.consent.app.title.google-recaptcha": "Google reCaptcha",
 
-  "cookies.consent.app.description.google-recaptcha": "We use google reCAPTCHA service during registration and password recovery",
+  "cookies.consent.app.description.google-recaptcha": "We use google reCAPTCHA service during registration, password recovery and Request a copy of the file",
 
   "cookies.consent.purpose.functional": "Functional",
 
   "cookies.consent.purpose.statistical": "Statistical",
 
-  "cookies.consent.purpose.registration-password-recovery": "Registration and Password recovery",
+  "cookies.consent.purpose.registration-password-recovery": "Registration, Password recovery and Request a copy of the file",
 
   "cookies.consent.purpose.sharing": "Sharing",
 

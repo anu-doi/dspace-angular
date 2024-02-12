@@ -53,6 +53,7 @@ import { ResultsBackButtonModule } from '../shared/results-back-button/results-b
 import { ItemAlertsComponent } from './alerts/item-alerts.component';
 import { ItemVersionsModule } from './versions/item-versions.module';
 import { BitstreamRequestACopyPageComponent } from './bitstreams/request-a-copy/bitstream-request-a-copy-page.component';
+import { ThemedBitstreamRequestACopyPageComponent } from './bitstreams/request-a-copy/themed-bitstream-request-a-copy-page';
 import { FileSectionComponent } from './simple/field-components/file-section/file-section.component';
 import { ItemSharedModule } from './item-shared.module';
 import { DsoPageModule } from '../shared/dso-page/dso-page.module';
@@ -103,6 +104,7 @@ const DECLARATIONS = [
   ItemAlertsComponent,
   ThemedItemAlertsComponent,
   BitstreamRequestACopyPageComponent,
+  ThemedBitstreamRequestACopyPageComponent,
 ];
 
 @NgModule({
