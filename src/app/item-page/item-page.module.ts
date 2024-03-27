@@ -15,6 +15,9 @@ import {
 import {
   ItemPageAbstractFieldComponent
 } from './simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import {
+  ThemedItemPageAbstractFieldComponent
+} from './simple/field-components/specific-field/abstract/themed-item-page-abstract-field.component';
 import { ItemPageUriFieldComponent } from './simple/field-components/specific-field/uri/item-page-uri-field.component';
 import { ItemPageFieldComponent } from './simple/field-components/specific-field/item-page-field.component';
 import { CollectionsComponent } from './field-components/collections/collections.component';
@@ -79,6 +82,7 @@ const DECLARATIONS = [
   ItemPageAuthorFieldComponent,
   ItemPageDateFieldComponent,
   ItemPageAbstractFieldComponent,
+  ThemedItemPageAbstractFieldComponent,
   ItemPageUriFieldComponent,
   ItemPageFieldComponent,
   CollectionsComponent,

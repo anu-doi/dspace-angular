@@ -5,19 +5,33 @@
 </ds-generic-item-page-field>
 
 <ds-generic-item-page-field [item]="object"
-[fields]="['dc.relation.ispartof']"
-[label]="'dc.relation.ispartof'">
-</ds-generic-item-page-field>
-
-<ds-generic-item-page-field [item]="object"
 [fields]="['dc.type']"
 [label]="'dc.type'">
 </ds-generic-item-page-field>
 
-<ds-generic-item-page-field [item]="object"
-[fields]="['dspace.entity.type']"
-[label]="'dspace.entity.type'">
-</ds-generic-item-page-field>
+<ng-container *ngIf = "object.firstMetadataValue('dspace.entity.type') !='ANUArchivesItem'">
+    <ds-generic-item-page-field [item]="object"
+    [fields]="['dc.relation.ispartof']"
+    [label]="'dc.relation.ispartof'">
+    </ds-generic-item-page-field>
+    
+    <ds-generic-item-page-field [item]="object"
+    [fields]="['dspace.entity.type']"
+    [label]="'dspace.entity.type'">
+    </ds-generic-item-page-field>
+</ng-container>
+
+<ng-container *ngIf = "object.firstMetadataValue('dspace.entity.type') =='ANUArchivesItem'">
+    <ds-generic-item-page-field [item]="object"
+    [fields]="['dc.relation.ispartofseries']"
+    [label]="'dc.relation.ispartof'">
+    </ds-generic-item-page-field>
+    
+    <ds-generic-item-page-field [item]="object"
+    [fields]="['dc.date.created']"
+    [label]="'anuarchivesitem.date.created'">
+    </ds-generic-item-page-field>
+</ng-container>
 
 <ds-generic-item-page-field [item]="object"
 [fields]="['dcterms.accessRights']"

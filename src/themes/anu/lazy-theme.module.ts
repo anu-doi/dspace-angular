@@ -44,6 +44,7 @@ import { ResourcePoliciesModule } from '../../app/shared/resource-policies/resou
 import { ComcolModule } from '../../app/shared/comcol/comcol.module';
 import { RootModule } from '../../app/root.module';
 import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
+import { ItemPageAbstractFieldComponent } from './app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
 // import { RootComponent } from './app/root/root.component';
 // import { BrowseBySwitcherComponent } from './app/browse-by/browse-by-switcher/browse-by-switcher.component';
@@ -179,6 +180,7 @@ const DECLARATIONS = [
   MediaViewerVideoComponent,
   StatisticsTableComponent,
   TotalViewsDownloadsComponent,
+  ItemPageAbstractFieldComponent,
   // LoginPageComponent,
   // LogoutPageComponent,
   // CreateProfileComponent,
