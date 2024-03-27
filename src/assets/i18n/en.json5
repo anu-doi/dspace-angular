@@ -5325,6 +5325,8 @@
 
   "anuarchivesitem.page.uri": "URI",
 
+  "anuarchivesitem.relation.ispartofseries" : "Archives Series",
+
   "dspace.entity.type": "Entity type",
 
   "statistics-view-count": "Total views",
