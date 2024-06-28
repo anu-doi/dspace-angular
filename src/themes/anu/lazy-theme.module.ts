@@ -121,6 +121,9 @@ import { ItemVersionsModule } from '../../app/item-page/versions/item-versions.m
 // import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
 // import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import {
+  ItemPageTitleFieldComponent
+} from './app/item-page/simple/field-components/specific-field/title/item-page-title-field.component';
 import { MediaViewerComponent } from './app/item-page/media-viewer/media-viewer.component';
 import {
   MediaViewerImageComponent
@@ -175,6 +178,7 @@ const DECLARATIONS = [
   CollectionPageComponent,
   ItemPageComponent,
   FullItemPageComponent,
+  ItemPageTitleFieldComponent,
   MediaViewerComponent,
   MediaViewerImageComponent,
   MediaViewerVideoComponent,
