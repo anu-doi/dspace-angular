@@ -23,7 +23,6 @@
     <ng-container *ngIf="mediaViewer.image">
       <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
     </ng-container>
-    <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
     <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
       [parentItem]="object"
@@ -96,6 +95,7 @@
     [fields]="['local.description.embargo']"
     [label]="'local.description.embargo'">
     </ds-generic-item-page-field>
+    <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
 
     <div>
       <a class="btn btn-outline-primary" role="button" [routerLink]="[itemPageRoute + '/full']">

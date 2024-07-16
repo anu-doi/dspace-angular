@@ -37,6 +37,7 @@ import { PersonComponent } from './app/entity-groups/research-entities/item-page
 import { OrgUnitComponent } from './app/entity-groups/research-entities/item-pages/org-unit/org-unit.component';
 import { ProjectComponent } from './app/entity-groups/research-entities/item-pages/project/project.component';
 // import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
+import { ItemPageDOIFieldComponent } from './app/item-page/simple/field-components/specific-field/doi/item-page-doi-field.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -74,6 +75,7 @@ const DECLARATIONS = [
 //  EditCollectionSelectorComponent,
 //  EditCommunitySelectorComponent,
 //  EditItemSelectorComponent,
+  ItemPageDOIFieldComponent,
 ];
 
 @NgModule({

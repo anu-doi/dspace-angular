@@ -1,1 +1,24 @@
-
+<ng-container *ngVar="(bitstreams$ | async) as bitstreams">
+    <ds-metadata-field-wrapper *ngIf="bitstreams?.length > 0" [label]="label | translate">
+      <div class="file-section">
+        <div class="row header-row font-weight-bold">
+          <div class="col-8">File</div>
+          <div class="col-4">Description</div>
+        </div>
+        <ng-container *ngFor="let file of bitstreams; let last=last;">
+          <div class="row bitstream-row">
+            <div class="col-8">
+              <ds-themed-file-download-link [bitstream]="file" [item]="item">
+                <span>{{ dsoNameService.getName(file) }}</span>
+                <span> ({{(file?.sizeBytes) | dsFileSize }})</span>
+              </ds-themed-file-download-link>
+            </div>
+            <div class="col-4">
+              {{ file.firstMetadataValue('dc.description') }}
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ds-metadata-field-wrapper>
+  </ng-container>
+  
