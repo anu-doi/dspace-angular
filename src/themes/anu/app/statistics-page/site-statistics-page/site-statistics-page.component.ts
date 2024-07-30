@@ -108,6 +108,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
         {
           fieldName: `uri`,
           fieldValue: uri,
+          encodeValue: false,
         },
       ],
       currentPage: page,

@@ -193,18 +193,22 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
         {
           fieldName: `uri`,
           fieldValue: uri,
+          encodeValue: false,
         },
         {
           fieldName: `startdate`,
           fieldValue: startdate,
+          encodeValue: false,
         },
         {
           fieldName: `enddate`,
           fieldValue: enddate,
+          encodeValue: false,
         },
         {
           fieldName: `type`,
           fieldValue: type,
+          encodeValue: false,
         }
       ],
       currentPage: page,
