@@ -33,6 +33,7 @@ import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
 import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
 import { OrgUnitComponent } from './app/entity-groups/research-entities/item-pages/org-unit/org-unit.component';
 import { ProjectComponent } from './app/entity-groups/research-entities/item-pages/project/project.component';
@@ -54,6 +55,7 @@ const ENTRY_COMPONENTS = [
   PersonComponent,
   OrgUnitComponent,
   ProjectComponent,
+  FileDownloadLinkComponent,
 
   /* CommunityListElementComponent,
   CollectionListElementComponent,
