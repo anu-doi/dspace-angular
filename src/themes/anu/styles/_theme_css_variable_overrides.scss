@@ -1,0 +1,114 @@
+// Override or add CSS variables for your theme here
+
+:root {
+  //--ds-header-logo-height: 80px;
+  //--ds-header-logo-height-xs: 50px;
+  //--ds-header-icon-color: #{$link-color};
+  //--ds-header-icon-color-hover: #{darken($link-color, 15%)};
+  --ds-header-navbar-border-top-color: #{theme-color('primary')};
+  --ds-header-icon-color: #{theme-color('primary')};
+  
+  --ds-nav-z-index: inherit;
+
+  --ds-footer-bg: #000;
+  --ds-top-footer-bg: #000;
+  // --ds-header-navbar-border-bottom-color: red;
+
+  --ds-navbar-bg-color: #f5edde;
+  --ds-navbar-link-color: #000;
+  --ds-navbar-link-color-hover: #000;
+  --ds-navbar-link-bg-color-hover: #fff;
+
+  $admin-sidebar-bg: "000";
+//  --ds-admin-sidebar-bg: #{$admin-sidebar-bg};
+  --ds-admin-sidebar-bg: #000;
+//  --ds-admin-sidebar-color: #000;
+//  --ds-admin-sidebar-active-bg: #{$admin-sidebar-bg};
+//  --ds-admin-sidebar-header-bg: #{darken($admin-sidebar-bg, 7%)};
+
+    $gold-link-color: "7b5a3d";
+
+    --ds-breadcrumb-bg: #FFF !important;
+    --ds-breadcrumb-link-color: #{$gold-link-color};
+    --ds-breadcrumb-link-active-color: #{darken($cyan, 30%)};
+
+    --ds-link-color: #00549E;
+    --ds-link-hover-color: #{$gold-link-color};
+}
+
+//#00549E;; -- link colour
+
+header .navbar-brand img {
+  width: 150px;
+}
+
+.navbar-container {
+  background-color: var(--ds-navbar-bg-color);
+}
+
+.navbar-container li:hover {
+  background-color: var(--ds-navbar-link-bg-color-hover);
+}
+
+a {
+  color: var(--ds-link-color);
+}
+
+a:visited {
+  color: var(--ds-link-color);
+}
+
+a:hover {
+ color: var(--ds-link-hover-color)
+}
+
+.badge-info {
+//  background-color: #{theme-color('secondary')};
+//  background-color: #f5edde;
+  background-color: #fff;
+  border: 1px solid #{theme-color('secondary')};
+  color: #000;
+}
+
+.btn-primary:visited {
+  color: #fff;
+}
+
+a.btn-dark:visited {
+  color: #fff;
+}
+
+.nav-link {
+  color: var(--ds-admin-sidebar-color);
+}
+
+.badge-secondary {
+//  background-color: #f5edde;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #{theme-color('secondary')};
+}
+
+.badge-success.badge, .badge-info.badge, .badge-warning.badge {
+  color: #000 !important;
+}
+
+.btn-outline-secondary, .btn-success, .btn-secondary {
+  color: #000;
+}
+
+.btn-outline-secondary a:visited, .btn-success a:visited, .btn-secondary a:visited {
+  color: #000;
+}
+
+footer.anu-wf-footer {
+  z-index: 0;
+  position: relative;
+}
+
+/** Mobile menu styling **/
+@media screen and (max-width: map-get($grid-breakpoints, md)) {
+  .dropdown-item-text {
+      color: white
+  }
+}

@@ -1,7 +1,10 @@
 # The URL to the DSpace sitemaps
 # XML sitemap is listed first as it is preferred by most search engines
-Sitemap: <%= origin %>/sitemap_index.xml
-Sitemap: <%= origin %>/sitemap_index.html
+#Sitemap: <%= origin %>/sitemap_index.xml
+#Sitemap: <%= origin %>/sitemap_index.html
+# Workaround because it doesn't seem to pickup the correct url
+Sitemap: https://openresearch-repository.anu.edu.au/sitemap_index.xml
+Sitemap: https://openresearch-repository.anu.edu.au/sitemap_index.html
 
 ##########################
 # Default Access Group
@@ -16,6 +19,8 @@ Disallow: /submit
 Disallow: /workspaceitems
 Disallow: /profile
 Disallow: /workflowitems
+Disallow: /statistics
+Disallow: /statistics/
 # Crawlers should be able to access entity pages, but not the facet search links present on entity pages
 Disallow: /entities/*?f
 

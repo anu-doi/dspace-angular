@@ -43,17 +43,17 @@ export class BitstreamRequestACopyPageComponent implements OnInit, OnDestroy {
   bitstream: Bitstream;
   bitstreamName: string;
 
-  constructor(private location: Location,
-              private translateService: TranslateService,
-              private route: ActivatedRoute,
+  constructor(protected location: Location,
+              protected translateService: TranslateService,
+              protected route: ActivatedRoute,
               protected router: Router,
-              private authorizationService: AuthorizationDataService,
-              private auth: AuthService,
-              private formBuilder: UntypedFormBuilder,
-              private itemRequestDataService: ItemRequestDataService,
-              private notificationsService: NotificationsService,
-              private dsoNameService: DSONameService,
-              private bitstreamService: BitstreamDataService,
+              protected authorizationService: AuthorizationDataService,
+              protected auth: AuthService,
+              protected formBuilder: UntypedFormBuilder,
+              protected itemRequestDataService: ItemRequestDataService,
+              protected notificationsService: NotificationsService,
+              protected dsoNameService: DSONameService,
+              protected bitstreamService: BitstreamDataService,
   ) {
   }
 
