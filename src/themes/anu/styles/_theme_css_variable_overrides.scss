@@ -14,10 +14,13 @@
   --ds-top-footer-bg: #000;
   // --ds-header-navbar-border-bottom-color: red;
 
-  --ds-navbar-bg-color: #f5edde;
+  --ds-navbar-bg: #f5edde;
   --ds-navbar-link-color: #000;
-  --ds-navbar-link-color-hover: #000;
+  --ds-navbar-link-color-hover: #495057;
   --ds-navbar-link-bg-color-hover: #fff;
+  --ds-navbar-item-vertical-padding: 0.5rem;
+  --ds-navbar-item-horizontal-padding: 0.5rem;
+  --ds-expandable-navbar-i-padding: 0.25rem;
 
   $admin-sidebar-bg: "000";
 //  --ds-admin-sidebar-bg: #{$admin-sidebar-bg};
@@ -93,8 +96,12 @@ a.btn-dark:visited {
   color: #000 !important;
 }
 
-.btn-outline-secondary, .btn-success, .btn-secondary {
+.btn-outline-secondary, .btn-secondary {
   color: #000;
+}
+
+.btn-success {
+  color: #fff;
 }
 
 .btn-outline-secondary a:visited, .btn-success a:visited, .btn-secondary a:visited {

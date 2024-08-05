@@ -6,6 +6,8 @@ import { first } from 'rxjs/operators';
 import { HostWindowService } from 'src/app/shared/host-window.service';
 import { rendersSectionForMenu } from 'src/app/shared/menu/menu-section.decorator';
 import { MenuID } from 'src/app/shared/menu/menu-id.model';
+import { ExpandableNavbarSectionComponent as BaseComponent } from '../../../../../app/navbar/expandable-navbar-section/expandable-navbar-section.component';
+  /**}
 
 /**
  * Represents an expandable section in the navbar
@@ -13,71 +15,12 @@ import { MenuID } from 'src/app/shared/menu/menu-id.model';
 @Component({
   selector: 'ds-expandable-navbar-section',
   templateUrl: './expandable-navbar-section.component.html',
+  // templateUrl:'../../../../../app/navbar/expandable-navbar-section/expandable-navbar-section.component.html',
   styleUrls: ['./expandable-navbar-section.component.scss'],
+  // styleUrls: ['../../../../../app/navbar/expandable-navbar-section/expandable-navbar-section.component.scss'],
   animations: [slide]
 })
-@rendersSectionForMenu(MenuID.PUBLIC, true)
-export class ExpandableNavbarSectionComponent extends NavbarSectionComponent implements OnInit {
-  /**
-   * This section resides in the Public Navbar
-   */
-  menuID = MenuID.PUBLIC;
 
-  constructor(@Inject('sectionDataProvider') menuSection,
-              protected menuService: MenuService,
-              protected injector: Injector,
-              private windowService: HostWindowService
-  ) {
-    super(menuSection, menuService, injector);
-  }
+export class ExpandableNavbarSectionComponent extends BaseComponent implements OnInit {
 
-  ngOnInit() {
-    super.ngOnInit();
-  }
-
-  /**
-   * Overrides the super function that activates this section (triggered on hover)
-   * Has an extra check to make sure the section can only be activated on non-mobile devices
-   * @param {Event} event The user event that triggered this function
-   */
-  activateSection(event): void {
-    this.windowService.isXsOrSm().pipe(
-      first()
-    ).subscribe((isMobile) => {
-      if (!isMobile) {
-        super.activateSection(event);
-      }
-    });
-  }
-
-  /**
-   * Overrides the super function that deactivates this section (triggered on hover)
-   * Has an extra check to make sure the section can only be deactivated on non-mobile devices
-   * @param {Event} event The user event that triggered this function
-   */
-  deactivateSection(event): void {
-    this.windowService.isXsOrSm().pipe(
-      first()
-    ).subscribe((isMobile) => {
-      if (!isMobile) {
-        super.deactivateSection(event);
-      }
-    });
-  }
-
-  /**
-   * Overrides the super function that toggles this section (triggered on click)
-   * Has an extra check to make sure the section can only be toggled on mobile devices
-   * @param {Event} event The user event that triggered this function
-   */
-  toggleSection(event): void {
-    event.preventDefault();
-    this.windowService.isXsOrSm().pipe(
-      first()
-    ).subscribe((isMobile) => {
-      if (isMobile) {
-        super.toggleSection(event);
-      }
-    });
-  }
 }
