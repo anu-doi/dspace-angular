@@ -81,7 +81,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'About',
-        href: 'https://openresearch.anu.edu.au/about-open-research-anu'
+        href: 'https://anulib.anu.edu.au/collections/open-research'
       } as ExternalLinkMenuItemModel,
     },
     {
@@ -93,7 +93,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'Publish',
-        href: 'https://openresearch.anu.edu.au/publishing-open-access'
+        href: 'https://anulib.anu.edu.au/collections/open-research/publishing-open-access'
       } as ExternalLinkMenuItemModel,
     },
     
@@ -106,7 +106,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'Policy',
-        href: 'https://openresearch.anu.edu.au/policy'
+        href: 'https://anulib.anu.edu.au/collections/open-research/policy'
       } as ExternalLinkMenuItemModel,
     },
     {
@@ -118,7 +118,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'Copyright',
-        href: 'https://openresearch.anu.edu.au/copyright-considerations'
+        href: 'https://anulib.anu.edu.au/collections/open-research/copyright-considerations'
       } as ExternalLinkMenuItemModel,
     },
     {
@@ -130,7 +130,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'Contact',
-        href: 'https://openresearch.anu.edu.au/contact'
+        href: 'https://anulib.anu.edu.au/collections/open-research'
       } as ExternalLinkMenuItemModel,
     }
   ];
@@ -164,7 +164,7 @@ export class NavbarComponent extends BaseComponent implements OnInit {
       model: {
         type: MenuItemType.EXTERNAL,
         text: 'Contribute',
-        href: 'https://openresearch.anu.edu.au/contribute'
+        href: 'https://anulib.anu.edu.au/collections/open-research/contribute'
       } as ExternalLinkMenuItemModel,
     });
 
