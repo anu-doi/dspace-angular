@@ -7,7 +7,7 @@ import { DSpaceObjectDataService } from 'src/app/core/data/dspace-object-data.se
 import { RouteService } from 'src/app/core/services/route.service';
 import { Component, OnInit } from '@angular/core';
 import { StatisticsPageCommonComponent } from '../common-stat-page-attr/common-stat-page-attr.component';
-import { Observable, map, switchMap } from 'rxjs';
+import { Observable, map, shareReplay, switchMap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { hasValue } from 'src/app/shared/empty.util';
 import { UsageReport } from 'src/app/core/statistics/models/usage-report.model';
@@ -39,6 +39,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
     'TopCountries',
     'TopCities',
     'TopDownloads',
+    'TotalItemsCount'
   ];
 
   constructor(
@@ -81,7 +82,8 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
       return this.scope$.pipe(
         switchMap((scope) =>
           this.searchStatistics(scope._links.self.href, 0, this.filterValue),
-        )
+        ),
+        shareReplay(1)
       );
     } else {
       if (this.minDate === undefined) {
@@ -97,7 +99,8 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
       return this.scope$.pipe(
         switchMap((scope) =>
           this.filterStatistics(scope._links.self.href, this.type, 0, this.filterValue, startDate, endDate),
-        )
+        ),
+        shareReplay(1)
       );
     }
   }

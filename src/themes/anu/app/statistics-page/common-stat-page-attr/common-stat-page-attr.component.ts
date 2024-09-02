@@ -2,7 +2,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { combineLatest, map, Observable, Subscription, switchMap } from 'rxjs';
+import { combineLatest, map, Observable, shareReplay, Subscription, switchMap } from 'rxjs';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { DSONameService } from 'src/app/core/breadcrumbs/dso-name.service';
 import { RouteService } from 'src/app/core/services/route.service';
@@ -167,6 +167,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
             this.types.map((type) => this.usageReportService.getStatistic(scope.id, type))
           ),
         ),
+        shareReplay(1)
       );
     } else {
       if (this.minDate === undefined) {
@@ -182,7 +183,8 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
       return this.scope$.pipe(
         switchMap((scope) =>
           this.filterStatistics(scope._links.self.href, this.type, 0, this.filterValue, startDate, endDate),
-        )
+        ),
+        shareReplay(1)
       );
     }
   }
