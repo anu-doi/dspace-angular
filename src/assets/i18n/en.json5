@@ -787,6 +787,16 @@
   "bitstream-request-a-copy.submit.success": "The item request was submitted successfully.",
 
   "bitstream-request-a-copy.submit.error": "Something went wrong with submitting the item request.",
+  
+  "bitstream-request-a-copy.google-recaptcha.notification.title": "Google reCaptcha",
+
+  "bitstream-request-a-copy.google-recaptcha.notification.message.error": "An error occurred during reCaptcha verification",
+
+  "bitstream-request-a-copy.google-recaptcha.notification.message.expired": "Verification expired. Please verify again.",
+
+  "bitstream-request-a-copy.google-recaptcha.must-accept-cookies": "In order to request a copy of the file, you must accept the <b>Request a copy </b> (Google reCaptcha) cookies.",
+  
+  "bitstream-request-a-copy.google-recaptcha.open-cookie-settings": "Open cookie settings",
 
   "browse.back.all-results": "All browse results",
 
@@ -1414,13 +1424,13 @@
 
   "cookies.consent.app.title.google-recaptcha": "Google reCaptcha",
 
-  "cookies.consent.app.description.google-recaptcha": "We use google reCAPTCHA service during registration and password recovery",
+  "cookies.consent.app.description.google-recaptcha": "We use google reCAPTCHA service during registration, password recovery and Request a copy of the file",
 
   "cookies.consent.purpose.functional": "Functional",
 
   "cookies.consent.purpose.statistical": "Statistical",
 
-  "cookies.consent.purpose.registration-password-recovery": "Registration and Password recovery",
+  "cookies.consent.purpose.registration-password-recovery": "Registration, Password recovery and Request a copy of the file",
 
   "cookies.consent.purpose.sharing": "Sharing",
 
@@ -1844,6 +1854,8 @@
 
   "grant-deny-request-copy.processed": "This request has already been processed. You can use the button below to get back to the home page.",
 
+  "grant-request-copy.email.message": "Dear {{ recipientName }},\nIn response to your request I have the pleasure to send you in attachment a copy of the file(s) concerning the document: \"{{ itemUrl }}\" ({{ itemName }}), of which I am an author.\n\nBest regards,\n{{ authorName }} <{{ authorEmail }}>",
+
   "grant-request-copy.email.subject": "Request copy of document",
 
   "grant-request-copy.error": "An error occurred",
@@ -1926,7 +1938,7 @@
 
   "info.privacy.breadcrumbs": "Privacy Statement",
 
-  "info.privacy.head": "Privacy Statement",
+  "info.privacy.head": "Privacy Policy",
 
   "info.privacy.title": "Privacy Statement",
 
@@ -2480,7 +2492,7 @@
 
   "item.page.edit": "Edit this item",
 
-  "item.page.files": "Files",
+  "item.page.files": "Downloads",
 
   "item.page.filesection.description": "Description:",
 
@@ -2864,7 +2876,7 @@
 
   "loading.top-level-communities": "Loading top-level communities...",
 
-  "login.form.email": "Email address",
+  "login.form.email": "ANU ID",
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
@@ -2920,7 +2932,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "Browse Open Research",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -3337,6 +3349,9 @@
   "process.overview.table.finish": "Finish time (UTC)",
 
   "process.overview.table.id": "Process ID",
+  "process.detail.create": "Create similar process",
+
+  "process.overview.table.finish": "Finish time (UTC)",
 
   "process.overview.table.name": "Name",
 
@@ -3613,6 +3628,10 @@
   "repository.title": "DSpace Repository",
 
   "repository.title.prefix": "DSpace Repository :: ",
+
+  "repository.title.prefix": "Open Research :: ",
+
+  "repository.title.prefixDSpace": "DSpace Angular ::",
 
   "resource-policies.add.button": "Add",
 
@@ -4060,7 +4079,7 @@
 
   "statistics.table.title.TotalVisitsPerMonth": "Total visits per month",
 
-  "statistics.table.title.TotalDownloads": "File Visits",
+  "statistics.table.title.TotalDownloads": "Total Downloads",
 
   "statistics.table.title.TopCountries": "Top country views",
 
@@ -5419,4 +5438,89 @@
   "live-region.ordering.dropped": "{{ itemName }}, dropped at position {{ index }} of {{ length }}.",
 
   "dynamic-form-array.sortable-list.label": "Sortable list",
+
+  "browse.comcol.by.type": "By Type",
+
+  "browse.metadata.type": "Type",
+
+  "browse.metadata.type.breadcrumbs": "Browse by Type",
+
+  "menu.section.browse_global_by_type": "By Type",
+
+  "search.filters.applied.f.accessrights": "Access Rights",
+
+  "search.filters.filter.accessrights.head": "Access Rights",
+
+  "search.filters.filter.accessrights.label": "Search Access Rights",
+
+  "submission.sections.describe.relationship-lookup.title.isJournalOfVolume": "Journal",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalOfVolume" : "Journal",
+
+  "submission.sections.describe.relationship-lookup.title.isJournalVolumeOfIssue" : "Journal Volumes",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalVolumeOfIssue" : "Journal volumes",
+
+  "journalvolume.search.results.head" : "Journal Volumes",
+
+  "submission.sections.describe.relationship-lookup.title.isPublicationOfAuthor" : "Publications",
+
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfAuthor" :  "Publications",
+
+  "statistics.table.title.TopDownloads": "Top downloads",
+  
+  "dc.source": "Source",
+
+  "dc.date.issued": "Date Issued",
+
+  "dcterms.accessRights": "Access Statement",
+
+  "dc.rights.license": "License Rights",
+
+  "dc.type": "Type",
+
+  "local.identifier.doi": "DOI",
+
+  "anuarchivesitem.listelement.badge": "ANU Archive Item",
+
+  "anuarchivesitem.page.description": "Description",
+
+  "anuarchivesitem.page.edit": "Edit this item",
+
+  "anuarchivesitem.page.journal-issn": "Journal ISSN",
+
+  "anuarchivesitem.page.journal-title": "Journal Title",
+
+  "anuarchivesitem.page.publisher": "Publisher",
+
+  "anuarchivesitem.page.titleprefix": "ANU Archives Item: ",
+
+  "anuarchivesitem.page.volume-title": "Volume Title",
+
+  "anuarchivesitem.search.results.head": "ANU Archive Search Results",
+
+  "anuarchivesitem-relationships.search.results.head": "ANU Archive Search Results",
+
+  "anuarchivesitem.search.title": "ANU Archive Search",
+
+  "anuarchivesitem.date.created": "Date created",
+
+  "anuarchivesitem.identifier.other": "Other Identifier/s",
+
+  "anuarchivesitem.rights.license": "Rights/License",
+
+  "anuarchivesitem.page.uri": "URI",
+
+  "anuarchivesitem.relation.ispartofseries" : "Archives Series",
+
+  "dspace.entity.type": "Entity type",
+
+  "statistics-view-count": "Total views",
+
+  "statistics-download-count": "Total downloads",
+
+  "dc.relation.ispartof": "Book Title",
+
+  "local.description.embargo": "Restricted until",
+
 }
