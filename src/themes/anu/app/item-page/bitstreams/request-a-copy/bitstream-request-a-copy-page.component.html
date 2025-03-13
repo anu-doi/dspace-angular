@@ -89,7 +89,7 @@
                 </button>
               </ng-container>
             <ng-template #v2Invisible>
-                <button class="btn btn-primary" [disabled]="requestCopyForm.invalid" (click)="executeRecaptcha()">
+                <button class="btn btn-primary" [dsBtnDisabled]="requestCopyForm.invalid" (click)="executeRecaptcha()">
                   {{ 'bitstream-request-a-copy.submit' | translate }}
                 </button>
             </ng-template>

@@ -10,7 +10,7 @@
                         </ds-comcol-page-header>
                         <!-- Collection logo -->
                         <ds-comcol-page-logo *ngIf="logoRD$" [logo]="(logoRD$ | async)?.payload"
-                            [alternateText]="'Collection Logo'">
+                            [alternateText]="'collection.logo' | translate">
                         </ds-comcol-page-logo>
 
                         <!-- Handle -->
