@@ -39,6 +39,7 @@ import { OrgUnitComponent } from './app/entity-groups/research-entities/item-pag
 import { ProjectComponent } from './app/entity-groups/research-entities/item-pages/project/project.component';
 // import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
 import { ItemPageDOIFieldComponent } from './app/item-page/simple/field-components/specific-field/doi/item-page-doi-field.component';
+import { LogInComponent } from './app/shared/log-in/log-in.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -78,6 +79,7 @@ const DECLARATIONS = [
 //  EditCommunitySelectorComponent,
 //  EditItemSelectorComponent,
   ItemPageDOIFieldComponent,
+  LogInComponent,
 ];
 
 @NgModule({
