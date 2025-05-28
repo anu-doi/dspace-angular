@@ -34,6 +34,8 @@ import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-b
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
+import { StartsWithDateComponent } from './app/shared/starts-with/date/starts-with-date.component';
+import { StartsWithTextComponent } from './app/shared/starts-with/text/starts-with-text.component';
 import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
 import { OrgUnitComponent } from './app/entity-groups/research-entities/item-pages/org-unit/org-unit.component';
 import { ProjectComponent } from './app/entity-groups/research-entities/item-pages/project/project.component';
@@ -57,6 +59,8 @@ const ENTRY_COMPONENTS = [
   OrgUnitComponent,
   ProjectComponent,
   FileDownloadLinkComponent,
+  StartsWithDateComponent,
+  StartsWithTextComponent,
 
   /* CommunityListElementComponent,
   CollectionListElementComponent,
