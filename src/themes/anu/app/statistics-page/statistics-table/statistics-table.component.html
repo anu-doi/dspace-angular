@@ -6,26 +6,37 @@
     <table class="table">
       <tbody>
         <tr class="table-header">
-          <th scope="col"></th>
+          <th scope="col" *ngIf="isTotalDownloadsReport || isTopDownloadsReport">Bitstreams</th>
+          <th scope="col" *ngIf="!isTotalDownloadsReport && !isTopDownloadsReport"></th>
           <th scope="col" *ngFor="let header of headers" class="{{header}}-header">
             {{ header }}
           </th>
-          <ng-container *ngIf="report.reportType == 'TopDownloads'">
-            <th scope="col" *ngFor="let header of headers1" class="{{header}}-header">
-              {{ header }}
-            </th>
+
+          <ng-container *ngIf="isTotalDownloadsReport || isTopDownloadsReport">
+            <ng-container *ngFor='let header of headers1'>
+              <th scope="col" *ngIf="restrictHandleDisplay(header)" class="{{header}}-header">
+                {{ header }}
+              </th>
+            </ng-container>
           </ng-container>
         </tr>
+
         <tr *ngFor="let point of report.points" class="{{point.id}}-data">
           <th scope="row">
             {{ getLabel(point) | async }}
           </th>
+
           <td *ngFor="let header of headers" class="{{point.id}}-{{header}}-data">
             {{ point.values[header] }}
           </td>
-          <td class="w-50" *ngFor="let header of headers1" class="{{point.id}}-data">
-            {{ point.values1[header] }}
-          </td>
+
+          <ng-container *ngIf="isTotalDownloadsReport || isTopDownloadsReport">
+            <ng-container *ngFor="let header of headers1; let i = index">
+                <td *ngIf="i === 0" class="w-50 {{point.id}}-data">
+                  <a [href] = "'/handle/' + point.values1[headers1[1]]" target="_blank">{{ point.values1[header] }}</a>
+                </td>
+            </ng-container>
+          </ng-container>
         </tr>
       </tbody>
     </table>

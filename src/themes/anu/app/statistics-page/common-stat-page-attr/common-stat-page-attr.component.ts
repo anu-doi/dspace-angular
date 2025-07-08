@@ -88,7 +88,7 @@ export abstract class StatisticsPageCommonComponent extends StatisticsPageCompon
         queryParamsHandling: 'merge'
       });
     }
-    if((this.minDate != null && this.maxDate != null) || this.filterValue != this.defaultNumber || this.type != this.selectedValue){ 
+    if((this.minDate != null && this.maxDate != null) || this.filterValue != this.defaultNumber){ 
       this.filterStats = true;
     } else {
       this.filterStats = false;

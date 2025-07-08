@@ -60,6 +60,18 @@ export class StatisticsTableComponent extends BaseComponent implements OnInit {
       }
     }
   }
+  
+  get isTotalDownloadsReport(): boolean {
+    return this.report.reportType == 'TotalDownloads';
+  }
+
+  get isTopDownloadsReport(): boolean {
+    return this.report.reportType == 'TopDownloads';
+  }
+
+  restrictHandleDisplay(header: string): boolean {
+    return header !== 'Handle';
+  }
 }
 
 /**
