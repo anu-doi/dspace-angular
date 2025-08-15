@@ -1450,6 +1450,8 @@
 
   "curation-task.task.registerdoi.label": "Register DOI",
 
+  "curation-task.task.removebitstreamembargo.label": "Remove Embargo Dates",
+
   "curation.form.task-select.label": "Task:",
 
   "curation.form.submit": "Start",
