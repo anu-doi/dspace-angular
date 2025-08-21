@@ -1,0 +1,60 @@
+.mat-form-field {
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.125;
+    font-family: Roboto, "Public Sans", sans-serif;
+    letter-spacing: normal
+}
+
+::ng-deep .mat-calendar-body-cell-content {
+    background-color: transparent;
+    color: black;
+}
+
+::ng-deep .mat-calendar-body-cell-content:hover {
+    background-color: #be830e;
+    color: black;
+}
+::ng-deep .mat-calendar-body-selected:hover {
+    background-color:grey;
+    color: #fff;
+}
+
+::ng-deep .mat-calendar-body-selected {
+    background-color: black;
+    color: #fff;
+}
+
+::ng-deep .mat-calendar-body-in-range::before {
+    background-color:  grey;
+}
+
+::ng-deep .mat-datepicker-toggle-active {
+    color: black;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: black !important;
+}
+
+::ng-deep .mat-mdc-form-field-flex{
+    color: black !important;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: black !important;
+}
+
+::ng-deep .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: grey;
+}
+
+.buttons {
+    width: 50px;
+    margin: 0 auto;
+    display: inline;}
+    
+.action_btn {
+    width: 50px;
+    margin: 0 auto;
+    display: inline;
+}

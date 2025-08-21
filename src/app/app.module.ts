@@ -31,6 +31,11 @@ import { APP_CONFIG, AppConfig } from '../config/app-config.interface';
 import { StoreDevModules } from '../config/store/devtools';
 import { RootModule } from './root.module';
 import { DspaceRestInterceptor } from './core/dspace-rest/dspace-rest.interceptor';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 export function getConfig() {
   return environment;
@@ -62,6 +67,11 @@ const IMPORTS = [
   StoreDevModules,
   EagerThemesModule,
   RootModule,
+  MatFormFieldModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  OverlayModule,
+  MatNativeDateModule
 ];
 
 const PROVIDERS = [
