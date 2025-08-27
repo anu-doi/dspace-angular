@@ -4,6 +4,7 @@ import { environment } from '../../../../environments/environment';
 import { KlaroService } from '../../../../app/shared/cookies/klaro.service';
 import { AuthorizationDataService } from '../../../../app/core/data/feature-authorization/authorization-data.service';
 import { DOCUMENT } from '@angular/common';
+import { AppConfig, APP_CONFIG } from '../../../../config/app-config.interface';
 
 @Component({
   selector: 'ds-footer',
@@ -19,9 +20,10 @@ export class FooterComponent extends BaseComponent {
   constructor(
     @Optional() private cookies1: KlaroService,
     authorizationService: AuthorizationDataService,
+    @Inject(APP_CONFIG) protected appConfig: AppConfig,
     @Inject(DOCUMENT) private document,
   ) {
-    super(cookies1, authorizationService);
+    super(cookies1, authorizationService, appConfig);
   }
   ngOnInit(){
     this.loadscript();
