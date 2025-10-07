@@ -17,6 +17,7 @@ export class CommunityStatisticsPageComponent extends StatisticsPageCommonCompon
     'TopCountries',
     'TopCities',
     'TotalDownloads',
-    'TotalVisitsDownloads'
+    'TotalVisitsDownloads',
+    'TotalItemsCount'
   ];
 }

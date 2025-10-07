@@ -39,6 +39,7 @@ export class SiteStatisticsPageComponent extends StatisticsPageCommonComponent i
     'TopCountries',
     'TopCities',
     'TopDownloads',
+    'TotalItemsCount'
   ];
 
   constructor(

@@ -4160,6 +4160,8 @@
 
   "statistics.table.no-name": "(object name could not be loaded)",
 
+  "statistics.table.title.TotalItemsCount": "Total items count",
+
   "submission.edit.breadcrumbs": "Edit Submission",
 
   "submission.edit.title": "Edit Submission",
