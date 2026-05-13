@@ -76,7 +76,7 @@ import { StatisticsTableComponent } from 'src/themes/anu/app/statistics-page/sta
 // import { ProfilePageComponent } from './app/profile-page/profile-page.component';
 // import { RegisterEmailComponent } from './app/register-page/register-email/register-email.component';
 // import { MyDSpacePageComponent } from './app/my-dspace-page/my-dspace-page.component';
-// import { SubmissionEditComponent } from './app/submission/edit/submission-edit.component';
+import { SubmissionEditComponent } from './app/submission/edit/submission-edit.component';
 // import { SubmissionImportExternalComponent } from './app/submission/import-external/submission-import-external.component';
 // import { SubmissionSubmitComponent } from './app/submission/submit/submission-submit.component';
 // import { WorkflowItemDeleteComponent } from './app/workflowitems-edit-page/workflow-item-delete/workflow-item-delete.component';
@@ -193,7 +193,7 @@ const DECLARATIONS = [
   // ProfilePageComponent,
   // RegisterEmailComponent,
   // MyDSpacePageComponent,
-  // SubmissionEditComponent,
+  SubmissionEditComponent,
   // SubmissionImportExternalComponent,
   // SubmissionSubmitComponent,
   // WorkflowItemDeleteComponent,
