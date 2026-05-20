@@ -46,7 +46,7 @@ import { RootModule } from '../../app/root.module';
 import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
 import { ItemPageAbstractFieldComponent } from './app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
-// import { RootComponent } from './app/root/root.component';
+import { RootComponent } from './app/root/root.component';
 // import { BrowseBySwitcherComponent } from './app/browse-by/browse-by-switcher/browse-by-switcher.component';
 // import { CommunityListPageComponent } from './app/community-list-page/community-list-page.component';
 // import { SearchPageComponent } from './app/search-page/search-page.component';
@@ -119,7 +119,7 @@ import { ItemVersionsModule } from '../../app/item-page/versions/item-versions.m
 // import { ResultsBackButtonComponent } from './app/shared/results-back-button/results-back-button.component';
 // import { DsoEditMetadataComponent } from './app/dso-shared/dso-edit-metadata/dso-edit-metadata.component';
 // import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
-// import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
+import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import {
   ItemPageTitleFieldComponent
@@ -148,6 +148,7 @@ import { BitstreamRequestACopyPageComponent } from './app/item-page/bitstreams/r
 // import { BrowseByMetadataPageComponent } from './app/browse-by/browse-by-metadata-page/browse-by-metadata-page.component';
 // import { BrowseByDatePageComponent } from './app/browse-by/browse-by-date-page/browse-by-date-page.component';
 // import { BrowseByTitlePageComponent } from './app/browse-by/browse-by-title-page/browse-by-title-page.component';
+import { CulturalSensitivityComponent } from './app/root/cultural-sensitivity/cultural-sensitivity.component';
 
 
 
@@ -157,7 +158,7 @@ const DECLARATIONS = [
   FileSectionComponent,
   HomePageComponent,
   DatePickerComponent,
-  // RootComponent,
+  RootComponent,
   // BrowseBySwitcherComponent,
   // CommunityListPageComponent,
   // SearchPageComponent,
@@ -219,6 +220,7 @@ const DECLARATIONS = [
   // ResultsBackButtonComponent,
   // DsoEditMetadataComponent,
   BitstreamRequestACopyPageComponent,
+  CulturalSensitivityComponent,
 ];
 
 @NgModule({
@@ -274,7 +276,7 @@ const DECLARATIONS = [
     ResourcePoliciesModule,
     ComcolModule,
     // DsoSharedModule,
-    // SystemWideAlertModule
+    SystemWideAlertModule,
     NgxGalleryModule,
     MatFormFieldModule,
     MatDatepickerModule,
