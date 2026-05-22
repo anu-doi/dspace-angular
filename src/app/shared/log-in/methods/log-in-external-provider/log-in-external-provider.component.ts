@@ -96,7 +96,7 @@ export class LogInExternalProviderComponent implements OnInit {
       console.log("correct Redirect URL : "+correctRedirectUrl);
       let externalServerUrl = this.location;
       
-      let externalServerUrl2 = new URL(this.location);
+      let externalServerUrl2 = new URL(this.location, this._window.nativeWindow.origin);
       const myRegexp = /\?redirectUrl=(.*)/g;
       const match = myRegexp.exec(this.location);
       const redirectUrlFromServer = (match && match[1]) ? match[1] : null;
@@ -107,7 +107,7 @@ export class LogInExternalProviderComponent implements OnInit {
 
       if(externalServerUrl2.searchParams.has('redirect_uri')){
           const redirectUri = new URL(externalServerUrl2.searchParams.get('redirect_uri'), this._window.nativeWindow.origin);
-          redirectUri.searchParams.set('redirect_uri', correctRedirectUrl);
+          redirectUri.searchParams.set('redirectUrl', correctRedirectUrl);
           externalServerUrl2.searchParams.set('redirect_uri', redirectUri.toString());
 
           console.log("external Server URL 2 : "+externalServerUrl2);
