@@ -123,7 +123,7 @@ export class LogInExternalProviderComponent implements OnInit {
       // }
 
       // redirect to shibboleth authentication url
-      this.hardRedirectService.redirect(externalServerUrl);
+      this.hardRedirectService.redirect(externalServerUrl2.toString());
     });
 
   }
