@@ -268,9 +268,6 @@ import {
   LogInExternalProviderComponent
 } from './log-in/methods/log-in-external-provider/log-in-external-provider.component';
 import {
-  ThemedLogInExternalProviderComponent
-} from './log-in/methods/log-in-external-provider/themed-log-in-external-provider.component';
-import {
   AdvancedClaimedTaskActionSelectReviewerComponent
 } from './mydspace-actions/claimed-task/select-reviewer/advanced-claimed-task-action-select-reviewer.component';
 import {
@@ -454,7 +451,6 @@ const ENTRY_COMPONENTS = [
   ItemMetadataRepresentationListElementComponent,
   LogInPasswordComponent,
   LogInExternalProviderComponent,
-  ThemedLogInExternalProviderComponent,
   ClaimedTaskActionsDeclineTaskComponent,
   CollectionDropdownComponent,
   ThemedCollectionDropdownComponent,

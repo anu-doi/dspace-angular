@@ -149,7 +149,6 @@ import { BitstreamRequestACopyPageComponent } from './app/item-page/bitstreams/r
 // import { BrowseByDatePageComponent } from './app/browse-by/browse-by-date-page/browse-by-date-page.component';
 // import { BrowseByTitlePageComponent } from './app/browse-by/browse-by-title-page/browse-by-title-page.component';
 import { CulturalSensitivityComponent } from './app/root/cultural-sensitivity/cultural-sensitivity.component';
-import { LogInExternalProviderComponent } from './app/shared/log-in/methods/log-in-external-provider/log-in-external-provider.component';
 
 
 
@@ -222,7 +221,6 @@ const DECLARATIONS = [
   // DsoEditMetadataComponent,
   BitstreamRequestACopyPageComponent,
   CulturalSensitivityComponent,
-  LogInExternalProviderComponent,
 ];
 
 @NgModule({

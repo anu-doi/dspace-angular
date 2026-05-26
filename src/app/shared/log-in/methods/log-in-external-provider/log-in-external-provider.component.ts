@@ -63,8 +63,8 @@ export class LogInExternalProviderComponent implements OnInit {
     @Inject('authMethodProvider') public injectedAuthMethodModel: AuthMethod,
     @Inject('isStandalonePage') public isStandalonePage: boolean,
     @Inject(NativeWindowService) protected _window: NativeWindowRef,
-    protected authService: AuthService,
-    protected hardRedirectService: HardRedirectService,
+    private authService: AuthService,
+    private hardRedirectService: HardRedirectService,
     private store: Store<CoreState>
   ) {
     this.authMethod = injectedAuthMethodModel;
@@ -86,7 +86,7 @@ export class LogInExternalProviderComponent implements OnInit {
    * Redirect to the external provider url for login
    */
   redirectToExternalProvider() {
-    this.authService.getRedirectUrl().pipe(take(1)).subscribe((redirectRoute) => {
+        this.authService.getRedirectUrl().pipe(take(1)).subscribe((redirectRoute) => {
       if (!this.isStandalonePage) {
         redirectRoute = this.hardRedirectService.getCurrentRoute();
       } else if (isEmpty(redirectRoute)) {
@@ -99,6 +99,11 @@ export class LogInExternalProviderComponent implements OnInit {
       const match = myRegexp.exec(this.location);
       const redirectUrlFromServer = (match && match[1]) ? match[1] : null;
 
+
+      console.log('correct Redirect URL : '+correctRedirectUrl);
+      console.log('external Server URL : '+externalServerUrl);
+      console.log('Redirect URL from server : '+redirectUrlFromServer);
+
       // Check whether the current page is different from the redirect url received from rest
       if (isNotNull(redirectUrlFromServer) && redirectUrlFromServer !== correctRedirectUrl) {
         // change the redirect url with the current page url
@@ -106,9 +111,54 @@ export class LogInExternalProviderComponent implements OnInit {
         externalServerUrl = this.location.replace(/\?redirectUrl=(.*)/g, newRedirectUrl);
       }
 
+      //store redirect url
+      // this.authService.setRedirectUrl(redirectRoute);
+      // console.log('After setRedirectUrl');
+      externalServerUrl = `${externalServerUrl}&state=${encodeURIComponent(redirectRoute)}`;
+      console.log('externalServerUrl before redirect: '+externalServerUrl);
       // redirect to shibboleth authentication url
       this.hardRedirectService.redirect(externalServerUrl);
     });
+    // this.authService.getRedirectUrl().pipe(take(1)).subscribe((redirectRoute) => {
+    //   if (!this.isStandalonePage) {
+    //     redirectRoute = this.hardRedirectService.getCurrentRoute();
+    //   } else if (isEmpty(redirectRoute)) {
+    //     redirectRoute = '/';
+    //   }
+    //   const correctRedirectUrl = new URLCombiner(this._window.nativeWindow.origin, redirectRoute).toString();
+    //   console.log("correct Redirect URL : "+correctRedirectUrl);
+    //   let externalServerUrl = this.location;
+      
+    //   let externalServerUrl2 = new URL(this.location, this._window.nativeWindow.origin);
+    //   const myRegexp = /\?redirectUrl=(.*)/g;
+    //   const match = myRegexp.exec(this.location);
+    //   const redirectUrlFromServer = (match && match[1]) ? match[1] : null;
+
+    //   console.log("correct Redirect URL : "+correctRedirectUrl);
+    //   console.log("external Server URL : "+externalServerUrl);
+    //   console.log('Redirect URL from server : '+redirectUrlFromServer);
+
+    //   if(externalServerUrl2.searchParams.has('redirect_uri')){
+    //       const redirectUri = new URL(externalServerUrl2.searchParams.get('redirect_uri'), this._window.nativeWindow.origin);
+    //       redirectUri.searchParams.set('redirectUrl', correctRedirectUrl);
+    //       externalServerUrl2.searchParams.set('redirect_uri', redirectUri.toString());
+
+    //       console.log("external Server URL 2 : "+externalServerUrl2);
+    //       externalServerUrl = `${externalServerUrl2.pathname}${externalServerUrl2.search}${externalServerUrl2.hash}`;
+    //       console.log("external Server URL after assign : "+externalServerUrl);
+    //   }
+    //   // Check whether the current page is different from the redirect url received from rest
+    //   // if (isNotNull(redirectUrlFromServer) && redirectUrlFromServer !== correctRedirectUrl) {
+    //   //   // change the redirect url with the current page url
+    //   //   const newRedirectUrl = `?redirectUrl=${correctRedirectUrl}`;
+    //   //   externalServerUrl = this.location.replace(/\?redirectUrl=(.*)/g, newRedirectUrl);
+    //   //   console.log("inside if : "+externalServerUrl);
+    //   // }
+
+    //   // redirect to shibboleth authentication url
+      
+    //   this.hardRedirectService.redirect(externalServerUrl2.toString());
+    // });
 
   }
 
