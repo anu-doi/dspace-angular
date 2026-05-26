@@ -112,8 +112,10 @@ export class LogInExternalProviderComponent implements OnInit {
       }
 
       //store redirect url
-      this.authService.setRedirectUrl(redirectRoute);
-      console.log('After setRedirectUrl');
+      // this.authService.setRedirectUrl(redirectRoute);
+      // console.log('After setRedirectUrl');
+      externalServerUrl = `${externalServerUrl}&state=${encodeURIComponent(redirectRoute)}`;
+      console.log('externalServerUrl before redirect: '+externalServerUrl);
       // redirect to shibboleth authentication url
       this.hardRedirectService.redirect(externalServerUrl);
     });
