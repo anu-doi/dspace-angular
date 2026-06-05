@@ -1,0 +1,28 @@
+.stat-card{
+    border: none;
+    background: black;
+    box-shadow: 6px 6px 12px rgba(0,0,0,.2);
+    transition: box-shadow .2s ease-in-out;
+}
+.contentContainer {
+    flex-flow: column;
+    position: relative;
+    font-weight: bold;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-top: 2.5em;
+    color: white;
+}
+
+p.card-number, p.card-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}

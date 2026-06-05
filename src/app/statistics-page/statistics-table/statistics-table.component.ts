@@ -37,7 +37,7 @@ export class StatisticsTableComponent implements OnInit {
   constructor(
     protected dsoService: DSpaceObjectDataService,
     protected nameService: DSONameService,
-    private translateService: TranslateService,
+    protected translateService: TranslateService,
   ) {
 
   }

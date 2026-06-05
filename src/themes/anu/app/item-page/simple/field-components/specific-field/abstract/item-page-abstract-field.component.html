@@ -1,0 +1,12 @@
+<div class="simple-view-element" [class.d-none]="hideIfNoTextContent">
+  <h2 _ngcontent-dspace-angular-c155="" class="simple-view-element-header" *ngIf="label">Abstract</h2>
+  <div class="simple-view-element-body">
+    <ds-truncatable>
+      <div class="item-list-abstract">
+        <ds-truncatable-part [minLines]="3">
+          <span> {{ getAbstractMetadata(item) }} </span>
+        </ds-truncatable-part>
+      </div>
+    </ds-truncatable>
+  </div>
+</div>

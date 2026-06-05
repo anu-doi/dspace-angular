@@ -1,0 +1,7 @@
+<div class="item-page-field">
+    <ds-metadata-field-wrapper [label]="label | translate">
+        <a class="dont-break-out" *ngFor="let mdValue of item?.allMetadata(fields); let last=last;" [href]="'https://doi.org/'+mdValue.value">
+            {{ mdValue.value }}<span *ngIf="!last" [innerHTML]="separator"></span>
+        </a>
+    </ds-metadata-field-wrapper>
+</div>
