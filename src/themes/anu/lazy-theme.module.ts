@@ -117,8 +117,8 @@ import {
 import { ItemVersionsModule } from '../../app/item-page/versions/item-versions.module';
 // import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 // import { ResultsBackButtonComponent } from './app/shared/results-back-button/results-back-button.component';
-// import { DsoEditMetadataComponent } from './app/dso-shared/dso-edit-metadata/dso-edit-metadata.component';
-// import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
+import { DsoEditMetadataComponent } from './app/dso-shared/dso-edit-metadata/dso-edit-metadata.component';
+import { DsoSharedModule } from '../../app/dso-shared/dso-shared.module';
 import { SystemWideAlertModule } from '../../app/system-wide-alert/system-wide-alert.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import {
@@ -149,8 +149,7 @@ import { BitstreamRequestACopyPageComponent } from './app/item-page/bitstreams/r
 // import { BrowseByDatePageComponent } from './app/browse-by/browse-by-date-page/browse-by-date-page.component';
 // import { BrowseByTitlePageComponent } from './app/browse-by/browse-by-title-page/browse-by-title-page.component';
 import { CulturalSensitivityComponent } from './app/root/cultural-sensitivity/cultural-sensitivity.component';
-
-
+import { LogInExternalProviderComponent } from './app/shared/log-in/methods/log-in-external-provider/log-in-external-provider.component';
 
 
 const DECLARATIONS = [
@@ -218,9 +217,10 @@ const DECLARATIONS = [
   // BrowseByTitlePageComponent,
   // ExternalSourceEntryImportModalComponent,
   // ResultsBackButtonComponent,
-  // DsoEditMetadataComponent,
+  DsoEditMetadataComponent,
   BitstreamRequestACopyPageComponent,
   CulturalSensitivityComponent,
+  LogInExternalProviderComponent,
 ];
 
 @NgModule({
@@ -275,7 +275,7 @@ const DECLARATIONS = [
     FormsModule,
     ResourcePoliciesModule,
     ComcolModule,
-    // DsoSharedModule,
+    DsoSharedModule,
     SystemWideAlertModule,
     NgxGalleryModule,
     MatFormFieldModule,

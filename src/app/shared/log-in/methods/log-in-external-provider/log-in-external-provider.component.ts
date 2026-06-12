@@ -21,9 +21,9 @@ import { AuthMethodType } from '../../../../core/auth/models/auth.method-type';
   templateUrl: './log-in-external-provider.component.html',
   styleUrls: ['./log-in-external-provider.component.scss']
 })
-@renderAuthMethodFor(AuthMethodType.Oidc)
-@renderAuthMethodFor(AuthMethodType.Shibboleth)
-@renderAuthMethodFor(AuthMethodType.Orcid)
+// @renderAuthMethodFor(AuthMethodType.Oidc)
+// @renderAuthMethodFor(AuthMethodType.Shibboleth)
+// @renderAuthMethodFor(AuthMethodType.Orcid)
 export class LogInExternalProviderComponent implements OnInit {
 
   /**
@@ -63,8 +63,8 @@ export class LogInExternalProviderComponent implements OnInit {
     @Inject('authMethodProvider') public injectedAuthMethodModel: AuthMethod,
     @Inject('isStandalonePage') public isStandalonePage: boolean,
     @Inject(NativeWindowService) protected _window: NativeWindowRef,
-    private authService: AuthService,
-    private hardRedirectService: HardRedirectService,
+    protected authService: AuthService,
+    protected hardRedirectService: HardRedirectService,
     private store: Store<CoreState>
   ) {
     this.authMethod = injectedAuthMethodModel;
