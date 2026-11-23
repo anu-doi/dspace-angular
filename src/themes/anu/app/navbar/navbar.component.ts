@@ -3,20 +3,24 @@ import {
   NgClass,
   NgComponentOutlet,
 } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
 import { ThemedUserMenuComponent } from 'src/app/shared/auth-nav-menu/user-menu/themed-user-menu.component';
 
 import { NavbarComponent as BaseComponent } from '../../../../app/navbar/navbar.component';
 import { slideMobileNav } from '../../../../app/shared/animations/slide';
+import { ThemedAuthNavMenuComponent } from 'src/app/shared/auth-nav-menu/themed-auth-nav-menu.component';
+import { MenuID } from 'src/app/shared/menu/menu-id.model';
+import { MenuItemType } from 'src/app/shared/menu/menu-item-type.model';
+import { ExternalLinkMenuItemModel } from 'src/app/shared/menu/menu-item/models/external-link.model';
 
 @Component({
   selector: 'ds-themed-navbar',
-  // styleUrls: ['./navbar.component.scss'],
-  styleUrls: ['../../../../app/navbar/navbar.component.scss'],
-  // templateUrl: './navbar.component.html',
-  templateUrl: '../../../../app/navbar/navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  // styleUrls: ['../../../../app/navbar/navbar.component.scss'],
+  templateUrl: './navbar.component.html',
+  // templateUrl: '../../../../app/navbar/navbar.component.html',
   animations: [slideMobileNav],
   imports: [
     AsyncPipe,
@@ -25,7 +29,153 @@ import { slideMobileNav } from '../../../../app/shared/animations/slide';
     NgComponentOutlet,
     ThemedUserMenuComponent,
     TranslateModule,
-  ],
+    ThemedAuthNavMenuComponent
+],
 })
-export class NavbarComponent extends BaseComponent {
+export class NavbarComponent extends BaseComponent implements OnInit {
+
+  ngOnInit(): void {
+    super.ngOnInit();
+
+    const menuList:  any[] = [
+    // About section - children
+    {
+      id: 'about_about',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'About',
+        href: 'https://openresearch.anu.edu.au/about-open-research-anu'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'about_publish',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Publish',
+        href: 'https://openresearch.anu.edu.au/publishing-open-access'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'about_policy',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Policy',
+        href: 'https://openresearch.anu.edu.au/policy'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'about_copyright',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Copyright',
+        href: 'https://openresearch.anu.edu.au/copyright-considerations'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'about_contact',
+      parentID: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Contact',
+        href: 'https://openresearch.anu.edu.au/contact'
+      } as ExternalLinkMenuItemModel,
+    },
+    // Related Links section - children
+    {
+      id: 'related_links_archive',
+      parentID: 'browse_related_links',
+      active: false,
+      visible: true,
+      index: 11,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'ANU Archives',
+        href: 'https://archives.anu.edu.au/'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'related_links_press',
+      parentID: 'browse_related_links',
+      active: false,
+      visible: true,
+      index: 11,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'ANU Press',
+        href: 'https://press.anu.edu.au/'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'related_links_library',
+      parentID: 'browse_related_links',
+      active: false,
+      visible: true,
+      index: 11,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'ANU Library',
+        href: 'http://anulib.anu.edu.au/'
+      } as ExternalLinkMenuItemModel,
+    },
+    {
+      id: 'related_links_rsd',
+      parentID: 'browse_related_links',
+      active: false,
+      visible: true,
+      index: 11,
+      model: {
+        type: MenuItemType.EXTERNAL,
+        text: 'Research Services Division',
+        href: 'https://services.anu.edu.au/business-units/research-services-division'
+      } as ExternalLinkMenuItemModel,
+    }
+    ];
+
+    menuList.push({
+      id: 'browse_related_links',
+      active: false,
+      visible: true,
+      index: 11,
+      model: {
+        type: MenuItemType.TEXT,
+        text: 'Related Links',
+      } as ExternalLinkMenuItemModel,
+    });
+
+    menuList.push({
+      id: 'about',
+      active: false,
+      visible: true,
+      index: 5,
+      model: {
+        type: MenuItemType.TEXT,
+        text: 'About'
+      } as ExternalLinkMenuItemModel,
+    });
+
+    menuList.forEach(menuSection => {
+      this.menuService.addSection(MenuID.PUBLIC, Object.assign(menuSection, {
+      shouldPersistOnRouteChange: true
+    }))}
+  );
+  }
 }

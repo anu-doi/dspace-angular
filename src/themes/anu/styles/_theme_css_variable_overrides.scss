@@ -11,6 +11,18 @@
     --ds-header-height: 90px;
   }
 
+  --ds-navbar-bg:#{$primary};
+  --ds-navbar-link-color: #{$bg-uniwhite};
+  --ds-navbar-link-color-hover: #{$bg-uniwhite};
+  --ds-navbar-link-bg-color-hover: #{$primary};
+  --ds-navbar-item-vertical-padding: 0.5rem;
+  --ds-navbar-item-horizontal-padding: 0.5rem;
+  --ds-expandable-navbar-i-padding: 0.25rem;
+
+  //Footer
+  --ds-footer-bg: #{$primary};
+  --ds-top-footer-bg: #{$primary};
+
   --ds-banner-text-background: rgba(0, 0, 0, 0.58);
   --ds-banner-background-gradient-width: 300px;
 
@@ -19,11 +31,209 @@
   /* set the next two properties as `--ds-header-navbar-border-bottom-*`
   in order to keep the bottom border of the header when navbar is expanded */
 
-  --ds-expandable-navbar-border-top-color: #{$white};
+  --ds-expandable-navbar-border-top-color: #{$bg-uniwhite};
   --ds-expandable-navbar-border-top-height: 0;
   --ds-expandable-navbar-padding-top: 0;
 
   --ds-item-page-img-field-default-inline-height: 24px;
-  --ds-item-page-img-field-ror-inline-height: var(--ds-item-page-img-field-default-inline-height);
+  --ds-item-page-img-field-ror-inline-height: var(
+    --ds-item-page-img-field-default-inline-height
+  );
+
+
+  /*Added from Dspace 7.6.7 code */
+  --ds-link-color: #00549e;
+
+  /*Added from ANU styling */
+  --ds-header-icon-color: #{$primary};
+  --ds-header-navbar-border-bottom-color: var(--ds-header-icon-color);
+
 }
 
+/*Added from Dspace 7.6.7 code */
+//Links ('a' tag)
+a {
+  color: var(--ds-link-color);
+}
+
+a:visited {
+  color: var(--ds-link-color);
+}
+
+a:hover {
+  color: var(--ds-link-hover-color);
+}
+
+//Badges
+.badge-secondary {
+//  background-color: #f5edde;
+  background-color: $bg-uniwhite;
+  color: #000;
+  border: 1px solid #{$secondary};
+}
+
+.badge-success.badge, .badge-info.badge, .badge-warning.badge {
+  color: #000 !important;
+}
+
+//Buttons
+.btn-outline-secondary,
+.btn-secondary {
+  color: #{$primary};
+}
+
+.btn-outline-secondary a:visited,
+.btn-success a:visited,
+.btn-secondary a:visited {
+  color: #{$primary};
+}
+
+.pr-4 {
+  padding-right: 40px !important;
+}
+
+.navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  color: var(--bs-navbar-brand-color);
+  white-space: nowrap;
+}
+
+/******************************************* START OF DEFAULT DSPACE HEADER *********************************************************/
+ds-header .overflow-hidden {
+    overflow: visible !important;
+  }
+
+@media (min-width: 768px) {
+  ds-header .overflow-hidden {
+    overflow: visible !important;
+  }
+}
+
+#main-navbar {
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+    ds-header ds-search-navbar {
+    position: relative;
+    z-index: 3;
+  }
+}
+/******************************************* END OF DEFAULT DSPACE HEADER ***********************************************************/
+/******************************************* START OF ANU HEADER ********************************************************************/
+header {
+  .anu-header-logo {
+    border-right: 2px #{$primary} solid;
+    width: 200px;
+  }
+
+  .anu-header-logo .logo,
+  .anu-header-logo .logo-xtrsml {
+    max-width: 100%;
+  }
+
+  .anu-wf-header-title {
+    color: #{$primary};
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+
+  .anu-wf-header-subtitle {
+    font-size: 1em;
+    text-decoration: none;
+    color: #{$primary};
+    letter-spacing: 0.03em;
+  }
+
+  .anu-wf-header-mobile {
+    background-color: #{$bg-unitint};
+    text-align: center;
+  }
+
+  .utility-menu {
+    font-size: 14px;
+  }
+}
+
+/* add meeting line to logo */
+header.anu-wf .container {
+  .col-lg-auto.col-md-4.col-sm-6.col-6 {
+    position: relative;
+    z-index: 3;
+  }
+  position: relative;
+  margin: 0 auto;
+  width: calc(100% - 4rem);
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+header.anu-wf .container::after {
+  content: "";
+  width: 1px;
+  background-color: $bg-unigold;
+  position: absolute;
+  top: 0;
+  bottom: -48px;
+  left: 0;
+  z-index: 1;
+}
+
+header.anu-wf .container .row :nth-of-type(1) .anu-wf-header-logo {
+  padding-left: 0;
+  transform: translateX(-70px);
+  position: relative;
+  z-index: 1;
+}
+
+header.anu-wf .container .row :nth-of-type(1) .anu-wf-header-logo::before {
+  content: "";
+  background-color: $bg-uniwhite;
+  position: absolute;
+  top: -1em;
+  bottom: -1em;
+  width: 100%;
+  z-index: -1;
+}
+
+header.anu-wf .container .row > div:nth-child(3) {
+  margin-left: auto;
+}
+
+/* the meeting line is overlapping the banner image on smaller screen */
+@media screen and (max-width: 991px) {
+  header.anu-wf .container::after {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anu-wf-header-mobile {
+    position: relative;
+    left: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  header {
+    .anu-header-logo {
+      border-right: 0;
+
+      .logo,
+      .logo-xtrsml {
+        max-width: 85%;
+      }
+    }
+  }
+}
+
+/* Limit the header logo width to avoid header subtitles to be pushed right with a gap */
+header.anu-wf .row .col-lg-auto {
+  width: 150px !important;
+}
+
+/******************************************* END OF ANU HEADER ********************************************************************/

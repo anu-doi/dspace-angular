@@ -1,0 +1,86 @@
+:host {
+  position: static;
+  .ds-menu-item-wrapper {
+    position: static; // align dropdown menu with respect to this element
+  }
+
+  .dropdown-menu {
+    overflow: hidden;
+    min-width: 100%;
+    top: 100%;
+    padding: var(--ds-expandable-navbar-padding);
+    border-top: 2px solid #be830e !important; 
+    background-color: black;
+    @include media-breakpoint-down(md) {
+      border: 0;
+      border-radius: 0;
+    }
+    @include media-breakpoint-up(md) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    ::ng-deep .ds-menu-item {
+      padding: var(--ds-expandable-navbar-item-padding);
+    }
+  }
+
+  .toggle-menu-icon {
+    &, &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .submenu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-auto-flow: column;
+      column-gap: 20px;
+
+      .text-nowrap {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+}
+
+  @media (min-width: 1400px) {
+  .nav-dropdown-menu > .container {
+    max-width: 1200px;
+  }
+}
+
+
+.nav-dropdown-menu {
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  width: auto;
+  min-width: 0;
+
+  .text-nowrap {
+    border-bottom: none;
+  }
+
+  ::ng-deep .text-nowrap a.ds-menu-item {
+    display: block;
+    box-sizing: border-box;
+    padding: 8px 30px 8px 5px !important;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  ::ng-deep .text-nowrap a.ds-menu-item:hover {
+    background: #000 url("https://d1blp3aor2iuhp.cloudfront.net/images/icons/raquo-white.gif") no-repeat right center !important;
+    color: #fff !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .nav-dropdown-menu {
+    position: static !important;
+  }
+}
+
+}

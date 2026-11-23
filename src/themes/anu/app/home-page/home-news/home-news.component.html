@@ -1,0 +1,49 @@
+<div class="background-image-container mt-ncs">
+  <div class="container">
+    <div class="home-news-content mt-0 mb-4">
+      <div class="col">
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-4">
+            <div class="bg-black p-2">
+              @if (homeNewsMetadataValue$ | async; as homeNewsMetadataValue) {
+                <div class="container">
+                  <div class="jumbotron jumbotron-fluid">
+                    <ds-markdown-viewer [value]="homeNewsMetadataValue"></ds-markdown-viewer>
+                  </div>
+                </div>
+              }
+              @else {
+                <div class="d-flex flex-wrap">
+                  <div>
+                    <h1>Open Research Repository</h1>
+                    <p>The Open Research Repository is the University’s online open access repository for collecting,
+                        maintaining and disseminating the scholarly output of the University.
+                    </p>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+          <div class="col-lg-6">
+          </div>
+          <div class="col-12 col-md-4 col-lg-2 align-self-end">
+            <div class="bg-black p-2">
+              <p>
+                Contribute to the Open Research Repository
+              </p>
+              @if (isAuthenticated | async){
+                  <button class="bg-black-button" type="button" (click)="openScopeModal()">Contribute</button>
+              }
+              @if (!(isAuthenticated | async)){
+                  <button class="bg-black-button" type="button" routerLink='/login'>Login</button>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <picture class="background-image">
+    <img alt="" [src]="'https://live.staticflickr.com/65535/49245750546_8152d4b817_o.jpg'"/>
+  </picture>
+</div>
