@@ -1,0 +1,195 @@
+// DSpace works with CSS variables for its own components, and has a mapping of all bootstrap Sass
+// variables to CSS equivalents (see src/styles/_bootstrap_variables_mapping.scss). However Bootstrap
+// still uses Sass variables internally. So if you want to override Bootstrap (or other sass
+// variables) you can do so here. Their CSS counterparts will include the changes you make here.
+
+// When this file is going to be compiled, internal Bootstrap variables won't have been declared yet,
+// therefore if you want to use any Bootstrap variable you also need to declare it here.
+
+// All SASS variables from the base theme are also included here. Do not use the '!default' flag
+// here if you want to override them.
+
+
+/*** FONT FAMILIES ***/
+
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+// $font-family-sans-serif: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif: 'Public Sans', sans-serif;
+
+
+/*** SEMANTIC COLOR SCHEME ***/
+
+// Gray scale (uncomment the variables that you want to override or that you need to use in this file)
+//$white:    #fff;
+//$gray-100: #f8f9fa;
+//$gray-200: #e9ecef;
+//$gray-300: #dee2e6;
+//$gray-400: #ced4da;
+//$gray-500: #adb5bd;
+//$gray-600: #6c757d;
+//$gray-700: #495057;
+//$gray-800: #343a40;
+//$gray-900: #212529;
+//$black:    #000;
+
+// Other colors (uncomment the variables that you want to override or that you need to use in this file)
+//$blue:    #007bff !default;
+//$indigo:  #6610f2 !default;
+//$purple:  #6f42c1 !default;
+//$pink:    #e83e8c !default;
+//$red:     #dc3545 !default;
+//$orange:  #fd7e14 !default;
+//$yellow:  #ffc107 !default;
+//$green:   #28a745 !default;
+//$teal:    #20c997 !default;
+//$cyan:    #17a2b8 !default;
+
+// Override semantic colors here
+// $primary:   #43515f;  // Gray
+// $secondary: #495057;  // As Bootstrap $gray-700
+// $success:   #92c642;  // Lime
+// $info:      #1e6f90;  // Light blue
+// $warning:   #ec9433;  // Orange
+// $danger:    #cf4444;  // Red
+// $light:     #f8f9fa;  // As Bootstrap $gray-100
+// $dark:      #43515f;  // Dark blue
+
+// Add new semantic colors here (you don't need to add existing semantic colors)
+$theme-custom-semantic-colors: (
+);
+
+// /*** OTHER BOOTSTRAP VARIABLES ***/
+
+$min-contrast-ratio: 2.06 !default;
+
+$body-color: #343a40;       // As Bootstrap $gray-800
+
+$link-color: #1e6f90;       // Blue green, as DSpace $info
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+$table-accent-bg: #f8f9fa;  // As Bootstrap $gray-100
+$table-hover-bg: #ced4da;   // As Bootstrap $gray-400
+
+$navbar-dark-color: #fff;
+
+
+/*** CUSTOM DSPACE VARIABLES ***/
+
+$ds-home-news-link-color: #D2FC93;
+$ds-header-navbar-border-bottom-color: #92c642;
+
+$ds-breadcrumb-link-color: #154E66 !default;
+$ds-breadcrumb-link-active-color: #040D11 !default;
+
+// $gray-700: #495057 !default;  // Bootstrap $gray-700
+// $gray-100: #f8f9fa !default;  //           $gray-100
+
+// $blue:   #2B4E72 !default;
+// $green:  #94BA65 !default;
+// $cyan:   #006666 !default;
+// $yellow: #ec9433 !default;
+// $red:    #CF4444 !default;
+// $dark:   darken($blue, 17%) !default;
+
+// $pale-gold: #f5edde !default;
+// $gold: #be830e !default;
+
+
+
+/*** ANU THEME STYLING ***/
+$bg-uniblack: #000000;
+$bg-unigrey: #333333;
+$bg-unigold: #be830e;
+$bg-unitint: #f5edde;
+$bg-uniwhite: #fff;
+$bg-unitrans: #ffffff00;
+
+/* USE THIS ONLY FOR HYPERLINKS */
+$bg-unilink: #146ebd;
+
+/* GOLD HYPERLINKS HYPERLINKS - WHEN USED ON SMALLER FONT TO PASS AA */
+$bg-unilinkgold: #945f00;
+
+/* USE THIS ONLY TO HIGHLIGHT'S IN TABLE */
+$bg-unicopper: #be4e0e;
+$bg-uniteal: #008ab1;
+
+/* GREY */
+$bg-unigrey90: #262626;
+$bg-unigrey78: #5d5d60;
+$bg-unigrey62: #666666;
+$bg-unigrey56: #888a8d;
+$bg-unigrey34: #b4b6b8;
+$bg-unigrey28: #bcbcbc;
+$bg-unigrey23: #F2F2F2;
+$bg-unigrey20: #D9D9D9;
+$bg-unigrey18: #E6E6E6;
+$bg-unigrey15: #f3f6fc;
+$bg-unigrey12: #e2e3e4;
+$bg-unigrey8: #ccc;
+
+/* GOLD */
+$bg-unigold90: #c89632;
+$bg-unigold78: #cc9e43;
+$bg-unigold56: #dbba78;
+$bg-unigold34: #e9d5ad;
+$bg-unigold22: #fff7e9;
+$bg-unigold12: #e9d5ad;
+$bg-unigold9: #f5eddeb3;
+$bg-unigold6: #F7EAC9;
+$bg-unigold3: #f5edde;
+
+/* COPPER */
+$bg-unicopper78: #cc7543;
+$bg-unicopper56: #db9e7a;
+$bg-unicopper34: #e9c3ad;
+$bg-unicopper28: #efe0c3;
+$bg-unicopper12: #f7eae2;
+
+/* TEAL */
+$bg-uniteal78: #009cbf;
+$bg-uniteal56: #61b1ce;
+$bg-uniteal34: #9ccbde;
+$bg-uniteal12: #d7e9f0;
+$bg-uniteal6: #f1f4f8;
+
+/* COLOURS ALOOWED FOR ERROR MESSAGES ON FORMS */
+$bg-unisuccess-bg: #effada;
+$bg-unisuccess-brd: #bfe498;
+$bg-unierror-bg: #ffe3e3;
+$bg-unierror-brd: #f00;
+$bg-uniwarn-bg: #fff9e6;
+$bg-uniwarn-brd: #fc3;
+$bg-uniinfo-bg: #edf3fe;
+$bg-uniinfo-brd: #69f;
+
+/* Badge color */
+$bg-unigreen: #13c35d;
+
+/* Focus color */
+$bg-uniblue: #146edb;
+
+$primary:  $bg-uniblack;
+$secondary:  $bg-unigold;
+$success:  $bg-unisuccess-bg;
+$info:     $bg-uniinfo-bg;
+$warning:   $bg-uniwarn-bg;
+$danger:    $bg-unierror-bg;
+$light:     $bg-unigrey23;
+$dark:      $bg-uniblue;
+$black:    $bg-uniblack;
+
+$theme-colors: (
+    primary: $bg-uniblack,
+    secondary: $bg-unigold,
+    black: $bg-uniblack,
+    success: $bg-unisuccess-bg,
+    info:  $bg-uniinfo-bg,
+    warning: $bg-uniwarn-bg,
+    danger: $bg-unierror-bg,
+    light: $bg-unigrey23,
+    dark: $bg-uniblue
+)

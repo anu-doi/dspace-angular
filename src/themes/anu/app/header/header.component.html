@@ -1,0 +1,27 @@
+<div class="container pe-md-3">
+  <div class="d-flex flex-row align-items-center justify-content-between">
+    <div class="flex-grow-1 min-width-0 overflow-hidden ps-2">
+      <header aria-label="Header banner" class="anu-wf react-none" data-title="Open Research Repository"
+        data-subtitle="Library" data-domain="//anulib.anu.edu.au" role="banner">
+      </header>
+    </div>
+    <div class="navbar navbar-light navbar-expand-md flex-shrink-0 px-0">
+      <ds-search-navbar></ds-search-navbar>
+      <div class="d-flex flex-row flex-nowrap align-items-center" role="toolbar"
+        [attr.aria-label]="'nav.user.description' | translate">
+        <ds-lang-switch></ds-lang-switch>
+        <ds-context-help-toggle></ds-context-help-toggle>
+        <ds-auth-nav-menu></ds-auth-nav-menu>
+        <ds-impersonate-navbar></ds-impersonate-navbar>
+      </div>
+      @if ((isMobile$ | async)) {
+        <div id="mobile-navbar-toggler" class="d-block d-md-none">
+          <button id="navbar-toggler" class="btn btn-transparent" type="button" (click)="toggleNavbar()"
+            [attr.aria-label]="'nav.toggle' | translate" aria-controls="collapsible-mobile-navbar" [attr.aria-expanded]="(isNavBarCollapsed$ | async) !== true">
+            <span class="fas fa-bars fa-fw fa-xl toggler-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</div>
