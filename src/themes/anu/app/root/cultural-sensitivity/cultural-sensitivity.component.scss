@@ -1,0 +1,174 @@
+#cultural-advice {
+    position: fixed;
+    top: clamp(96px, 22vh, 300px);
+    right: 0;
+    z-index: 2147483647;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+#cultural-advice-tab {
+    flex: 0 0 auto;
+
+    border: 0;
+    padding: 14px 12px;
+    border-radius: 12px 0 0 12px;
+
+    background: #f5b400;
+    color: #111;
+
+    font: inherit;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+
+}
+
+#cultural-advice-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+
+    width: clamp(280px, 32vw, 380px);
+    max-width: calc(100vw - 88px);
+    max-height: calc(100vh - 24px);
+
+    margin-right: 12px;
+    padding: 18px 18px 16px;
+
+    overflow: hidden;
+    overscroll-behavior: contain;
+
+    background: #fff;
+ /*   background-color: #fff;*/
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.24);
+}
+
+#cultural-advice-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    padding-right: 40px;
+    min-height: 0;
+}
+
+#cultural-advice-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border: 0;
+    border-radius: 10px;
+    padding: 0;
+
+    background: transparent;
+    color: #111;
+    font: inherit;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#cultural-advice-tab:focus,
+#cultural-advice-close:focus,
+#cultural-advice-close:focus-visible,
+#cultural-advice-panel:focus {
+  outline: 3px solid rgba(0, 90, 173, 0.45);
+  outline-offset: 2px;
+}
+
+#cultural-advice-close:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+@media (max-height: 820px) {
+    #cultural-advice {
+        top: 72px;
+    }
+
+    #cultural-advice-panel {
+        max-height: calc(100vh - 88px);
+    }
+}
+
+@media (max-width: 1024px) {
+    #cultural-advice {
+        top: clamp(72px, 16vh, 180px);
+    }
+
+    #cultural-advice-panel {
+        width: min(360px, calc(100vw - 84px));
+    }
+}
+
+@media (max-width: 700px) {
+    #cultural-advice {
+        top: auto;
+        right: 12px;
+        bottom: 16px;
+        align-items: flex-end;
+    }
+
+    #cultural-advice-panel {
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: 76px;
+
+        width: auto;
+        max-width: none;
+        max-height: min(70vh, calc(100vh - 96px));
+
+        margin-right: 0;
+        padding: 16px 16px 14px;
+        border-radius: 16px;
+    }
+
+    #culturla-advice-content {
+        padding-right: 36px;
+    }
+    
+    #cultural-advice-tab {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+
+        border-radius: 12px;
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    #cultural-advice {
+        right: 10px;
+        bottom: 12px;
+    }
+
+    #cultural-advice-panel {
+        left: 10px;
+        right: 10px;
+        bottom: 68px;
+        max-height: min(72vh, calc(100vh - 84px));
+    }
+
+    #cultural-advice-tab {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
